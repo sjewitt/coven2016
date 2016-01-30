@@ -1,6 +1,14 @@
 
 {
     "README": "Push colourscheme, link and title etc. on",
+    "CSS-SCHEMES" : [
+        "scheme-black",
+        "scheme-vlight",
+        "scheme-light",
+        "scheme-mid",
+        "scheme-dark",
+        "scheme-vdark"
+    ],
     "hierarchy":[
         {
             "pageId":1,
@@ -257,7 +265,7 @@
         
         {
             "url" : "/weddingfest07.html",
-            "id" : "1.5",
+            "id" : "1.6",
             "type" : "LANDING",
             "title":"WeddingFest 07",
             "banner":"/images/css/beaker-neg.png",
@@ -265,9 +273,37 @@
                 {
                     "data": 
                     {
-                        "title": "The day",
-                        "intro": "intro text intro text 1",
+                        "title": "Clare &amp; Silas wedding stuff!",
+                        "intro": "Hello people! This is our wedding site...<br/>Choose a panel from here",
+                        "class": "scheme-black",
+                        "link": "#",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "The Concept",
+                        "intro": "<h3>A mini-festival</h3><p>Live music! a field! A Barbeque! REAL beer!</p></p>Basically, we wanted a celebration that was not yer typical wedding do - so we hired a big tent, a band and a barbeque for a party in a field...<p></p>As well as the Bimble Inn, we are using Wessex Marquees for additional bad weather cover.</p>",
                         "class": "scheme-vlight",
+                        "link": "#"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "The Band",
+                        "intro": "<h3>Clare & Silas wedding stuff!</h3><p>We have arranged a Commitments tribute band - The Conmitments. We don't want the normal '80s disco crap...</p><h3>Review</h3><p>Well they turned out to be excellent, and full marks to them for arriving when the rest of the country were stuck on the M4 when it rained a bit...</p>",
+                        "class": "scheme-light",
+                        "link": "#"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "The Bimble Inn",
+                        "intro": "<h3>A big tent...</h3><p>A venue which travels around doing summer festivals. Visit their website for more info.</p>",
+                        "class": "scheme-mid",
                         "link": "#",
                         "linkId":"3"
                     }
@@ -275,10 +311,20 @@
                 {
                     "data":
                     {
-                        "title": "Images",
-                        "intro": "[use coverflow here]",
+                        "title": "Accommodation (link here)",
+                        "intro": "<ul><li>Here you will find a list of contact details for accommodation local to the area.</li><li>We are encouraging people to rough it and camp at the venue actually on the night, but for those that wish to stay longer or don't want to camp, this list gives some local hostelries.</li></ul><p>You can also contact the local Tourist Information offices on +44 (0)1935 815341 (Sherbourne) or +44 (0)1935 471279 (Yeovil).</p><p>Click for more details.</p>",
                         "class": "scheme-dark",
-                        "link": "#",
+                        "link": "/weddingfest07/accommodation.html",
+                        "id" : "image-output"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "Gallery",
+                        "intro": "Welcome to the WeddingFest07 Gallery! It may take some time to sort these properly, so bear with us as we weed out the wierd, rude and just crappy pictures. Well, we might leave the rude ones in...",
+                        "class": "scheme-vdark",
+                        "link": "/weddingfest07/gallery.html",
                         "id" : "image-output"
                     }
                 }
@@ -586,6 +632,31 @@
             "id" : "1.5.2",
             "type" : "CONTENT",
             "title":"MSc",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        {
+            "url" : "/weddingfest07/gallery.html",
+            "id" : "1.6.1",
+            "type" : "CONTENT",
+            "title":"Gallery",
             "panels": [
                 {
                     "data": 

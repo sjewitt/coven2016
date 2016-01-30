@@ -2,6 +2,12 @@
 //http://www.ajaxload.info/ for loading gifs!
 var controller = {
     
+    TYPE_HOME : "HOME",
+    TYPE_LANDING :"LANDING",
+    TYPE_CONTENT : "CONTENT",
+    TYPE_CUSTOM : "CUSTOM",
+    TYPE_DEFAULT : this.TYPE_CONTENT,
+    
     defaultPage : "index.html",
     currentPage : null,
     currentPath : [],
@@ -56,7 +62,7 @@ var controller = {
                         
                         break;
                         case "1.5":
-                            weddingfest07.test();
+                            //weddingfest07.test();
                         
                         break;
                     }
@@ -288,6 +294,11 @@ var controller = {
          */
     },
 
+    /*
+     * Attach link handlers to panels, suppressing if link is undefined, null or #
+     * Also, check that the defined URL actually exists...
+     * @returns {undefined}
+     */
     initLinkPanels : function(){
 
         //attach handlers to panels:
@@ -298,10 +309,16 @@ var controller = {
                 //set current background colour so we can revert on click
                 currentColour = $(this).css("background-color"); 
                 $(this).css("background-color","grey");
-                $(this).css("cursor","pointer");
+                var href = $(this).attr("data-url");
+                if(href !== null 
+                && href !== undefined 
+                && href!== "#"){
+                    $(this).css("cursor","pointer");
+                }
             })
             .click(function(){
                 //flash to white, and fade back to colour:
+                //console.log("HREF: " + $(this).attr("data-url"));
                 var href = $(this).attr("data-url");
                 $(this).css("background-color","white");
                 $(this).animate({
@@ -329,7 +346,15 @@ var controller = {
     },
 
     panelClickAnimateComplete : function(href){
-        window.location.href = href;
+        if(href !== null 
+                && href !== undefined 
+                && href!== "#"){ //TODO: boolean check URL exists function
+            console.log("reloading...");
+            window.location.href = href;
+        }
+        else{
+            return false;
+        }
     },
       
     loadCommonElements : function(){
@@ -380,23 +405,21 @@ I only need panelNum on content pages to determine whether left or right panel
     buildPanel : function(panelData,pageType,panelNum,data){
         var basePanelClass1 = null;
         var basePanelClass2 = null;
-        
-        console.log(panelData);
-        
+  
         //var url = this.getLinkFromId(data,panelData.linkId);
         var addLink = false;
         switch(pageType){
-            case "HOME":
+            case this.TYPE_HOME :
                 basePanelClass1 = "pure-u-1-2 pure-u-sm-1-4 linkpanel row-small";
                 addLink = true;
             break;
                 
-            case "LANDING":
+            case this.TYPE_LANDING :
                 basePanelClass1 = "pure-u-1 pure-u-sm-1-2 linkpanel row";
                 addLink = true;
             break;
                 
-            case "CONTENT":
+            case this.TYPE_CONTENT :
                 basePanelClass1 = "pure-u-1 pure-u-sm-1-4 contentpanel row";
                 basePanelClass2 = "pure-u-1 pure-u-sm-3-4 contentpanel row";
             break;
@@ -405,12 +428,11 @@ I only need panelNum on content pages to determine whether left or right panel
         var _outer = document.createElement("div");
         
         var baseClass = basePanelClass1;
-        if(pageType === "CONTENT" && panelNum > 0){
+        if(pageType === this.TYPE_CONTENT && panelNum > 0){
             baseClass = basePanelClass2;
         }
         $(_outer).attr("class",baseClass);
         if(panelData.id !== null){
-            console.log("APPENDING PANEL ID:");
             $(_outer).attr("id",panelData.id);
         }
         if(addLink) $(_outer).attr("data-url",panelData.link);   //conditional
@@ -463,7 +485,8 @@ I only need panelNum on content pages to determine whether left or right panel
         }
         return page;
     }
-
+    
+ 
 };
 
 /*
