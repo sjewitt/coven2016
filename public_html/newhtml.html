@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="content">
+    <h1></h1>
+        <script src="/js/libs/jquery/jquery.js" type="text/javascript"></script>    
+        <script>
+           $(function(){
+               var hash = window.location.hash;
+               //console.log(hash);
+               switch(hash){
+                   case "#1":
+                       $("h1").html("The first...");
+                       break;
+                   case "#2":
+                       $("h1").html("Second of hopefully many");
+                       break;
+               }
+           }); 
+        </script>
+    </body>
+</html>
+

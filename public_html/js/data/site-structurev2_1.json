@@ -1,0 +1,611 @@
+
+{
+    "README": "Push colourscheme, link and title etc. on",
+    "hierarchy":[
+        {
+            "pageId":1,
+            "childs":[
+                {"pageId":2,
+                    "childs":[
+                        {"pageId":3}
+                    ]}
+            ]
+        }
+    ],
+    "pages": 
+    [
+        {
+            "url" : "/index.html",
+            "id" : "1",
+            "type" : "HOME",
+            "title":"Home",
+            "banner":"/images/css/Haunted-House2.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "Code",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "linkId":"1.1",
+                        "link": "/code.html"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Tech",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-light",
+                        "linkId":"1.1",
+                        "link": "/tech.html",
+                        "panelTypeClass":"linkpanel",
+                        "panelHeightClass":"row-small",
+                        "panelWidth":"1-4"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Games",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-mid",
+                        "linkId":"1.1",
+                        "link": "/games.html"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Me",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-vdark",
+                        "linkId":"1.1",
+                        "link": "/me.html"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Academic",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-vlight",
+                        "linkId":"1.1",
+                        "link": "/academic.html"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "WeddingFest '07!",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "linkId":"1.6",
+                        "link": "/weddingfest07.html"
+                    }
+                }
+            ]
+        },
+        
+        
+        {
+            "url" : "/code.html",
+            "id" : "1.3",
+            "type" : "LANDING",
+            "title":"Code",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "Web",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "/code/web.html",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "Java",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "link": "/code/java.html"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "LibriVox",
+                        "intro": "Simple LibriVox interface using AJAX",
+                        "class": "scheme-dark",
+                        "link": "/code/librivox.html"
+                    }
+                }
+            ]
+        },         
+        
+        {
+            "url" : "/tech.html",
+            "id" : "1.1",
+            "type" : "LANDING",
+            "title":"Tech",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "/tech/tech-1.html",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "link": "/tech/tech-2.html"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/games.html",
+            "id" : "1.2",
+            "type" : "LANDING",
+            "title":"Games",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "Doom",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "/games/doom.html",
+                        "linkId":"3"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "Quake",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "link": "/games/quake.html"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "Half-Life",
+                        "intro": "intro text intro text 2xxx",
+                        "class": "scheme-dark",
+                        "link": "/games/half-life.html"
+                    }
+                }
+            ]
+        },
+       
+        
+        {
+            "url" : "/me.html",
+            "id" : "1.4",
+            "type" : "LANDING",
+            "title":"Me",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "My Work",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "/me/me-1.html",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "link": "/me/me-2.html"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/academic.html",
+            "id" : "1.5",
+            "type" : "LANDING",
+            "title":"Academic",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "/academic/phd.html",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark",
+                        "link": "/academic/msc.html"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/weddingfest07.html",
+            "id" : "1.5",
+            "type" : "LANDING",
+            "title":"WeddingFest 07",
+            "banner":"/images/css/beaker-neg.png",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "The day",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight",
+                        "link": "#",
+                        "linkId":"3"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "Images",
+                        "intro": "[use coverflow here]",
+                        "class": "scheme-dark",
+                        "link": "#",
+                        "id" : "image-output"
+                    }
+                }
+            ]
+        },        
+        
+        {
+            "url" : "/tech/tech-1.html",
+            "id" : "1.1.1",
+            "type" : "CONTENT",
+            "title":"Tech 1",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/tech/tech-2.html",
+            "id" : "1.1.2",
+            "type" : "CONTENT",
+            "title":"Tech 2",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        
+        {
+            "url" : "/games/doom.html",
+            "id" : "1.2.1",
+            "type" : "CONTENT",
+            "title":"DooM",
+            "banner" : "/images/doombar.jpg",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/games/quake.html",
+            "id" : "1.2.2",
+            "type" : "CONTENT",
+            "title":"Quake",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/games/half-life.html",
+            "id" : "1.2.3",
+            "type" : "CONTENT",
+            "title":"Half-Life",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        
+        {
+            "url" : "/code/web.html",
+            "id" : "1.3.1",
+            "type" : "CONTENT",
+            "title":"Web",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/code/java.html",
+            "id" : "1.3.2",
+            "type" : "CONTENT",
+            "title":"Java",
+            "panels": [
+                {
+
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+                {
+            "url" : "/code/librivox.html",
+            "id" : "1.3.3",
+            "type" : "CONTENT",
+            "title":"LibriVox",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "Find",
+                        "intro": "Search for an author:",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "Loading LibriVox data...",
+                        "intro": "",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        
+        {
+            "url" : "/me/me-1.html",
+            "id" : "1.4.1",
+            "type" : "CONTENT",
+            "title":"Me",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/me/me-2.html",
+            "id" : "1.4.2",
+            "type" : "CONTENT",
+            "title":"Me again",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        
+        {
+            "url" : "/academic/PhD.html",
+            "id" : "1.5.1",
+            "type" : "CONTENT",
+            "title":"PhD",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "url" : "/academic/MSc.html",
+            "id" : "1.5.2",
+            "type" : "CONTENT",
+            "title":"MSc",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "topic 1",
+                        "intro": "intro text intro text 1",
+                        "class": "scheme-vlight"
+                    }
+                },
+                {
+
+                    "data":
+                    {
+                        "title": "topic 2",
+                        "intro": "intro text intro text 2",
+                        "class": "scheme-dark"
+                    }
+                }
+            ]
+        }
+
+    ]
+}
