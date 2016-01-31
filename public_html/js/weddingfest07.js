@@ -836,7 +836,7 @@ var weddingfest07 = {
     /*
      * New method
      */
-    loadImagesForContentFlow : function(categoryFlag){
+    loadImagesForContentFlow : function(categoryFlag,target){
         //get raw data usingf existing function:
         var _temp = this.getTempArr(categoryFlag);
         var _out = "";
@@ -852,7 +852,7 @@ var weddingfest07 = {
             _out += "<div class=\"item\"><img class=\"content\" src=\"" + _temp[a].src + "\"/><div class=\"caption\">" + _temp[a].alt + "</div></div>";
         }
         
-        $("#target").html(_out);
+        $(target).html(_out);
     },
 
 
@@ -883,7 +883,7 @@ var weddingfest07 = {
 
         catch(e)
         {
-            alert("Error in method showImage(): "+e.message)
+            alert("Error in method showImage(): "+e.message);
         }
     },
 
@@ -1113,34 +1113,35 @@ writeTopMenu : function (pageurl){
 
     //may not need to do AJAX at all
     test : function(){
-        $.ajax("/proxy/listfiles.aspx",{
-            dataType:"json"
-        }).complete(function(data){
-            console.log(data);
-            var out = "";
-            /*
-             *         <div class="item">
-             *             <img class="content" src="someImageFile.jpg"/>
-             *             <div class="caption">Your_Image_Title</div>
-             *         </div>
-             */
-            for(var a=0;a<data.responseJSON.images.length;a++){
-                out += "<div class=\"item\">"
-                    + "<img class=\"item\" src=\"" + data.responseJSON.images[a] + "\" />"
-                    + "<div class=\"caption\">Your_Image_Title</div>"
-                    + "</div>";
-            }
-
-            console.log("APPENDING IMAGES:");
-            $("#image-output").html(out);
-            
-            //assuming format is OK, call contentflow: TODO:
-
-            
-        }).error(function(err){
-            console.log(err);
-        });
-        
+//        $.ajax("/proxy/listfiles.aspx",{
+//            dataType:"json"
+//        }).complete(function(data){
+//            console.log(data);
+//            var out = "";
+//            /*
+//             *         <div class="item">
+//             *             <img class="content" src="someImageFile.jpg"/>
+//             *             <div class="caption">Your_Image_Title</div>
+//             *         </div>
+//             */
+//            for(var a=0;a<data.responseJSON.images.length;a++){
+//                out += "<div class=\"item\">"
+//                    + "<img class=\"item\" src=\"" + data.responseJSON.images[a] + "\" />"
+//                    + "<div class=\"caption\">Your_Image_Title</div>"
+//                    + "</div>";
+//            }
+//
+//            console.log("APPENDING IMAGES:");
+//            $("#TEST_FLOW").html(out);
+//            
+//            //assuming format is OK, call contentflow: TODO:
+//            
+//
+//            
+//        }).error(function(err){
+//            console.log(err);
+//        });
+//        
     }    
 
 };

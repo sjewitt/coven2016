@@ -61,9 +61,20 @@ var controller = {
                             librivox.init();  
                         
                         break;
-                        case "1.5":
-                            //weddingfest07.test();
-                        
+                        case "1.6.1":
+                            weddingfest07.init();
+        
+                            //TEST call method to load images by category and correct format:
+                            
+                            //console.log("LOAD CONTENTFLOW:");
+                            //$("#TEST_FLOW").css({"visibility":"hidden"});
+                            //$("#TEST_FLOW").addClass("ContentFlow");
+                            $("#TEST_FLOW > div.panel-text").addClass("flow");
+                            
+                            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY1,"#TEST_FLOW > div.panel-text");
+                            
+                            var myNewFlow = new ContentFlow('TEST_FLOW', { reflectionHeight: 0, circularFlow: false } ) ;
+                        //console.log(myNewFlow);
                         break;
                     }
                     
@@ -431,12 +442,24 @@ I only need panelNum on content pages to determine whether left or right panel
         if(pageType === this.TYPE_CONTENT && panelNum > 0){
             baseClass = basePanelClass2;
         }
+        
+                //do we have a modifier-class?
+        if(
+                panelData.modifier_class !== null 
+                && panelData.modifier_class !== undefined
+                && panelData.modifier_class !== ""
+                ){
+            console.log("APPLYING CLASS " + panelData.modifier_class);
+            baseClass += " " + panelData.modifier_class;
+        }
+        
         $(_outer).attr("class",baseClass);
         if(panelData.id !== null){
             $(_outer).attr("id",panelData.id);
         }
         if(addLink) $(_outer).attr("data-url",panelData.link);   //conditional
         $(_outer).addClass(panelData.class);
+        
         
         var _title = document.createElement("div");
         $(_title).addClass("panel-title");

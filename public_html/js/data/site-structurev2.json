@@ -314,8 +314,7 @@
                         "title": "Accommodation (link here)",
                         "intro": "<ul><li>Here you will find a list of contact details for accommodation local to the area.</li><li>We are encouraging people to rough it and camp at the venue actually on the night, but for those that wish to stay longer or don't want to camp, this list gives some local hostelries.</li></ul><p>You can also contact the local Tourist Information offices on +44 (0)1935 815341 (Sherbourne) or +44 (0)1935 471279 (Yeovil).</p><p>Click for more details.</p>",
                         "class": "scheme-dark",
-                        "link": "/weddingfest07/accommodation.html",
-                        "id" : "image-output"
+                        "link": "/weddingfest07/accommodation.html"
                     }
                 },
                 {
@@ -670,9 +669,10 @@
 
                     "data":
                     {
-                        "title": "topic 2",
+                        "title": "TEST FLOW",
                         "intro": "intro text intro text 2",
-                        "class": "scheme-dark"
+                        "class": "scheme-dark",
+                        "id":"TEST_FLOW"
                     }
                 }
             ]
