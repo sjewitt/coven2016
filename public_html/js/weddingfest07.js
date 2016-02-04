@@ -40,13 +40,40 @@ var weddingfest07 = {
     TEST                : 999,
     
     
+    flowDOM : null,
+    loadContentFlow : false,
     
     //data:
     arr : new Array(),
 
-    init : function(){
-        console.log("loading library...");
+/*
+ * 
+ * @param {type} config = {displaytargetId : "target_id",linksTargetId : "links_list_id"}
+ * @returns {undefined}
+ */
+    init : function(config){
+        console.log("loading library with params:");
+        console.log(config);
+        this.loadContentFlow = config.loadContentFlow;// = config.
+        
         //load the data into the array:
+        this.loadImageArray();
+        
+        //build contentflow outer in main content area:
+        this.buildFlowContainer(config);
+        
+        //build links (test):
+        this.buildFlowLinks(config);
+        
+
+    },
+
+    /*
+     * Load the images:
+     * @returns {undefined}
+     */
+    loadImageArray : function(){
+        console.log("Loading images");
         this.arr.push({src:"BLANK",orientation:0,alt:""});
         //setup
         this.arr.push({src:"web_0002.jpg",orientation:0,alt:"Car park before the quagmire",  category : this.EVENT_SETUP_DAY1});
@@ -829,14 +856,85 @@ var weddingfest07 = {
         //and prefix the URL with path:
         for(var a=0;a<this.arr.length;a++){
             this.arr[a].src = this.IMGPATH + this.arr[a].src;
-        }
+        }  
+    },
+
+    /*
+     * build the flow container in the body area:
+     *  <div class="ContentFlow">
+            <div class="loadIndicator"><div class="indicator"></div></div>
+            <div class="flow">
+                <img class="item" src="someImageFile.jpg" title="Your_Image_Title"/>
+                <!-- Add as many items as you like. -->
+            </div>
+            <div class="globalCaption"></div>
+            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
+        </div>
+     */
+    buildFlowContainer : function(config){
+        $("#" + config.displaytargetId).empty();
+        var ContentFlow = document.createElement("div");
+        //ContentFlow.setAttribute("class","ContentFlow");
+        ContentFlow.setAttribute("id","contentFlow");
+        
+        var loadIndicator = document.createElement("div");
+        loadIndicator.setAttribute("class","loadIndicator");
+        
+        var indicator = document.createElement("div");
+        indicator.setAttribute("class","indicator");
+        
+        var flow = document.createElement("div");
+        flow.setAttribute("class","flow");
+        
+        //and assemble:
+        loadIndicator.appendChild(indicator);
+        ContentFlow.appendChild(loadIndicator);
+        ContentFlow.appendChild(flow);
+        
+        //console.log("appending " + ContentFlow);
+        $("#" + config.displaytargetId).append(ContentFlow);
+        this.flowDOM = ContentFlow;
+        //return ContentFlow; //so I can build on it
+        
+    },
+
+    buildFlowLinks : function(config){
+        var x = document.createElement("div");
+        x.appendChild(document.createTextNode("TEST LINK"));
+        $(x).click(function(){
+
+            //initialise content flow with specified flags:
+            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY1,this.flowDOM);
+            
+            //load contentflow:
+            if(config.loadContentFlow){
+                console.log("loading flow 1...");
+                var myNewFlow = new ContentFlow("contentFlow", {} ) ;
+            }
+        });
+        $("#" + config.linksTargetId).append($(x));
+        
+        var y = document.createElement("div");
+        y.appendChild(document.createTextNode("TEST LINK2"));
+        $(y).click(function(){
+            //initialise content flow with specified flags:
+            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY2);
+            
+            //load contentflow:
+            if(config.loadContentFlow){
+                console.log("loading flow 2...");
+                var myNewFlow = new ContentFlow("contentFlow", { } ) ;
+            }
+        });
+        $("#" + config.linksTargetId).append($(y));
     },
 
 
     /*
      * New method
      */
-    loadImagesForContentFlow : function(categoryFlag,target){
+    loadImagesForContentFlow : function(categoryFlag){
+        console.log("loading images for " + categoryFlag);
         //get raw data usingf existing function:
         var _temp = this.getTempArr(categoryFlag);
         var _out = "";
@@ -849,10 +947,12 @@ var weddingfest07 = {
              *             <div class="caption">Your_Image_Title</div>
              *         </div>
              */
-            _out += "<div class=\"item\"><img class=\"content\" src=\"" + _temp[a].src + "\"/><div class=\"caption\">" + _temp[a].alt + "</div></div>";
+            _out += "<div class=\"item\"><img class=\"content\" src=\"" 
+                    + _temp[a].src + "\"/><div class=\"caption\">" 
+                    + _temp[a].alt + "</div></div>";
         }
         
-        $(target).html(_out);
+        $(this.flowDOM).find("div.flow").html(_out);
     },
 
 
