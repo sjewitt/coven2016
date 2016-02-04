@@ -14,8 +14,10 @@ and open the template in the editor.
         <script src="/js/libs/contentflow/contentflow.js" type="text/javascript"></script>
     </head>
     <body>
-
-        <div class="ContentFlowXXX" id="fish">
+<div id="links">
+    
+    </div>
+        <div class="ContentFlow" id="fish">
             <div class="loadIndicator"><div class="indicator"></div></div>
             <div class="flow" id="target" style="width:50%;height:400px;border:1px solid black;">
                 <!-- push images here before initialising contentflow -->
@@ -25,16 +27,48 @@ and open the template in the editor.
         </div>
         
                 <script src="/js/libs/jquery/jquery.js" type="text/javascript"></script> 
-        <!-- script src="/js/controller.js" type="text/javascript"></script -->  
+        <script src="/js/controller.js" type="text/javascript"></script>  
         <script src="/js/weddingfest07.js" type="text/javascript"></script>
         <script>
     $(function(){
-        weddingfest07.init();
+        
+        weddingfest07.init({displaytargetId:"target",linksTargetId : "content_flow_links"});
+        
         
         //TEST call method to load images by category and correct format:
-        weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY2);
+        //weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY2);
         
         var myNewFlow = new ContentFlow('fish', { reflectionHeight: 0, circularFlow: false } ) ;
+        
+        console.log(myNewFlow);
+        
+        
+        var _temp = weddingfest07.getTempArr(weddingfest07.EVENT_DINNER);
+        var _out = "";
+        console.log(_temp);
+        for(var a=0;a<_temp.length;a++){
+            //build DOM here, test with strings...
+                        /*
+             *         <div class="item">
+             *             <img class="content" src="someImageFile.jpg"/>
+             *             <div class="caption">Your_Image_Title</div>
+             *         </div>
+             */
+            var added = myNewFlow.addItem($.parseHTML("<div class=\"item\"><img class=\"content\" src=\"" 
+                    + _temp[a].src 
+                    + "\"/><div class=\"caption\">" 
+                    + _temp[a].alt 
+                    + "</div></div>","first"));
+            console.log("item added at: "+added);
+            //_out += "<div class=\"item\"><img class=\"content\" src=\"" + _temp[a].src + "\"/><div class=\"caption\">" + _temp[a].alt + "</div></div>";
+        }
+        
+        console.log(myNewFlow);
+        
+        myNewFlow.init();
+        
+        //myNewFlow.addItem()
+        
     });
         </script>
         
