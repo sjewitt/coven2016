@@ -62,19 +62,20 @@ var controller = {
                         
                         break;
                         case "1.6.1":
-                            weddingfest07.init();
+                            weddingfest07.init({displaytargetId : "content_flow_display",linksTargetId : "content_flow_links", loadContentFlow : true});
         
-                            //TEST call method to load images by category and correct format:
-                            
-                            //console.log("LOAD CONTENTFLOW:");
-                            //$("#TEST_FLOW").css({"visibility":"hidden"});
-                            //$("#TEST_FLOW").addClass("ContentFlow");
-                            $("#TEST_FLOW > div.panel-text").addClass("flow");
-                            
-                            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY1,"#TEST_FLOW > div.panel-text");
-                            
-                            var myNewFlow = new ContentFlow('TEST_FLOW', { reflectionHeight: 0, circularFlow: false } ) ;
-                        //console.log(myNewFlow);
+//                            //TEST call method to load images by category and correct format:
+//                            
+//                            //console.log("LOAD CONTENTFLOW:");
+////                            $("#TEST_FLOW").css({"visibility":"hidden"});
+//                            $("#TEST_FLOW").addClass("ContentFlow");
+//                            $("#TEST_FLOW > div.panel-title").addClass("flow");
+//                            
+//                            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY1,"#content_flow_display > div.panel-title");
+//                            
+//                            var myNewFlow = new ContentFlow('content_flow_display', { reflectionHeight: 0, circularFlow: false } ) ;
+//                            console.log("CONTENTFLOW OBJECT:");
+//                            console.log(myNewFlow);
                         break;
                     }
                     
@@ -86,6 +87,9 @@ var controller = {
             },
             error : function(e){
                 console.log(e);
+            },
+            complete : function(){
+
             }
         });
     },
@@ -522,6 +526,10 @@ $(function(){
      * Start controller:
      */
     controller.init();
+    
+    
+    
+    
 
 });
 
