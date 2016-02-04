@@ -660,9 +660,10 @@
                 {
                     "data": 
                     {
-                        "title": "topic 1",
+                        "title": "LINKS",
                         "intro": "intro text intro text 1",
-                        "class": "scheme-vlight"
+                        "class": "scheme-vlight",
+                        "id":"content_flow_links"
                     }
                 },
                 {
@@ -672,7 +673,7 @@
                         "title": "TEST FLOW",
                         "intro": "intro text intro text 2",
                         "class": "scheme-dark",
-                        "id":"TEST_FLOW"
+                        "id":"content_flow_display"
                     }
                 }
             ]
