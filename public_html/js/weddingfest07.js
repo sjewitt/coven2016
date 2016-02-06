@@ -81,11 +81,7 @@ var weddingfest07 = {
          */
         this.buildFlowLinks();
         
-        /*
-         * And initialise the contentflow:
-         */
-        console.log("this.ContentFlowInstance: "+this.ContentFlowInstance);
-        var myNewFlow = new ContentFlow(this.ContentFlowInstance, { reflectionHeight: 0, circularFlow: false } ) ;
+
     },
 
     /*
@@ -893,7 +889,7 @@ var weddingfest07 = {
         </div>
      */
     buildFlowContainer : function(DOMImageList){
-        //console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId + "\nUsing:");
+        console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId);// + "\nUsing:");
         //console.log(DOMImageList);
         //remove prior contentflow
         $("#" + this.ContentFlowConfig.displaytargetId).empty();
@@ -922,6 +918,7 @@ var weddingfest07 = {
         ContentFlowContainer.appendChild(flow);
  
         $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
+        console.log("DOM created OK");
     },
     
     //clear out the flow container:
@@ -945,6 +942,13 @@ var weddingfest07 = {
                     
                     //build DOM structure:
                     weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category")));
+                    
+                    /*
+                     * And initialise the contentflow:
+                     */
+                    console.log("this.ContentFlowInstance: "+this.ContentFlowInstance);
+                    var myNewFlow = new ContentFlow("contentFlow") ;
+                    console.log(myNewFlow);
                 }
             });
             _outer.appendChild(x);
