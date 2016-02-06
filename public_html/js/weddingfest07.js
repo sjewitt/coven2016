@@ -896,6 +896,7 @@ var weddingfest07 = {
         
         var ContentFlowContainer = document.createElement("div");
         ContentFlowContainer.setAttribute("id","contentFlow");
+        //ContentFlowContainer.setAttribute("class","ContentFlow");
         
         var loadIndicator = document.createElement("div");
         loadIndicator.setAttribute("class","loadIndicator");
@@ -908,7 +909,7 @@ var weddingfest07 = {
         
         //and assemble:
         loadIndicator.appendChild(indicator);
-        ContentFlowContainer.appendChild(loadIndicator);
+        //ContentFlowContainer.appendChild(loadIndicator);
         
         //and push the items onto the flow element:
         for(var a=0;a<DOMImageList.length;a++){
@@ -939,15 +940,14 @@ var weddingfest07 = {
             $(x).click(function(){
                 //initialise content flow with specified flags:
                 if(weddingfest07.ContentFlowConfig.loadContentFlow){
-                    
                     //build DOM structure:
                     weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category")));
                     
                     /*
                      * And initialise the contentflow:
                      */
-                    console.log("this.ContentFlowInstance: "+this.ContentFlowInstance);
-                    var myNewFlow = new ContentFlow("contentFlow") ;
+                    var myNewFlow = new ContentFlow("contentFlow");
+                    myNewFlow.init();
                     console.log(myNewFlow);
                 }
             });
