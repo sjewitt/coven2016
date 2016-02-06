@@ -1,6 +1,19 @@
 //for ASPX, use: http://stackoverflow.com/questions/9035817/asp-net-c-sharp-get-all-text-from-a-file-in-the-web-path
 // - basically, server.mapPath();
 //and then list all files of type png/gif/jpg
+/*
+ * ContentFlow logic:
+ * 
+ * on each link click:
+ * 
+ * 1: CLEAR container if already full
+ * 2: build ContentFlow container PER CALL.
+ * 3: Load, as DOM structure compatable with ContentFlow Items, a sub-array by category
+ * 4: push above onto contentflow container items node
+ * 5: Only when full structure is built, initialise ContentFlow instance. 
+ * 
+ * @type type
+ */
 
 var weddingfest07 = {
     
@@ -10,38 +23,42 @@ var weddingfest07 = {
     THUMBPATH       : "/images/gallery/thmb/", //TODO
 
     //categories:
-    ALL_IMAGES          : -1,
-    EVENT_SETUP_DAY1    : 10,
-    EVENT_SETUP_DAY2    : 11,
-    EVENT_CEREMONY      : 20,
-    EVENT_DINNER        : 30,
-    EVENT_ARRIVAL       : 31,
-    EVENT_DINNER2       : 40,
-    EVENT_PARTY1        : 41,
-    EVENT_PARTY2        : 42,
-    EVENT_HANGOVER      : 50,
+    categories : {
+        "ALL_IMAGES"          : -1,
+        "EVENT_SETUP_DAY1"    : 10,
+        "EVENT_SETUP_DAY2"    : 11,
+        "EVENT_CEREMONY"      : 20,
+        "EVENT_DINNER"        : 30,
+        "EVENT_ARRIVAL"       : 31,
+        "EVENT_DINNER2"       : 40,
+        "EVENT_PARTY1"        : 41,
+        "EVENT_PARTY2"        : 42,
+        "EVENT_HANGOVER"      : 50,
 
-    //honeymoon
-    HM_GENERAL          : 60,
-    HM_SHED             : 70,
-    HM_FORT             : 80,
-    HM_SADDELL          : 90,
-    HM_WWHEEL           : 100,
-    HM_SKIPNESS         : 110,
-    HM_SFCABIN          : 120,
-    HM_TARBERT          : 130,
-    HM_KILBERRY         : 140,
-    HM_OWL              : 150,
-    HM_HOME             : 160,
-    HM_WESTPORT         : 170,
-    HM_GDNS             : 180,
-    HM_OTHER            : 190,
+        //honeymoon
+        "HM_GENERAL"          : 60,
+        "HM_SHED"             : 70,
+        "HM_FORT"             : 80,
+        "HM_SADDELL"          : 90,
+        "HM_WWHEEL"           : 100,
+        "HM_SKIPNESS"         : 110,
+        "HM_SFCABIN"          : 120,
+        "HM_TARBERT"          : 130,
+        "HM_KILBERRY"         : 140,
+        "HM_OWL"              : 150,
+        "HM_HOME"             : 160,
+        "HM_WESTPORT"         : 170,
+        "HM_GDNS"             : 180,
+        "HM_OTHER"            : 190,
 
-    TEST                : 999,
+        "TEST"                : 999
+    },
     
     
     flowDOM : null,
-    loadContentFlow : false,
+    //loadContentFlow : false,
+    ContentFlowConfig : null,
+    ContentFlowInstance : null,
     
     //data:
     arr : new Array(),
@@ -53,19 +70,24 @@ var weddingfest07 = {
  */
     init : function(config){
         console.log("loading library with params:");
-        console.log(config);
-        this.loadContentFlow = config.loadContentFlow;// = config.
         
+        this.ContentFlowConfig = config;
+        console.log(this.ContentFlowConfig);
         //load the data into the array:
         this.loadImageArray();
+        //console.log(this.arr);
         
         //build contentflow outer in main content area:
-        this.buildFlowContainer(config);
+        //this.ContentFlowInstance = this.buildFlowContainer(config);
         
+        
+        //console.log($(this.ContentFlowInstance));
+        
+        /*
+         * Once we have this, we can push arrays of images onto it - hopefully...
+         */
         //build links (test):
-        this.buildFlowLinks(config);
-        
-
+        this.buildFlowLinks();
     },
 
     /*
@@ -871,11 +893,13 @@ var weddingfest07 = {
             <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
         </div>
      */
-    buildFlowContainer : function(config){
-        $("#" + config.displaytargetId).empty();
-        var ContentFlow = document.createElement("div");
-        //ContentFlow.setAttribute("class","ContentFlow");
-        ContentFlow.setAttribute("id","contentFlow");
+    buildFlowContainer : function(){
+        console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId);
+        //remove prior contentflow
+        $("#" + this.ContentFlowConfig.displaytargetId).empty();
+        
+        var ContentFlowContainer = document.createElement("div");
+        ContentFlowContainer.setAttribute("id","contentFlow");
         
         var loadIndicator = document.createElement("div");
         loadIndicator.setAttribute("class","loadIndicator");
@@ -888,71 +912,84 @@ var weddingfest07 = {
         
         //and assemble:
         loadIndicator.appendChild(indicator);
-        ContentFlow.appendChild(loadIndicator);
-        ContentFlow.appendChild(flow);
+        ContentFlowContainer.appendChild(loadIndicator);
+        ContentFlowContainer.appendChild(flow);
         
-        //console.log("appending " + ContentFlow);
-        $("#" + config.displaytargetId).append(ContentFlow);
-        this.flowDOM = ContentFlow;
-        //return ContentFlow; //so I can build on it
-        
+        $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
+    },
+    
+    //clear out the flow container:
+    clearFlowContainer : function(){
+        $("#" + this.ContentFlowConfig.displaytargetId).empty();
     },
 
-    buildFlowLinks : function(config){
-        var x = document.createElement("div");
-        x.appendChild(document.createTextNode("TEST LINK"));
-        $(x).click(function(){
-
-            //initialise content flow with specified flags:
-            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY1,this.flowDOM);
-            
-            //load contentflow:
-            if(config.loadContentFlow){
-                console.log("loading flow 1...");
-                var myNewFlow = new ContentFlow("contentFlow", {} ) ;
-            }
-        });
-        $("#" + config.linksTargetId).append($(x));
+//currently TEST:
+    buildFlowLinks : function(){
         
-        var y = document.createElement("div");
-        y.appendChild(document.createTextNode("TEST LINK2"));
-        $(y).click(function(){
-            //initialise content flow with specified flags:
-            weddingfest07.loadImagesForContentFlow(weddingfest07.EVENT_SETUP_DAY2);
+        var _outer = document.createElement("div");
+        
+        for(var p in this.categories){
+            console.log(p +" = "+this.categories[p]);
             
-            //load contentflow:
-            if(config.loadContentFlow){
-                console.log("loading flow 2...");
-                var myNewFlow = new ContentFlow("contentFlow", { } ) ;
-            }
-        });
-        $("#" + config.linksTargetId).append($(y));
+            var x = document.createElement("div");
+            x.setAttribute("data-image-category",this.categories[p]);
+            x.appendChild(document.createTextNode(p));
+            $(x).click(function(){
+                //initialise content flow with specified flags:
+                if(weddingfest07.ContentFlowConfig.loadContentFlow){
+                    console.log("loading flow for " + $(this).attr("data-image-category") + "...");
+                    
+                    //build DOM structure:
+                    weddingfest07.buildFlowContainer();
+                    
+                    //append images:
+                    weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category"));
+                    
+                    //var myNewFlow = new ContentFlow("contentFlow", {} ) ;
+                    //console.log(myNewFlow);
+                    //weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category"),myNewFlow);
+                }
+            });
+            _outer.appendChild(x);
+        }
+
+        $("#" + this.ContentFlowConfig.linksTargetId).append($(_outer));
+
     },
 
 
     /*
      * New method
+     * returns an array of DOM elements to append to contentflow instance
      */
     loadImagesForContentFlow : function(categoryFlag){
+        
         console.log("loading images for " + categoryFlag);
         //get raw data usingf existing function:
         var _temp = this.getTempArr(categoryFlag);
         var _out = "";
-        console.log(_temp);
+        //console.log(_temp);
         for(var a=0;a<_temp.length;a++){
-            //build DOM here, test with strings...
-                        /*
+            
+            //build DOM structure to append:
+            /*
              *         <div class="item">
              *             <img class="content" src="someImageFile.jpg"/>
              *             <div class="caption">Your_Image_Title</div>
              *         </div>
              */
-            _out += "<div class=\"item\"><img class=\"content\" src=\"" 
-                    + _temp[a].src + "\"/><div class=\"caption\">" 
-                    + _temp[a].alt + "</div></div>";
+            var item = document.createElement("div");
+            item.setAttribute("class","item");
+            var img = document.createElement("img");
+            img.setAttribute("src",_temp[a].src);
+            img.setAttribute("class","content");
+            var caption = document.createElement("div");
+            caption.setAttribute("class","caption");
+            caption.appendChild(document.createTextNode(_temp[a].alt));
+            item.appendChild(img);
+            item.appendChild(caption);
         }
-        
-        $(this.flowDOM).find("div.flow").html(_out);
+        return _out;
     },
 
 
