@@ -24,12 +24,12 @@ var weddingfest07 = {
 
     //categories:
     categories : {
-        ALL_IMAGES          : -1,
+        //ALL_IMAGES          : -1,
         EVENT_SETUP_DAY1    : 10,
         EVENT_SETUP_DAY2    : 11,
         EVENT_CEREMONY      : 20,
         EVENT_DINNER        : 30,
-        EVENT_ARRIVAL       : 31,
+        //EVENT_ARRIVAL       : 31,
         EVENT_DINNER2       : 40,
         EVENT_PARTY1        : 41,
         EVENT_PARTY2        : 42,
@@ -51,16 +51,13 @@ var weddingfest07 = {
         HM_GDNS             : 180,
         HM_OTHER            : 190,
 
-        TEST                : 999
+        //TEST                : 999
     },
     
-    
-    //flowDOM : null,
-    //loadContentFlow : false,
     ContentFlowConfig : null,
     ContentFlowInstance : null,
     
-    //data:
+    //Image data:
     arr : new Array(),
 
 /*
@@ -69,10 +66,9 @@ var weddingfest07 = {
  * @returns {undefined}
  */
     init : function(config){
-        //console.log("loading library with params:");
         
         this.ContentFlowConfig = config;
-        console.log(this.ContentFlowConfig);
+        //console.log(this.ContentFlowConfig);
         //load the data into the array:
         this.loadImageArray();
         
@@ -80,8 +76,6 @@ var weddingfest07 = {
          * Once we have this, we can push arrays of images onto it - hopefully...
          */
         this.buildFlowLinks();
-        
-
     },
 
     /*
@@ -878,10 +872,13 @@ var weddingfest07 = {
 
     /*
      * build the flow container in the body area:
-     *  <div class="ContentFlow">
+        <div class="ContentFlow">
             <div class="loadIndicator"><div class="indicator"></div></div>
             <div class="flow">
-                <img class="item" src="someImageFile.jpg" title="Your_Image_Title"/>
+                <div class="item">
+                    <img class="content" src="someImageFile.jpg"/>
+                    <div class="caption">Your_Image_Title</div>
+                </div>
                 <!-- Add as many items as you like. -->
             </div>
             <div class="globalCaption"></div>
@@ -889,27 +886,40 @@ var weddingfest07 = {
         </div>
      */
     buildFlowContainer : function(DOMImageList){
-        console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId);// + "\nUsing:");
+        //console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId);// + "\nUsing:");
         //console.log(DOMImageList);
         //remove prior contentflow
         $("#" + this.ContentFlowConfig.displaytargetId).empty();
         
         var ContentFlowContainer = document.createElement("div");
         ContentFlowContainer.setAttribute("id","contentFlow");
-        //ContentFlowContainer.setAttribute("class","ContentFlow");
+        //ContentFlowContainer.setAttribute("class","ContentFlow"); //don't need this if loaded programmatically
         
+        //load indicator
         var loadIndicator = document.createElement("div");
         loadIndicator.setAttribute("class","loadIndicator");
         
         var indicator = document.createElement("div");
         indicator.setAttribute("class","indicator");
+        loadIndicator.appendChild(indicator);
         
+        //scrollbar:
+        var scrollbar = document.createElement("div");
+        scrollbar.setAttribute("class","scrollbar");
+        
+        //slider
+        var slider = document.createElement("div");
+        slider.setAttribute("class","slider");
+        scrollbar.appendChild(slider);        
+        
+        //Item container:
         var flow = document.createElement("div");
         flow.setAttribute("class","flow");
         
         //and assemble:
-        loadIndicator.appendChild(indicator);
-        //ContentFlowContainer.appendChild(loadIndicator);
+        
+        ContentFlowContainer.appendChild(loadIndicator);
+        
         
         //and push the items onto the flow element:
         for(var a=0;a<DOMImageList.length;a++){
@@ -917,9 +927,10 @@ var weddingfest07 = {
         }        
         
         ContentFlowContainer.appendChild(flow);
- 
+        ContentFlowContainer.appendChild(scrollbar);
+        
         $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
-        console.log("DOM created OK");
+        //console.log("DOM created OK");
     },
     
     //clear out the flow container:
@@ -930,31 +941,59 @@ var weddingfest07 = {
     //currently TEST:
     buildFlowLinks : function(){
         
-        var _outer = document.createElement("div");
-        
+        //var _outer = document.createElement("div");
+        var _outer = document.createElement("select");
+        _outer.setAttribute("id","image_display_trigger");
         for(var p in this.categories){
             
-            var x = document.createElement("div");
+            //var x = document.createElement("div");
+            var x = document.createElement("option");
             x.setAttribute("data-image-category",this.categories[p]);
-            x.appendChild(document.createTextNode(p));
-            $(x).click(function(){
-                //initialise content flow with specified flags:
-                if(weddingfest07.ContentFlowConfig.loadContentFlow){
-                    //build DOM structure:
-                    weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category")));
-                    
-                    /*
-                     * And initialise the contentflow:
-                     */
-                    var myNewFlow = new ContentFlow("contentFlow");
-                    myNewFlow.init();
-                    console.log(myNewFlow);
-                }
-            });
+            x.appendChild(document.createTextNode(p));  //append thumbnail here? and tile?
+//            $(x).click(function(){
+//                //initialise content flow with specified flags:
+//                if(weddingfest07.ContentFlowConfig.loadContentFlow){
+//                    //clear existing:
+//                    weddingfest07.clearFlowContainer();
+//                    
+//                    //build DOM structure:
+//                    weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category")));
+//                    
+//                    /*
+//                     * And initialise the contentflow:
+//                     */
+//                    var myNewFlow = new ContentFlow("contentFlow");
+//                    myNewFlow.init();
+//                    console.log(myNewFlow);
+//                }
+//            });
             _outer.appendChild(x);
         }
+        
+        var btn = document.createElement("input");
+        btn.setAttribute("type","button");
+        btn.setAttribute("value","OK");
+        $(btn).click(function(){
+            //initialise content flow with specified flags:
+            if(weddingfest07.ContentFlowConfig.loadContentFlow){
+                //clear existing:
+                weddingfest07.clearFlowContainer();
+
+                //build DOM structure:
+                weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($("#image_display_trigger option:selected").attr("data-image-category")));
+
+                /*
+                 * And initialise the contentflow:
+                 */
+                var myNewFlow = new ContentFlow("contentFlow");
+                myNewFlow.init();
+                console.log(myNewFlow);
+            }
+        });
+        
 
         $("#" + this.ContentFlowConfig.linksTargetId).append($(_outer));
+        $("#" + this.ContentFlowConfig.linksTargetId).append($(btn));
         console.log("Done building DOM");
     },
 
@@ -1174,7 +1213,7 @@ var weddingfest07 = {
             for(var a=1;a<this.arr.length;a++)
             {
                 //check for image category : this.
-                if(category === this.arr[a].category || category === this.categories.ALL_IMAGES)
+                if(category === this.arr[a].category)// || category === this.categories.ALL_IMAGES)
                 {
                     tempArr.push(this.arr[a]);
                 }
