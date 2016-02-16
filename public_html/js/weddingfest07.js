@@ -68,9 +68,11 @@ var weddingfest07 = {
     init : function(config){
         
         this.ContentFlowConfig = config;
-        //console.log(this.ContentFlowConfig);
+        
         //load the data into the array:
         this.loadImageArray();
+        
+        //NEW: Build ALL images:
         
         /*
          * Once we have this, we can push arrays of images onto it - hopefully...
@@ -867,27 +869,18 @@ var weddingfest07 = {
         for(var a=0;a<this.arr.length;a++){
             this.arr[a].src = this.IMGPATH + this.arr[a].src;
             this.arr[a].category = this.arr[a].category + "";   //because the attr I compare with is a string now
+            
+            //load an Image() object for each:
+            this.arr[a].img = new Image();
+            this.arr[a].img.src = this.arr[a].src;
         }  
     },
 
     /*
      * build the flow container in the body area:
-        <div class="ContentFlow">
-            <div class="loadIndicator"><div class="indicator"></div></div>
-            <div class="flow">
-                <div class="item">
-                    <img class="content" src="someImageFile.jpg"/>
-                    <div class="caption">Your_Image_Title</div>
-                </div>
-                <!-- Add as many items as you like. -->
-            </div>
-            <div class="globalCaption"></div>
-            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
-        </div>
      */
     buildFlowContainer : function(DOMImageList){
-        //console.log("loading ContentFlow container into " + this.ContentFlowConfig.displaytargetId);// + "\nUsing:");
-        //console.log(DOMImageList);
+
         //remove prior contentflow
         $("#" + this.ContentFlowConfig.displaytargetId).empty();
         
@@ -917,9 +910,7 @@ var weddingfest07 = {
         flow.setAttribute("class","flow");
         
         //and assemble:
-        
         ContentFlowContainer.appendChild(loadIndicator);
-        
         
         //and push the items onto the flow element:
         for(var a=0;a<DOMImageList.length;a++){
@@ -928,9 +919,11 @@ var weddingfest07 = {
         
         ContentFlowContainer.appendChild(flow);
         ContentFlowContainer.appendChild(scrollbar);
-        
+
         $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
-        //console.log("DOM created OK");
+        $("#" + this.ContentFlowConfig.displaytargetId).load(function(){
+            console.log("LOAD CONTENTFLOW FROM LOAD FUNCTION");
+        });
     },
     
     //clear out the flow container:
@@ -941,32 +934,13 @@ var weddingfest07 = {
     //currently TEST:
     buildFlowLinks : function(){
         
-        //var _outer = document.createElement("div");
         var _outer = document.createElement("select");
         _outer.setAttribute("id","image_display_trigger");
         for(var p in this.categories){
             
-            //var x = document.createElement("div");
             var x = document.createElement("option");
             x.setAttribute("data-image-category",this.categories[p].id);
             x.appendChild(document.createTextNode(this.categories[p].name));  //append thumbnail here? and tile?
-//            $(x).click(function(){
-//                //initialise content flow with specified flags:
-//                if(weddingfest07.ContentFlowConfig.loadContentFlow){
-//                    //clear existing:
-//                    weddingfest07.clearFlowContainer();
-//                    
-//                    //build DOM structure:
-//                    weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($(this).attr("data-image-category")));
-//                    
-//                    /*
-//                     * And initialise the contentflow:
-//                     */
-//                    var myNewFlow = new ContentFlow("contentFlow");
-//                    myNewFlow.init();
-//                    console.log(myNewFlow);
-//                }
-//            });
             _outer.appendChild(x);
         }
         
@@ -974,10 +948,9 @@ var weddingfest07 = {
         btn.setAttribute("type","button");
         btn.setAttribute("value","OK");
         $(btn).click(function(){
+            
             //initialise content flow with specified flags:
             if(weddingfest07.ContentFlowConfig.loadContentFlow){
-                //clear existing:
-                weddingfest07.clearFlowContainer();
 
                 //build DOM structure:
                 weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($("#image_display_trigger option:selected").attr("data-image-category")));
@@ -985,16 +958,15 @@ var weddingfest07 = {
                 /*
                  * And initialise the contentflow:
                  */
+                console.log("INIT CONTENTFLOW FROM buildFowLinks()");
                 var myNewFlow = new ContentFlow("contentFlow");
                 myNewFlow.init();
-                //console.log(myNewFlow);
             }
         });
         
 
         $("#" + this.ContentFlowConfig.linksTargetId).append($(_outer));
         $("#" + this.ContentFlowConfig.linksTargetId).append($(btn));
-        //console.log("Done building DOM");
     },
 
 
@@ -1004,25 +976,19 @@ var weddingfest07 = {
      */
     loadImagesForContentFlow : function(categoryFlag){
         
-        //console.log("loading images for " + categoryFlag);
         //get raw data using existing function:
         var _temp = this.getTempArr(categoryFlag);
         var _out = [];
-        //console.log(_temp);
+
         for(var a=0;a<_temp.length;a++){
             
-            //build DOM structure to append:
-            /*
-             *         <div class="item">
-             *             <img class="content" src="someImageFile.jpg"/>
-             *             <div class="caption">Your_Image_Title</div>
-             *         </div>
-             */
+            //build DOM structure for content flow items to append:
             var item = document.createElement("div");
             item.setAttribute("class","item");
             var img = document.createElement("img");
             
-            img.setAttribute("src",_temp[a].src);
+            //img.setAttribute("src",_temp[a].src);
+            img.setAttribute("src",_temp[a].img.src);
             img.setAttribute("class","content");
             var caption = document.createElement("div");
             caption.setAttribute("class","caption");
@@ -1032,7 +998,7 @@ var weddingfest07 = {
             
             _out.push(item);
         }
-        //console.log("returning sub array");
+
         return _out;
     },
 
@@ -1068,143 +1034,143 @@ var weddingfest07 = {
         }
     },
 
-    displayImageTag : function (){
-        try
-        {
-            var orientationArray = new Array();
-            orientationArray.push(new Array(670,600));  //landscape
-            orientationArray.push(new Array(510,750));  //portrait
-            orientationArray.push(new Array(670,547));  //landscape
-            orientationArray.push(new Array(450,750));  //portrait
-
-            //get the image:
-            var out = "";
-            var params = getURLParams();
-            var tempArr = getTempArr(params.category);
-            var orientation = tempArr[params.img].orientation;
-
-            var width;
-            var height;
-            var alttext;
-            if(params)
-            {
-                width = orientationArray[orientation][0];
-                height = orientationArray[orientation][1];
-                alttext = tempArr[params.img].src;
-                if(tempArr[params.img].alt.length > 0)
-                {
-                    alttext = tempArr[params.img].alt;
-                }
-                //out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + tempArr[params.img].alt + "\" class=\"center_img\" />";
-                out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + alttext + "\" class=\"center_img\" />";
-                self.window.resizeTo(width,height);
-            }   
-            document.write(out);
-        }
-
-        catch(e)
-        {
-            //alert("Error in method displayImageTag(): "+e.message)
-        }
-    },
-
-    /**
-     * I need to build the temp array so the pagination works correctly!
-     * */
-    nextImage : function (){
-        try
-        {
-            var out         = "";
-            var params = getURLParams();   
-
-            //populate tempArr:
-            var tempArr = getTempArr(params.category);
-
-            //increment the image index ID:
-            params.img++;
-            if(params.img >= tempArr.length)
-                params.img = 0;   //this needs to be the tempArr.length value when I build it
-            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Next image" />Next</a>'; 
-
-            document.write(out);
-        }
-        catch(e)
-        {
-            alert("Error in method nextImage(): " + e.message);
-        }
-    },
-    /**
-     * I need to build the temp array so the pagination works correctly!
-     * */
-    prevImage : function (){
-        try
-        {
-            var out         = "";
-            var params = this.getURLParams();
-
-            //populate tempArr:
-            var tempArr = this.getTempArr(params.category);
-
-            //decrement the image ID:
-            params.img--;
-            if(params.img <0)
-                params.img = tempArr.length-1;
-            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Previous image" />Back</a>'; 
-
-            document.write(out);
-        }
-        catch(e)
-        {
-            alert("Error in method prevImage(): "+e.message);
-        }
-    },
-
-    /**
-     * Generate a thumbnail list from
-     * image array. This assumes that 
-     * a corresponding prefixed thumbnail
-     * exists for each image, with the
-     * configured prefix.  
-     * 
-     * NOTE: this method simply lists IMG tags
-     * for each image. It does NOT generate any arrays.
-     * This only happens when the popup is created.
-     * 
-     * A dynamically generated javascript call of 
-     * the form:
-     * 
-     *   onclick=javascript:showImage([string imageIndex],int category)
-     *   
-     * is created for each image. clicking this passes the relevant image
-     * array index reference and category ID to the popup URL parameter.              
-     *  */
-    getThumbs : function (category)
-    {
-        try
-        {
-            var out = "";
-            var tempArr = getTempArr(category);
-            var alttext;
-
-            for(var a=0;a<tempArr.length;a++)
-            {
-                alttext = tempArr[a].src;
-                if(tempArr[a].alt.length > 0)
-                {
-                    alttext = tempArr[a].alt;
-                }
-                out += "<a onClick=\"javascript:showImage('" + a + "'," + category + ");return false;\" href=\"*\" title=\"" + alttext + "\" target=\"_blank\">\n";
-                //out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + tempArr[a].alt + "("+tempArr[a].src+")\" class=\"center_img\" />\n";
-                out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + alttext +"\" class=\"center_img\" />\n";
-                out += "</a>\n";
-            }
-            document.write(out);
-        }
-        catch(ex)
-        {
-            alert("Error in method getThumbs(): "+ex.message);
-        }
-    },
+//    displayImageTag : function (){
+//        try
+//        {
+//            var orientationArray = new Array();
+//            orientationArray.push(new Array(670,600));  //landscape
+//            orientationArray.push(new Array(510,750));  //portrait
+//            orientationArray.push(new Array(670,547));  //landscape
+//            orientationArray.push(new Array(450,750));  //portrait
+//
+//            //get the image:
+//            var out = "";
+//            var params = getURLParams();
+//            var tempArr = getTempArr(params.category);
+//            var orientation = tempArr[params.img].orientation;
+//
+//            var width;
+//            var height;
+//            var alttext;
+//            if(params)
+//            {
+//                width = orientationArray[orientation][0];
+//                height = orientationArray[orientation][1];
+//                alttext = tempArr[params.img].src;
+//                if(tempArr[params.img].alt.length > 0)
+//                {
+//                    alttext = tempArr[params.img].alt;
+//                }
+//                //out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + tempArr[params.img].alt + "\" class=\"center_img\" />";
+//                out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + alttext + "\" class=\"center_img\" />";
+//                self.window.resizeTo(width,height);
+//            }   
+//            document.write(out);
+//        }
+//
+//        catch(e)
+//        {
+//            //alert("Error in method displayImageTag(): "+e.message)
+//        }
+//    },
+//
+//    /**
+//     * I need to build the temp array so the pagination works correctly!
+//     * */
+//    nextImage : function (){
+//        try
+//        {
+//            var out         = "";
+//            var params = getURLParams();   
+//
+//            //populate tempArr:
+//            var tempArr = getTempArr(params.category);
+//
+//            //increment the image index ID:
+//            params.img++;
+//            if(params.img >= tempArr.length)
+//                params.img = 0;   //this needs to be the tempArr.length value when I build it
+//            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Next image" />Next</a>'; 
+//
+//            document.write(out);
+//        }
+//        catch(e)
+//        {
+//            alert("Error in method nextImage(): " + e.message);
+//        }
+//    },
+//    /**
+//     * I need to build the temp array so the pagination works correctly!
+//     * */
+//    prevImage : function (){
+//        try
+//        {
+//            var out         = "";
+//            var params = this.getURLParams();
+//
+//            //populate tempArr:
+//            var tempArr = this.getTempArr(params.category);
+//
+//            //decrement the image ID:
+//            params.img--;
+//            if(params.img <0)
+//                params.img = tempArr.length-1;
+//            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Previous image" />Back</a>'; 
+//
+//            document.write(out);
+//        }
+//        catch(e)
+//        {
+//            alert("Error in method prevImage(): "+e.message);
+//        }
+//    },
+//
+//    /**
+//     * Generate a thumbnail list from
+//     * image array. This assumes that 
+//     * a corresponding prefixed thumbnail
+//     * exists for each image, with the
+//     * configured prefix.  
+//     * 
+//     * NOTE: this method simply lists IMG tags
+//     * for each image. It does NOT generate any arrays.
+//     * This only happens when the popup is created.
+//     * 
+//     * A dynamically generated javascript call of 
+//     * the form:
+//     * 
+//     *   onclick=javascript:showImage([string imageIndex],int category)
+//     *   
+//     * is created for each image. clicking this passes the relevant image
+//     * array index reference and category ID to the popup URL parameter.              
+//     *  */
+//    getThumbs : function (category)
+//    {
+//        try
+//        {
+//            var out = "";
+//            var tempArr = getTempArr(category);
+//            var alttext;
+//
+//            for(var a=0;a<tempArr.length;a++)
+//            {
+//                alttext = tempArr[a].src;
+//                if(tempArr[a].alt.length > 0)
+//                {
+//                    alttext = tempArr[a].alt;
+//                }
+//                out += "<a onClick=\"javascript:showImage('" + a + "'," + category + ");return false;\" href=\"*\" title=\"" + alttext + "\" target=\"_blank\">\n";
+//                //out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + tempArr[a].alt + "("+tempArr[a].src+")\" class=\"center_img\" />\n";
+//                out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + alttext +"\" class=\"center_img\" />\n";
+//                out += "</a>\n";
+//            }
+//            document.write(out);
+//        }
+//        catch(ex)
+//        {
+//            alert("Error in method getThumbs(): "+ex.message);
+//        }
+//    },
 
     //return a sub array:
     getTempArr : function (category){
@@ -1233,62 +1199,62 @@ var weddingfest07 = {
      * return the image index ID and category ID from 
      * page URL params.
      * */
-    getURLParams : function (){
-        try
-        {
-            var location    = window.location.toString();
-            var result = new Object();
-            if(location.indexOf("img=") !== -1 && location.indexOf("category=") !== -1)
-            {
-                var params = location.split("?")[1].split("&");
-                for(var a=0;a<params.length;a++)
-                {
-                    if(params[a].split("=")[0] === "img")
-                        result.img = params[a].split("=")[1];
-
-                    if(params[a].split("=")[0] === "category")
-                        result.category = params[a].split("=")[1];
-                }
-            }
-            return(result);
-        }
-
-        catch(e)
-        {
-            return(false);
-        }
-    },
-
-    writeTopMenu : function (pageurl){
-        try
-        {
-            var page = pageurl.toString().split("/")[pageurl.toString().split("/").length-1].split(".")[0];
-            var output = "<ul class=\"nav\">";
-            var output2 = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"800\"><tr>"
-            var suffix = "shtml";
-            var root = "weddingfest07/";
-            var topnavarray = new Array(["index","Home"],["concept","Concept"],["gallery","Gallery"],["thanks","Thank you"]);
-            for(var a=0;a<topnavarray.length;a++)
-            {
-                if(topnavarray[a][0] === page)
-                {
-                    output2 += "<td class=\"hilite\"><img src=\"/images/structure/celtic_small_purple.gif\" alt=\"bullet\" class=\"navbullet\" />"+topnavarray[a][1]+"</td>";
-                    output += "<li class=\"hilite\">"+topnavarray[a][1]+"</li>";
-                }
-                else
-                {
-                    output2 += "<td class=\"nav\"><img src=\"/images/structure/celtic_small.gif\" alt=\"bullet\" class=\"navbullet\" /><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></td>";
-                    output += "<li class=\"nav\"><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></li>";
-                }
-            }
-            output2 += "</tr></table>";
-            output += "</ul>";
-            //document.write("<xmp>"+output+"</xmp>");
-            document.write(output2);
-        }
-        catch(e)
-        {}
-    }   
+//    getURLParams : function (){
+//        try
+//        {
+//            var location    = window.location.toString();
+//            var result = new Object();
+//            if(location.indexOf("img=") !== -1 && location.indexOf("category=") !== -1)
+//            {
+//                var params = location.split("?")[1].split("&");
+//                for(var a=0;a<params.length;a++)
+//                {
+//                    if(params[a].split("=")[0] === "img")
+//                        result.img = params[a].split("=")[1];
+//
+//                    if(params[a].split("=")[0] === "category")
+//                        result.category = params[a].split("=")[1];
+//                }
+//            }
+//            return(result);
+//        }
+//
+//        catch(e)
+//        {
+//            return(false);
+//        }
+//    },
+//
+//    writeTopMenu : function (pageurl){
+//        try
+//        {
+//            var page = pageurl.toString().split("/")[pageurl.toString().split("/").length-1].split(".")[0];
+//            var output = "<ul class=\"nav\">";
+//            var output2 = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"800\"><tr>"
+//            var suffix = "shtml";
+//            var root = "weddingfest07/";
+//            var topnavarray = new Array(["index","Home"],["concept","Concept"],["gallery","Gallery"],["thanks","Thank you"]);
+//            for(var a=0;a<topnavarray.length;a++)
+//            {
+//                if(topnavarray[a][0] === page)
+//                {
+//                    output2 += "<td class=\"hilite\"><img src=\"/images/structure/celtic_small_purple.gif\" alt=\"bullet\" class=\"navbullet\" />"+topnavarray[a][1]+"</td>";
+//                    output += "<li class=\"hilite\">"+topnavarray[a][1]+"</li>";
+//                }
+//                else
+//                {
+//                    output2 += "<td class=\"nav\"><img src=\"/images/structure/celtic_small.gif\" alt=\"bullet\" class=\"navbullet\" /><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></td>";
+//                    output += "<li class=\"nav\"><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></li>";
+//                }
+//            }
+//            output2 += "</tr></table>";
+//            output += "</ul>";
+//            //document.write("<xmp>"+output+"</xmp>");
+//            document.write(output2);
+//        }
+//        catch(e)
+//        {}
+//    }   
 
 };
 
