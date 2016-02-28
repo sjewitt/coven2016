@@ -865,13 +865,33 @@ var weddingfest07 = {
         this.arr.push({src:"web_0656.jpg",orientation:0,alt:"",category : this.categories.HM_GDNS.id});
         this.arr.push({src:"web_0657.jpg",orientation:0,alt:"",category : this.categories.HM_GDNS.id});
         
+        var allImagesLoaded = false;
         //and prefix the URL with path:
         for(var a=0;a<this.arr.length;a++){
+            
             this.arr[a].src = this.IMGPATH + this.arr[a].src;
             this.arr[a].category = this.arr[a].category + "";   //because the attr I compare with is a string now
             
             //load an Image() object for each:
             this.arr[a].img = new Image();
+            
+            
+
+            function loaded() {
+                console.log('loaded '+a);
+            }
+
+            if (this.arr[a].img.complete) {
+                loaded();
+            } else {
+                this.arr[a].img.addEventListener('load', loaded);
+                this.arr[a].img.addEventListener('error', function() {
+                    console.log('error');
+                });
+            }
+            
+            
+            
             this.arr[a].img.src = this.arr[a].src;
         }  
     },
@@ -959,9 +979,14 @@ var weddingfest07 = {
                  * And initialise the contentflow:
                  */
                 console.log("INIT CONTENTFLOW FROM buildFowLinks()");
-                var myNewFlow = new ContentFlow("contentFlow");
+                var conf = {
+                    "onclickActiveItem":weddingfest07.contentFlowItemClickHandler,
+                    "circularFlow":true
+                };
+                var myNewFlow = new ContentFlow("contentFlow",conf);
+                
                 myNewFlow.init();
-            }
+            };
         });
         
 
@@ -969,6 +994,25 @@ var weddingfest07 = {
         $("#" + this.ContentFlowConfig.linksTargetId).append($(btn));
     },
 
+    /*
+     * Build overlay for selected image:
+     * @returns {undefined}
+     */
+    contentFlowItemClickHandler : function(){
+        var src = $(this.getActiveItem().canvas).attr("src");
+        console.log(src);
+        
+//        var _img = document.createElement("img");
+//        _img.setAttribute("src",src);
+        
+        var _img = new Image();
+        _img.src = src;
+        
+        //trigger featherlight:
+        var _config = {};
+        $.featherlight($(_img), _config);
+        
+    },
 
     /*
      * New method
@@ -1034,144 +1078,6 @@ var weddingfest07 = {
         }
     },
 
-//    displayImageTag : function (){
-//        try
-//        {
-//            var orientationArray = new Array();
-//            orientationArray.push(new Array(670,600));  //landscape
-//            orientationArray.push(new Array(510,750));  //portrait
-//            orientationArray.push(new Array(670,547));  //landscape
-//            orientationArray.push(new Array(450,750));  //portrait
-//
-//            //get the image:
-//            var out = "";
-//            var params = getURLParams();
-//            var tempArr = getTempArr(params.category);
-//            var orientation = tempArr[params.img].orientation;
-//
-//            var width;
-//            var height;
-//            var alttext;
-//            if(params)
-//            {
-//                width = orientationArray[orientation][0];
-//                height = orientationArray[orientation][1];
-//                alttext = tempArr[params.img].src;
-//                if(tempArr[params.img].alt.length > 0)
-//                {
-//                    alttext = tempArr[params.img].alt;
-//                }
-//                //out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + tempArr[params.img].alt + "\" class=\"center_img\" />";
-//                out = "<img src=\"" + IMGPATH + tempArr[params.img].src + "\" alt=\"" + alttext + "\" class=\"center_img\" />";
-//                self.window.resizeTo(width,height);
-//            }   
-//            document.write(out);
-//        }
-//
-//        catch(e)
-//        {
-//            //alert("Error in method displayImageTag(): "+e.message)
-//        }
-//    },
-//
-//    /**
-//     * I need to build the temp array so the pagination works correctly!
-//     * */
-//    nextImage : function (){
-//        try
-//        {
-//            var out         = "";
-//            var params = getURLParams();   
-//
-//            //populate tempArr:
-//            var tempArr = getTempArr(params.category);
-//
-//            //increment the image index ID:
-//            params.img++;
-//            if(params.img >= tempArr.length)
-//                params.img = 0;   //this needs to be the tempArr.length value when I build it
-//            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Next image" />Next</a>'; 
-//
-//            document.write(out);
-//        }
-//        catch(e)
-//        {
-//            alert("Error in method nextImage(): " + e.message);
-//        }
-//    },
-//    /**
-//     * I need to build the temp array so the pagination works correctly!
-//     * */
-//    prevImage : function (){
-//        try
-//        {
-//            var out         = "";
-//            var params = this.getURLParams();
-//
-//            //populate tempArr:
-//            var tempArr = this.getTempArr(params.category);
-//
-//            //decrement the image ID:
-//            params.img--;
-//            if(params.img <0)
-//                params.img = tempArr.length-1;
-//            out = '<a href="/weddingfest07/popup.htm?img=' + params.img + '&category=' + params.category + '" title="Previous image" />Back</a>'; 
-//
-//            document.write(out);
-//        }
-//        catch(e)
-//        {
-//            alert("Error in method prevImage(): "+e.message);
-//        }
-//    },
-//
-//    /**
-//     * Generate a thumbnail list from
-//     * image array. This assumes that 
-//     * a corresponding prefixed thumbnail
-//     * exists for each image, with the
-//     * configured prefix.  
-//     * 
-//     * NOTE: this method simply lists IMG tags
-//     * for each image. It does NOT generate any arrays.
-//     * This only happens when the popup is created.
-//     * 
-//     * A dynamically generated javascript call of 
-//     * the form:
-//     * 
-//     *   onclick=javascript:showImage([string imageIndex],int category)
-//     *   
-//     * is created for each image. clicking this passes the relevant image
-//     * array index reference and category ID to the popup URL parameter.              
-//     *  */
-//    getThumbs : function (category)
-//    {
-//        try
-//        {
-//            var out = "";
-//            var tempArr = getTempArr(category);
-//            var alttext;
-//
-//            for(var a=0;a<tempArr.length;a++)
-//            {
-//                alttext = tempArr[a].src;
-//                if(tempArr[a].alt.length > 0)
-//                {
-//                    alttext = tempArr[a].alt;
-//                }
-//                out += "<a onClick=\"javascript:showImage('" + a + "'," + category + ");return false;\" href=\"*\" title=\"" + alttext + "\" target=\"_blank\">\n";
-//                //out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + tempArr[a].alt + "("+tempArr[a].src+")\" class=\"center_img\" />\n";
-//                out += "\t<img src=\"" + THUMBPATH + THUMBPREFIX + tempArr[a].src + "\" alt=\"" + alttext +"\" class=\"center_img\" />\n";
-//                out += "</a>\n";
-//            }
-//            document.write(out);
-//        }
-//        catch(ex)
-//        {
-//            alert("Error in method getThumbs(): "+ex.message);
-//        }
-//    },
-
     //return a sub array:
     getTempArr : function (category){
         try
@@ -1193,69 +1099,7 @@ var weddingfest07 = {
             console.log(e);
             return(false);
         }
-    },
-
-    /**
-     * return the image index ID and category ID from 
-     * page URL params.
-     * */
-//    getURLParams : function (){
-//        try
-//        {
-//            var location    = window.location.toString();
-//            var result = new Object();
-//            if(location.indexOf("img=") !== -1 && location.indexOf("category=") !== -1)
-//            {
-//                var params = location.split("?")[1].split("&");
-//                for(var a=0;a<params.length;a++)
-//                {
-//                    if(params[a].split("=")[0] === "img")
-//                        result.img = params[a].split("=")[1];
-//
-//                    if(params[a].split("=")[0] === "category")
-//                        result.category = params[a].split("=")[1];
-//                }
-//            }
-//            return(result);
-//        }
-//
-//        catch(e)
-//        {
-//            return(false);
-//        }
-//    },
-//
-//    writeTopMenu : function (pageurl){
-//        try
-//        {
-//            var page = pageurl.toString().split("/")[pageurl.toString().split("/").length-1].split(".")[0];
-//            var output = "<ul class=\"nav\">";
-//            var output2 = "<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"800\"><tr>"
-//            var suffix = "shtml";
-//            var root = "weddingfest07/";
-//            var topnavarray = new Array(["index","Home"],["concept","Concept"],["gallery","Gallery"],["thanks","Thank you"]);
-//            for(var a=0;a<topnavarray.length;a++)
-//            {
-//                if(topnavarray[a][0] === page)
-//                {
-//                    output2 += "<td class=\"hilite\"><img src=\"/images/structure/celtic_small_purple.gif\" alt=\"bullet\" class=\"navbullet\" />"+topnavarray[a][1]+"</td>";
-//                    output += "<li class=\"hilite\">"+topnavarray[a][1]+"</li>";
-//                }
-//                else
-//                {
-//                    output2 += "<td class=\"nav\"><img src=\"/images/structure/celtic_small.gif\" alt=\"bullet\" class=\"navbullet\" /><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></td>";
-//                    output += "<li class=\"nav\"><a href=\"/"+root+topnavarray[a][0]+"."+suffix+"\" title=\""+topnavarray[a][1]+"\">"+topnavarray[a][1]+"</a></li>";
-//                }
-//            }
-//            output2 += "</tr></table>";
-//            output += "</ul>";
-//            //document.write("<xmp>"+output+"</xmp>");
-//            document.write(output2);
-//        }
-//        catch(e)
-//        {}
-//    }   
-
+    }
 };
 
 
