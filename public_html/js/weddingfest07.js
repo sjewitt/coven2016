@@ -898,6 +898,10 @@ var weddingfest07 = {
 
     /*
      * build the flow container in the body area:
+     * 
+     * <div class="globalCaption"></div>
+            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
+     * 
      */
     buildFlowContainer : function(DOMImageList){
 
@@ -925,6 +929,10 @@ var weddingfest07 = {
         slider.setAttribute("class","slider");
         scrollbar.appendChild(slider);        
         
+        //caption container
+        var globalCaption = document.createElement("div");
+        globalCaption.setAttribute("class","globalCaption");
+        
         //Item container:
         var flow = document.createElement("div");
         flow.setAttribute("class","flow");
@@ -938,6 +946,7 @@ var weddingfest07 = {
         }        
         
         ContentFlowContainer.appendChild(flow);
+        ContentFlowContainer.appendChild(globalCaption);
         ContentFlowContainer.appendChild(scrollbar);
 
         $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
@@ -978,10 +987,11 @@ var weddingfest07 = {
                 /*
                  * And initialise the contentflow:
                  */
-                console.log("INIT CONTENTFLOW FROM buildFowLinks()");
+                //console.log("INIT CONTENTFLOW FROM buildFowLinks()");
                 var conf = {
                     "onclickActiveItem":weddingfest07.contentFlowItemClickHandler,
-                    "circularFlow":true
+                    "circularFlow":true,
+                    "visibleItems":3
                 };
                 var myNewFlow = new ContentFlow("contentFlow",conf);
                 
@@ -1001,9 +1011,6 @@ var weddingfest07 = {
     contentFlowItemClickHandler : function(){
         var src = $(this.getActiveItem().canvas).attr("src");
         console.log(src);
-        
-//        var _img = document.createElement("img");
-//        _img.setAttribute("src",src);
         
         var _img = new Image();
         _img.src = src;
@@ -1039,6 +1046,8 @@ var weddingfest07 = {
             caption.appendChild(document.createTextNode(_temp[a].alt));
             item.appendChild(img);
             item.appendChild(caption);
+            
+            //console.log(item.outerHTML);
             
             _out.push(item);
         }
