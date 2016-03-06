@@ -1,5 +1,9 @@
 //TODO: Push JSON 'title' on to path
 //http://www.ajaxload.info/ for loading gifs!
+/*
+ * "banner_scale" : "anchor", - sort out an adaptive fit or shrink
+ * @type type
+ */
 var controller = {
     
     TYPE_HOME : "HOME",
@@ -176,10 +180,16 @@ var controller = {
                 $("title").html(this.currentPage.title);
                 $(".top-bar-title").html(this.currentPage.title);
 
+                console.log(this.currentPage);
+                var _imageAttachment = "contain";
+                if(this.currentPage.banner_attachment && this.currentPage.banner_attachment !== null){
+                    _imageAttachment = this.currentPage.banner_attachment;
+                }
                 //banner
                 $(".banner-content").css({
                     "background-image":"url(" + this.currentPage.banner + ")",
-                    "background-size": "contain",
+                    //base switch here on banner_scale: default to contain.
+                    "background-size": _imageAttachment,
                     "background-position": "left",
                     "background-repeat": "no-repeat",
                     "background-attachment":"top-left"

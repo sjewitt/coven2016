@@ -22,9 +22,7 @@ var weddingfest07 = {
     CATEGORY_LINK_DISPLAY_TYPE : "option",
     
     //config (adapted from original weddingfest07 controller, so apologies for crappy code...):
-    //THUMBPREFIX : "thmb_",
     IMGPATH         : "/weddingfest07/images/gallery/",
-    //THUMBPATH       : "/images/gallery/thmb/", //TODO
     
     //do not change
     LINKUI_TYPE_LIST : "list",
