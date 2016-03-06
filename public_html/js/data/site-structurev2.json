@@ -660,8 +660,8 @@
                 {
                     "data": 
                     {
-                        "title": "LINKS",
-                        "intro": "intro text intro text 1",
+                        "title": "Categories",
+                        "intro": "",
                         "class": "scheme-vlight",
                         "id":"content_flow_links"
                     }
@@ -670,8 +670,8 @@
 
                     "data":
                     {
-                        "title": "TEST FLOW",
-                        "intro": "intro text intro text 2",
+                        "title": "WeddingFest Gallery",
+                        "intro": "Select a category...",
                         "class": "scheme-dark",
                         "id":"content_flow_display"
                     }

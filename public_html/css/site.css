@@ -299,6 +299,17 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
 }
 
 
+/* weddingfest gallery styling */
+.image_display_trigger_wrapper{
+    width:100%;
+    height: 250px;
+    overflow: auto;
+}
+/*  */
+#image_display_trigger{
+    display:inline;
+    width:70%;
+}
 
 /* MQ - breakpoints as PureIO - TODO */
 /*

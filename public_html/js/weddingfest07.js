@@ -16,11 +16,19 @@
  */
 
 var weddingfest07 = {
+    //new config:
+  
+    //'option' or 'list'
+    CATEGORY_LINK_DISPLAY_TYPE : "option",
     
     //config (adapted from original weddingfest07 controller, so apologies for crappy code...):
-    THUMBPREFIX : "thmb_",
+    //THUMBPREFIX : "thmb_",
     IMGPATH         : "/weddingfest07/images/gallery/",
-    THUMBPATH       : "/images/gallery/thmb/", //TODO
+    //THUMBPATH       : "/images/gallery/thmb/", //TODO
+    
+    //do not change
+    LINKUI_TYPE_LIST : "list",
+    LINKUI_TYPE_OPTION : "option", 
 
     //categories:
     categories : {
@@ -36,7 +44,7 @@ var weddingfest07 = {
         EVENT_HANGOVER      : {id:50,name:"Hangover"},
 
         //honeymoon
-        HM_GENERAL          : {id:60,name:"Honeymoon"},
+        //HM_GENERAL          : {id:60,name:"Honeymoon"},
         HM_SHED             : {id:70,name:"Honeymoon - shed!"},
         HM_FORT             : {id:80,name:"Honeymoon - fort"},
         HM_SADDELL          : {id:90,name:"Honeymoon - Saddell"},
@@ -72,12 +80,8 @@ var weddingfest07 = {
         //load the data into the array:
         this.loadImageArray();
         
-        //NEW: Build ALL images:
-        
-        /*
-         * Once we have this, we can push arrays of images onto it - hopefully...
-         */
-        this.buildFlowLinks();
+        //Once we have this, we can push arrays of images onto it - hopefully...
+        this.buildFlowLinks(this.CATEGORY_LINK_DISPLAY_TYPE);
     },
 
     /*
@@ -85,7 +89,6 @@ var weddingfest07 = {
      * @returns {undefined}
      */
     loadImageArray : function(){
-        //console.log("Loading images");
         this.arr.push({src:"BLANK",orientation:0,alt:""});
         //setup
         this.arr.push({src:"web_0002.jpg",orientation:0,alt:"Car park before the quagmire",  category : this.categories.EVENT_SETUP_DAY1.id});
@@ -865,7 +868,8 @@ var weddingfest07 = {
         this.arr.push({src:"web_0656.jpg",orientation:0,alt:"",category : this.categories.HM_GDNS.id});
         this.arr.push({src:"web_0657.jpg",orientation:0,alt:"",category : this.categories.HM_GDNS.id});
         
-        var allImagesLoaded = false;
+//        var allImagesLoaded = false;    //TODO
+        //
         //and prefix the URL with path:
         for(var a=0;a<this.arr.length;a++){
             
@@ -874,24 +878,21 @@ var weddingfest07 = {
             
             //load an Image() object for each:
             this.arr[a].img = new Image();
-            
-            
 
-            function loaded() {
-                console.log('loaded '+a);
-            }
+//            //TODO - delay util all iages actually loaded.           
+//            function loaded() {
+//                console.log('loaded '+a);
+//            }
+//
+//            if (this.arr[a].img.complete) {
+//                loaded();
+//            } else {
+//                this.arr[a].img.addEventListener('load', loaded);
+//                this.arr[a].img.addEventListener('error', function() {
+//                    console.log('error');
+//                });
+//            }
 
-            if (this.arr[a].img.complete) {
-                loaded();
-            } else {
-                this.arr[a].img.addEventListener('load', loaded);
-                this.arr[a].img.addEventListener('error', function() {
-                    console.log('error');
-                });
-            }
-            
-            
-            
             this.arr[a].img.src = this.arr[a].src;
         }  
     },
@@ -950,9 +951,9 @@ var weddingfest07 = {
         ContentFlowContainer.appendChild(scrollbar);
 
         $("#" + this.ContentFlowConfig.displaytargetId).append(ContentFlowContainer);
-        $("#" + this.ContentFlowConfig.displaytargetId).load(function(){
-            console.log("LOAD CONTENTFLOW FROM LOAD FUNCTION");
-        });
+//        $("#" + this.ContentFlowConfig.displaytargetId).load(function(){
+//            console.log("LOAD CONTENTFLOW FROM LOAD FUNCTION");
+//        });
     },
     
     //clear out the flow container:
@@ -961,47 +962,96 @@ var weddingfest07 = {
     },
 
     //currently TEST:
-    buildFlowLinks : function(){
+    buildFlowLinks : function(ui){
         
-        var _outer = document.createElement("select");
-        _outer.setAttribute("id","image_display_trigger");
-        for(var p in this.categories){
+        var _outer = null;
+        var _wrapper = document.createElement("div");
+        _wrapper.setAttribute("class","image_display_trigger_wrapper");        
+        //local function for use by switch/case element:
+        var buildOPTION = function(){
+;
+            _outer = document.createElement("select");
+            _outer.setAttribute("id","image_display_trigger");
+            for(var p in weddingfest07.categories){
+                if(weddingfest07.categories[p].id!==weddingfest07.categories.TEST.id){
+                    var x = document.createElement("option");
+                    x.setAttribute("data-image-category",weddingfest07.categories[p].id);
+                    x.appendChild(document.createTextNode(weddingfest07.categories[p].name));  //append thumbnail here? and tile?
+                    _outer.appendChild(x);
+                }
+            }
+            var btn = document.createElement("input");
+            btn.setAttribute("type","button");
+            btn.setAttribute("value","OK");
+            //attach handler to start contentflow:
+            $(btn).click(function(){startContentFlow(false);});
+
+            _wrapper.appendChild(_outer);
+            _wrapper.appendChild(btn);
+
+            $("#" + weddingfest07.ContentFlowConfig.linksTargetId).append($(_wrapper));
+            //$("#" + weddingfest07.ContentFlowConfig.linksTargetId).append($(btn));
+        };
+        var buildLIST = function(){
+            _outer = document.createElement("ul");
+            _outer.setAttribute("id","image_display_trigger");
             
-            var x = document.createElement("option");
-            x.setAttribute("data-image-category",this.categories[p].id);
-            x.appendChild(document.createTextNode(this.categories[p].name));  //append thumbnail here? and tile?
-            _outer.appendChild(x);
-        }
+            for(var p in weddingfest07.categories){
+                if(weddingfest07.categories[p].id!==weddingfest07.categories.TEST.id){
+                    var x = document.createElement("li");
+                    x.setAttribute("data-image-category",weddingfest07.categories[p].id);
+                    x.appendChild(document.createTextNode(weddingfest07.categories[p].name));
+                    $(x).click(function(){startContentFlow(this);}).css("cursor","pointer");
+                    _outer.appendChild(x);
+                }
+            }
+            
+            _wrapper.appendChild(_outer);
+            
+            $("#" + weddingfest07.ContentFlowConfig.linksTargetId).append($(_wrapper));
+        };
         
-        var btn = document.createElement("input");
-        btn.setAttribute("type","button");
-        btn.setAttribute("value","OK");
-        $(btn).click(function(){
-            
+        //handler for starting contentflow
+        var startContentFlow = function(elem){
+            var imageCategory = -1;
+            if(elem !== false){
+                imageCategory = $(elem).attr("data-image-category");
+            }
+            else{
+                imageCategory = $("#image_display_trigger option:selected").attr("data-image-category");
+            }
+
             //initialise content flow with specified flags:
             if(weddingfest07.ContentFlowConfig.loadContentFlow){
 
-                //build DOM structure:
-                weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow($("#image_display_trigger option:selected").attr("data-image-category")));
+                //build DOM structure from dropdown trigger:
+                weddingfest07.buildFlowContainer(weddingfest07.loadImagesForContentFlow(imageCategory));
 
-                /*
-                 * And initialise the contentflow:
-                 */
-                //console.log("INIT CONTENTFLOW FROM buildFowLinks()");
+                //And initialise the contentflow:
                 var conf = {
                     "onclickActiveItem":weddingfest07.contentFlowItemClickHandler,
                     "circularFlow":true,
                     "visibleItems":3
                 };
                 var myNewFlow = new ContentFlow("contentFlow",conf);
-                
-                myNewFlow.init();
-            };
-        });
-        
 
-        $("#" + this.ContentFlowConfig.linksTargetId).append($(_outer));
-        $("#" + this.ContentFlowConfig.linksTargetId).append($(btn));
+                myNewFlow.init();
+            }
+        };
+        
+        switch(ui){
+            case this.LINKUI_TYPE_LIST:
+                buildLIST();
+                
+                break;
+            case this.LINKUI_TYPE_OPTION:
+                buildOPTION();
+                
+                break;
+            default:
+                //list
+                buildLIST();
+        }
     },
 
     /*
@@ -1010,7 +1060,6 @@ var weddingfest07 = {
      */
     contentFlowItemClickHandler : function(){
         var src = $(this.getActiveItem().canvas).attr("src");
-        console.log(src);
         
         var _img = new Image();
         _img.src = src;
@@ -1018,7 +1067,6 @@ var weddingfest07 = {
         //trigger featherlight:
         var _config = {};
         $.featherlight($(_img), _config);
-        
     },
 
     /*
@@ -1046,9 +1094,6 @@ var weddingfest07 = {
             caption.appendChild(document.createTextNode(_temp[a].alt));
             item.appendChild(img);
             item.appendChild(caption);
-            
-            //console.log(item.outerHTML);
-            
             _out.push(item);
         }
 
@@ -1068,24 +1113,24 @@ var weddingfest07 = {
      * prevImage() and nextImage(). Each of these uses the passed URL params to
      * display or paginate.        
      * */
-    showImage : function(id,category){
-        try
-        {
-            //determine orientation:
-            var location = window.location.toString();
-            var width   = 680;
-            var height  = 550;
-
-            var src = "/weddingfest07/popup.htm?img=" + id + "&category=" + category;
-            var w = window.open(src,"gallery","left=20,top=20,width=" + width + ",height=" + height + ",toolbar=0,resizable=0");
-            w.focus();
-        }
-
-        catch(e)
-        {
-            alert("Error in method showImage(): "+e.message);
-        }
-    },
+//    showImage : function(id,category){
+//        try
+//        {
+//            //determine orientation:
+//            var location = window.location.toString();
+//            var width   = 680;
+//            var height  = 550;
+//
+//            var src = "/weddingfest07/popup.htm?img=" + id + "&category=" + category;
+//            var w = window.open(src,"gallery","left=20,top=20,width=" + width + ",height=" + height + ",toolbar=0,resizable=0");
+//            w.focus();
+//        }
+//
+//        catch(e)
+//        {
+//            alert("Error in method showImage(): "+e.message);
+//        }
+//    },
 
     //return a sub array:
     getTempArr : function (category){
