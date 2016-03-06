@@ -268,7 +268,8 @@
             "id" : "1.6",
             "type" : "LANDING",
             "title":"WeddingFest 07",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner01.jpg",
+            "banner_attachment" : "cover",
             "panels": [
                 {
                     "data": 
@@ -655,6 +656,8 @@
             "url" : "/weddingfest07/gallery.html",
             "id" : "1.6.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner03.jpg",
+            "banner_attachment" : "cover",
             "title":"Gallery",
             "panels": [
                 {
