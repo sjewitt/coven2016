@@ -101,7 +101,8 @@
             "id" : "1.3",
             "type" : "LANDING",
             "title":"Code",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner_code_static2.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -392,6 +393,7 @@
             "type" : "CONTENT",
             "title":"DooM",
             "banner" : "/images/doombar.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
 
@@ -445,6 +447,8 @@
             "url" : "/games/half-life.html",
             "id" : "1.2.3",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner_g-man.png",
+            "banner_attachment":"cover",
             "title":"Half-Life",
             "panels": [
                 {
@@ -472,6 +476,8 @@
         {
             "url" : "/code/web.html",
             "id" : "1.3.1",
+            "banner":"/images/banners/banner_web2.jpg",
+            "banner_attachment":"cover",
             "type" : "CONTENT",
             "title":"Web",
             "panels": [
@@ -499,6 +505,8 @@
             "url" : "/code/java.html",
             "id" : "1.3.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner_java.jpg",
+            "banner_attachment":"cover",
             "title":"Java",
             "panels": [
                 {
@@ -525,6 +533,7 @@
             "url" : "/code/librivox.html",
             "id" : "1.3.3",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner_librivox2.png",
             "title":"LibriVox",
             "panels": [
                 {
