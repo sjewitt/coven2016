@@ -149,6 +149,9 @@ var librivox = {
          * use e.g.:
          * http://stackoverflow.com/questions/17604071/parse-xml-using-javascript
          * http://stackoverflow.com/questions/7228141/how-to-parse-xml-using-jquery
+         * 
+         * For the RSS mp3 links, create a HTML5 overlay player.
+         * Ensure the correct MIME type?
          */
         var dataType = "json";
         var ajaxUrl = this.proxyUrl + "?endpoint=api/feed/audiotracks&project_id=" + bookObj.id;
