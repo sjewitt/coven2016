@@ -145,6 +145,10 @@ var librivox = {
          * abstract either a librivox audiotracks call or a librivox RSS call to get
          * the audio tracks. 
          * It seems the mp3 links in the audiotracks data is not complete.
+         * 
+         * use e.g.:
+         * http://stackoverflow.com/questions/17604071/parse-xml-using-javascript
+         * http://stackoverflow.com/questions/7228141/how-to-parse-xml-using-jquery
          */
         var dataType = "json";
         var ajaxUrl = this.proxyUrl + "?endpoint=api/feed/audiotracks&project_id=" + bookObj.id;
