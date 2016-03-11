@@ -128,21 +128,45 @@ var librivox = {
             //there should only be one book for supplied ID:
             $(librivox.outputPanelIdentifier).html(getBookDetailsOutput(data.responseJSON.books[0]).content);
             $(librivox.outputPanelIdentifier).append(getBookDetailsOutput(data.responseJSON.books[0]).close);
+            //process link to downloads here
         }).error(function(err){
             console.log(err);
         });
     },
     
+    //may need to change this:
     getAudioLinkOutput : function(bookObj){
         var out = document.createElement("div");
         //call tracks API:
-        $.ajax(this.proxyUrl + "?endpoint=api/feed/audiotracks&project_id=" + bookObj.id,{
-            dataType:"json"
+        //perhaps substitute for the RSS feed here?
+        console.log("get rss at: https://librivox.org/rss/" + bookObj.id);
+        /*
+         * TODO: Substitute the anonymous function for a function reference. That way, I can 
+         * abstract either a librivox audiotracks call or a librivox RSS call to get
+         * the audio tracks. 
+         * It seems the mp3 links in the audiotracks data is not complete.
+         */
+        var dataType = "json";
+        var ajaxUrl = this.proxyUrl + "?endpoint=api/feed/audiotracks&project_id=" + bookObj.id;
+        //var ajaxUrl = this.proxyUrl + "?endpoint=rss/" + bookObj.id;
+        $.ajax(ajaxUrl,{
+            dataType:dataType
         }).complete(function(data){
-
+            console.log(data);
             for(var a=0;a<data.responseJSON.sections.length;a++){
                 var row = document.createElement("div");
                 row.setAttribute("id",data.responseJSON.sections[a].id);
+                
+                //push link to mp3 here:
+                row.setAttribute("data-file",data.responseJSON.sections[a].listen_url);
+                row.setAttribute("data-trackid",data.responseJSON.sections[a].listen_url);
+                
+                /*
+                 * if listen_url === "", look up the corresponding RSS link?
+                 * maybe DON'T do this inside the loop?
+                 */
+                
+                
                 $(row).css("cursor","pointer");
                 row.appendChild(document.createTextNode(data.responseJSON.sections[a].title));
                 //out += data.responseJSON.sections[a].title + "(track ID=" + data.responseJSON.sections[a].id + ")";
@@ -153,7 +177,8 @@ var librivox = {
                 );
             
                 $(row).click(function(data){
-                    alert("track ID=" + $(this).attr("id"));
+                    //alert("track ID=" + $(this).attr("id"));
+                    alert("audio file=" + $(this).attr("data-file"));
                 });
                 //and append the click handler TODO:
                 out.appendChild(row);
@@ -165,6 +190,8 @@ var librivox = {
         });
         return out;
     },
+    
+    
     
     updateDisplayPanelTitle : function(val){
         $(this.displayPanelTitleIdentifier).html(val);
