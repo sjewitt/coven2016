@@ -1,6 +1,11 @@
 //for AJAX working:
 //http://stackoverflow.com/questions/4901537/how-to-show-processing-animation-spinner-during-ajax-request
 
+/*
+ * TODO:
+ * Push author/book/track onto breadcrumb, and attach appropriate handlers for browsing back.
+ * @type type
+ */
 var librivox = {
     
     //strings:
@@ -14,6 +19,32 @@ var librivox = {
     outputPanelTitle : "",
     previousContent : "",
     firstLoadMessage : "Loading LibriVox data...",
+    
+    currentBookDetails : {},
+    
+    /*
+     * TODO: 
+     * Build stack for main panel display (fro breadcrumb) and for the nav panel:
+     * may need to modify this...
+    */
+    outputPanelStack : {
+        VIEW_INITIAL : {    //after initiial ajax load
+            findState:null,
+            displayState:null
+        },
+        VIEW_BY_AUTHOR : {  //view of books by selected author
+            findState:null,
+            displayState:null
+        },
+        VIEW_BY_BOOK : {    //view tracks after selecting a book
+            findState:null,
+            displayState:null
+        },
+        VIEW_BY_TRACK : {    //view after selecting a track (the html 5 player)
+            findState:null,
+            displayState:null
+        }
+    },
     
     init : function(){
         this.BuildLibrivoxForm();
@@ -93,7 +124,7 @@ var librivox = {
                     });
  
                     return false;
-                  }
+                 }
             });
         });
     },
@@ -126,6 +157,7 @@ var librivox = {
             dataType:"json"
         }).complete(function(data){
             //there should only be one book for supplied ID:
+            
             $(librivox.outputPanelIdentifier).html(getBookDetailsOutput(data.responseJSON.books[0]).content);
             $(librivox.outputPanelIdentifier).append(getBookDetailsOutput(data.responseJSON.books[0]).close);
             //process link to downloads here
@@ -134,64 +166,101 @@ var librivox = {
         });
     },
     
+    /*
+     * build track player - this will just be a HTML5 audio tag with perhaps a back/next to 
+     * navigate the tracks for current book.
+     * @returns {undefined}
+     */
+    loadTrackPlayer : function(sections,currentSection){
+
+        //get current contents of display area:
+        
+        
+        //https://developer.mozilla.org/en/docs/Web/HTML/Element/audio
+        var audio = document.createElement("audio");
+        audio.setAttribute("controls","controls");
+        var source = document.createElement("source");
+        source.setAttribute("src",$(currentSection).attr("data-file"));
+        audio.appendChild(source);
+        console.log(audio);
+        $(librivox.outputPanelIdentifier).html(audio);
+        
+    },
+    
     //may need to change this:
     getAudioLinkOutput : function(bookObj){
         var out = document.createElement("div");
-        //call tracks API:
-        //perhaps substitute for the RSS feed here?
-        console.log("get rss at: https://librivox.org/rss/" + bookObj.id);
+
         /*
-         * TODO: Substitute the anonymous function for a function reference. That way, I can 
-         * abstract either a librivox audiotracks call or a librivox RSS call to get
-         * the audio tracks. 
-         * It seems the mp3 links in the audiotracks data is not complete.
-         * 
-         * use e.g.:
-         * http://stackoverflow.com/questions/17604071/parse-xml-using-javascript
-         * http://stackoverflow.com/questions/7228141/how-to-parse-xml-using-jquery
-         * 
          * For the RSS mp3 links, create a HTML5 overlay player.
          * Ensure the correct MIME type?
          */
-        var dataType = "json";
-        var ajaxUrl = this.proxyUrl + "?endpoint=api/feed/audiotracks&project_id=" + bookObj.id;
-        //var ajaxUrl = this.proxyUrl + "?endpoint=rss/" + bookObj.id;
+        var dataType = "xml";
+        var ajaxUrl = this.proxyUrl + "?endpoint=rss/" + bookObj.id;
         $.ajax(ajaxUrl,{
             dataType:dataType
         }).complete(function(data){
-            console.log(data);
-            for(var a=0;a<data.responseJSON.sections.length;a++){
+
+            var items = data.responseXML.getElementsByTagName("item");
+            librivox.currentBookDetails = items;
+/*
+ *  <item>
+ *      <title><![CDATA[track title]]></title>
+ *      <reader></reader>
+ *      <link><![CDATA[http://www.archive.org/download/[trackname].mp3]]></link>
+ *      <enclosure url="http://www.archive.org/download/[trackname].mp3" length="15.7" type="audio/mpeg"/>
+ *      <itunes:explicit xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">No</itunes:explicit>
+ *      <itunes:block xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">No</itunes:block>
+ *      <itunes:duration xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"><![CDATA[hh:mm:ss]]></itunes:duration>
+ *      <pubDate></pubDate>
+ *      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://www.archive.org/download/[filename].mp3" fileSize="15.7" type="audio/mpeg"/>
+ *  </item>
+ */
+            for(var a=0;a<items.length;a++){
                 var row = document.createElement("div");
-                row.setAttribute("id",data.responseJSON.sections[a].id);
-                
-                //push link to mp3 here:
-                row.setAttribute("data-file",data.responseJSON.sections[a].listen_url);
-                row.setAttribute("data-trackid",data.responseJSON.sections[a].listen_url);
-                
-                /*
-                 * if listen_url === "", look up the corresponding RSS link?
-                 * maybe DON'T do this inside the loop?
-                 */
-                
+                var childs = items[a].childNodes;
+                var link = "";
+                var title = "";
+                var duration = "";
+                for(var b=0;b<childs.length;b++){
+                    switch(childs[b].nodeName){
+                        case "link":
+                            link = childs[b].firstChild.nodeValue; //check for node type?
+                        break;
+                        case "title":
+                            title = childs[b].firstChild.nodeValue; //check for node type?
+                        break;
+                        case "itunes:duration":
+                            duration = childs[b].firstChild.nodeValue; //check for node type?
+                        break;
+                    }
+                }
+
+                row.setAttribute("data-file",link);
+                row.setAttribute("data-time",duration);
+                row.setAttribute("data-index",a);
                 
                 $(row).css("cursor","pointer");
-                row.appendChild(document.createTextNode(data.responseJSON.sections[a].title));
-                //out += data.responseJSON.sections[a].title + "(track ID=" + data.responseJSON.sections[a].id + ")";
+                row.appendChild(document.createTextNode(title));
                 
                 $(row).hover(
                     function(){$(this).css("text-decoration","underline");},
                     function(){$(this).css("text-decoration","none");}
                 );
+
             
                 $(row).click(function(data){
-                    //alert("track ID=" + $(this).attr("id"));
-                    alert("audio file=" + $(this).attr("data-file"));
+                    //alert("audio file=" + $(this).attr("data-file"));
+                    librivox.loadTrackPlayer(librivox.currentBookDetails, $(this));
+                    //console.log(data);
+                    //trigger overlay with audio tag + next/back track buttons:
+                    //TODO!
                 });
                 //and append the click handler TODO:
                 out.appendChild(row);
-                
-                }
-            console.log(out);
+            }
+           
+            console.log("out: " + out);
         }).error(function(err){
             console.log(err);
         });
@@ -296,4 +365,17 @@ function getCloseButton(DOMId){
     $(close).css({"width":"20px","height":"20px"});
     $(close).attr({"id":DOMId});
     return(close);
+}
+//from http://jsfiddle.net/RwE9s/15/
+function StringtoXML(text){
+    if (window.ActiveXObject){
+        var doc = new ActiveXObject('Microsoft.XMLDOM');
+        doc.async = 'false';
+        doc.loadXML(text);
+    } 
+    else {
+        var parser=new DOMParser();
+        var doc=parser.parseFromString(text,'text/xml');
+    }
+    return doc;
 }
