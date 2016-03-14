@@ -4,6 +4,7 @@
 /*
  * TODO:
  * Push author/book/track onto breadcrumb, and attach appropriate handlers for browsing back.
+ * Also - add ability to grab author/book/track with URL params?
  * @type type
  */
 var librivox = {
@@ -48,21 +49,6 @@ var librivox = {
     
     init : function(){
         this.BuildLibrivoxForm();
-    },
-    
-    BuildLibrivoxResponse : function(params){
-        //params is an object...
-        //
-        //push dynamic search form on to LH panel:
-
-        //add params here:
-        //Turn into a function that responds to the form/list?
-        //Add bits that dynamically update the form as well (author/book lists etc.)
-        $.ajax(this.proxyUrl + "?" + params,{
-            dataType:"json"
-        }).complete(function(data){  
-                $("#body-content > div.pure-u-1.pure-u-sm-3-4.contentpanel.row > div.panel-text").html(data.responseText);
-        });
     },
     
     /*
@@ -129,6 +115,24 @@ var librivox = {
         });
     },
     
+    
+    
+    BuildLibrivoxResponse : function(params){
+        //params is an object...
+        //
+        //push dynamic search form on to LH panel:
+
+        //add params here:
+        //Turn into a function that responds to the form/list?
+        //Add bits that dynamically update the form as well (author/book lists etc.)
+        $.ajax(this.proxyUrl + "?" + params,{
+            dataType:"json"
+        }).complete(function(data){  
+                $("#body-content > div.pure-u-1.pure-u-sm-3-4.contentpanel.row > div.panel-text").html(data.responseText);
+        });
+    },
+
+    
     buildLibrivoxBooklistByAuthor : function(params){
         //TODO: Filter by language if supplied
         var out = [];
@@ -179,6 +183,10 @@ var librivox = {
         //https://developer.mozilla.org/en/docs/Web/HTML/Element/audio
         var audio = document.createElement("audio");
         audio.setAttribute("controls","controls");
+        
+        //start disabled:
+        audio.setAttribute("autoplay","autoplay");
+        
         var source = document.createElement("source");
         source.setAttribute("src",$(currentSection).attr("data-file"));
         audio.appendChild(source);
