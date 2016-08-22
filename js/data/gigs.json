@@ -1,0 +1,28 @@
+{
+    "gigs":[
+        {
+            "band" : "Blue Oyster Cult",
+            "giglist":[
+                {
+                    "date":"",
+                    "venue":"",
+                    "review":"",
+                    "images":[""]
+                }
+            ],
+            "amazonProductIds":["B00004UI4R","B00000IBD5"]
+        },
+        {
+            "band" : "Iron Maiden",
+            "giglist":[
+                {
+                    "date":"",
+                    "venue":"",
+                    "review":"",
+                    "images":[""]
+                }
+            ],
+            "amazonProductIds":["B0000251VW","B0000251VP","B0000251VS","B0000251W2"]
+        }
+    ]
+}

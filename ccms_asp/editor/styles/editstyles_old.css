@@ -1,0 +1,44 @@
+/* CSS Document */
+/*old editor:*/
+*{margin:0px;padding:0px;font-family:verdana,arial,sans-serif;}
+#container{font-size:0.9em;}
+#container #tabs ul{margin:0px;padding:0px;}
+#container #tabs ul li{
+  display:inline;
+  left:0px;
+  margin:0px;
+  margin-right:5px;
+  background-color:#ccc;
+  font-weight:bold;
+  color:#eee;
+  border:1px solid black;
+  padding:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+#container #tabs ul li.tabon{
+  background-color:#999;
+  font-weight:bold;
+  color:purple;;
+}
+#panel1{}
+#panel2{display:none;}
+#panel3{display:none;}
+#panel4{display:none;}
+#panel5{display:none;}
+
+.editpanel{border:1px solid black;width:970px;height:450px;padding:5px;margin-top:10px;}
+.editpanel h1{font-size:1.1em;font-weight:bold;margin-top:2px;}
+.editpanel h2{font-size:1.1em;font-weight:normal;font-style:italic;margin-top:2px;margin-bottom:5px;}
+
+#contentlist{width:300px;height:120px;border:1px solid black;overflow:auto;float:left;margin:auto;}
+#contentactions{width:300px;height:120px;border:1px solid black;float:left;margin-left:5px;;}
+/*end*/
+
+
+#editbanner{font-family:arial,sans-serif;font-size:8pt; background-color:#dddddd;padding:5px;border:1px dashed black;}
+#editbanner p{margin-top:0px;margin-bottom:2px;}
+#userdisplay a{text-decoration:none;}
+#userdisplay a:hover{text-decoration:underline;}
+.editoption a{text-decoration:none;}
+.editoption a:hover{text-decoration:underline;}
