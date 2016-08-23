@@ -96,7 +96,7 @@ if(currentUser){
     '//www.tinymce.com/css/codepen.min.css'
   ],
       image_list : "/ccms_asp/editor/imagelist_JSON.asp",
-      link_list : "/ccms_asp/editor/linklist_JSON.asp",    
+      link_list : "/ccms_asp/editor/linklistJSON.asp",    
 //      mode : "textareas",
 //      theme : "advanced",
 //      theme_advanced_toolbar_location : "top",

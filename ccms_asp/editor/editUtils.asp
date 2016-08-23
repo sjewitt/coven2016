@@ -589,7 +589,7 @@ methods to populate the TinyMCE linklist and imagelist:
 */
 
 //get array of filenames/option texts. returns an array of these: ["linkText", "ccms?nodeid=nnn"]
-editUtils.getInternalLinkArray = function(){
+editUtils.getInternalLinkArray = function(asJSON){
   try{
   
     var treeNodes = (new Viewtree()).getAllNodes();
@@ -597,15 +597,30 @@ editUtils.getInternalLinkArray = function(){
     var currPage = new Page();
     var currLinkText = "";
     
-    for(var a=0;a<treeNodes.length;a++){
-      currPage = new Page(treeNodes[a].pageId);
-      if(currPage.linkText){
-        currLinkText = currPage.linkText;  
-      }
-      else{
-        currLinkText = "[node=" + treeNodes[a].id + "]" ;
-      }
-      data.push("\n['" + currLinkText + "','/ccms.asp?nodeid=" + treeNodes[a].id + "']");
+    //for later versions of tinyMCE:
+    if(asJSON){
+        for(var a=0;a<treeNodes.length;a++){
+            currPage = new Page(treeNodes[a].pageId);
+            if(currPage.linkText){
+                currLinkText = currPage.linkText;  
+            }
+            else{
+                currLinkText = "[node=" + treeNodes[a].id + "]" ;
+            }
+            data.push('{title : "' + currLinkText + '",value : "/ccms.asp?nodeid=' + treeNodes[a].id + '"}\n');
+        }
+    }
+    else{   //for OLD version of tinyMCE
+        for(var a=0;a<treeNodes.length;a++){
+            currPage = new Page(treeNodes[a].pageId);
+                if(currPage.linkText){
+                    currLinkText = currPage.linkText;  
+                }
+                else{
+                    currLinkText = "[node=" + treeNodes[a].id + "]" ;
+                }
+            data.push("\n['" + currLinkText + "','/ccms.asp?nodeid=" + treeNodes[a].id + "']");
+        }
     }
     return data;
   }
@@ -616,42 +631,62 @@ editUtils.getInternalLinkArray = function(){
 
 //get array of filenames/option texts. returns an array of these: ["imagename", "imageurl"]
 //param: boolean getImages: true: returns images, false returns configured binary types
-editUtils.getUploadedBinaryLinkArray = function(getImages){
-  try{
-    if(getImages == undefined){
-      getImages = false;  
-    }
+editUtils.getUploadedBinaryLinkArray = function(getImages,asJSON){
+    try{
+        if(getImages == undefined){
+            getImages = false;  
+        }
     
-    var imagePath   = UPLOADFILEPATH;
-    var realpath    = Server.MapPath("/" + UPLOADFILEPATH + "/");
-    var filesystem  = Server.CreateObject("Scripting.FileSystemObject");
-    var folder      = filesystem.GetFolder(realpath);
-    var files       = folder.Files;
-    var enumerator  = new Enumerator(files);         //MS ScriptingHost object
-    var data        = new Array();
-    //enumerate:
-    enumerator.moveFirst();
-    var currFile;
-    var currExtension;
-    while(!enumerator.atEnd()){
-      currFile = enumerator.item();
-      currExtension = currFile.Name.substring(currFile.Name.lastIndexOf(".")+1,currFile.Name.length);
-      //get images = true, configured image types, NOT download object type:
-      if(getImages && IMAGETYPES[currExtension.toUpperCase()] &! (INSERTABLEDOWNLOADTYPES[currExtension.toUpperCase()])){
-        data.push('\n["' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '","/' + UPLOADFILEPATH + '/' + currFile.Name + '"]');
-      }
+        var imagePath   = UPLOADFILEPATH;
+        var realpath    = Server.MapPath("/" + UPLOADFILEPATH + "/");
+        var filesystem  = Server.CreateObject("Scripting.FileSystemObject");
+        var folder      = filesystem.GetFolder(realpath);
+        var files       = folder.Files;
+        var enumerator  = new Enumerator(files);         //MS ScriptingHost object
+        var data        = new Array();
+    
+        //enumerate:
+        enumerator.moveFirst();
+        var currFile;
+        var currExtension;
+        while(!enumerator.atEnd()){
+            currFile = enumerator.item();
+            currExtension = currFile.Name.substring(currFile.Name.lastIndexOf(".")+1,currFile.Name.length);
       
-      //if we are not getting images and the filetype is in the configured list:
-      else if(!getImages && this.isDownloadableType(currExtension)){//check here for configured MIME types:
-        data.push('\n["[' + currExtension + '] ' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '","/' + UPLOADFILEPATH + '/' + currFile.Name + '"]');
-      }
-      enumerator.moveNext();  
+            if(asJSON){ //for V4 tinyMCE
+                //get images = true, configured image types, NOT download object type:
+                if(getImages && IMAGETYPES[currExtension.toUpperCase()] &! (INSERTABLEDOWNLOADTYPES[currExtension.toUpperCase()])){
+                    data.push('"{title : \"XXX\",value : \"YYY\"}"');   //TODO
+                }
+
+                //if we are not getting images and the filetype is in the configured list:
+                else if(!getImages && this.isDownloadableType(currExtension)){
+                    //check here for configured MIME types:
+                  //data.push('{title : "' + currLinkText + '",value : "/ccms.asp?nodeid=' + treeNodes[a].id + '"}');
+                    data.push('{title : "[' + currExtension + '] ' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '",value : "/' + UPLOADFILEPATH + '/' + currFile.Name + '"}\n');
+                }
+            }
+            else{   //older tinyMCE
+                //get images = true, configured image types, NOT download object type:
+                if(getImages && IMAGETYPES[currExtension.toUpperCase()] &! (INSERTABLEDOWNLOADTYPES[currExtension.toUpperCase()])){
+                    data.push('\n["' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '","/' + UPLOADFILEPATH + '/' + currFile.Name + '"]');
+                }
+
+                //if we are not getting images and the filetype is in the configured list:
+                else if(!getImages && this.isDownloadableType(currExtension)){
+                    //check here for configured MIME types:
+                    data.push('\n["[' + currExtension + '] ' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '","/' + UPLOADFILEPATH + '/' + currFile.Name + '"]');
+                }
+            }
+            enumerator.moveNext();  
+        }
+        
+        
+        return(data);
     }
-    return(data);
-  }
-  catch(e){
-    Response.Write("error in editUtils.getUploadedBinaryLinkArray(): "+e.message);
-  }
+    catch(e){
+        Response.Write("error in editUtils.getUploadedBinaryLinkArray(): "+e.message);
+    }
 }
 
 /*
