@@ -74,9 +74,9 @@ if(alternator=="#ddd;") alternator="#eee;";
       
       switch(form.action.value){
         case "add":
-          if(confirm("you are about to ADD page '<%=pageName%>' to the viewtree. Are you sure?")){
+          //if(confirm("you are about to ADD page '<%=pageName%>' to the viewtree. Are you sure?")){
             popup("/ccms_asp/editor/addtoviewtree.asp?pageid=" + form.pageid.value);
-          }
+          //}
         break;
         case "managevt":
           if(confirm("you are about to perform action ACTION on page '<%=page.name%>' (msg TODO)")){
@@ -89,9 +89,9 @@ if(alternator=="#ddd;") alternator="#eee;";
         break;
         
         case "properties":
-          if(confirm("Modify page '<%=page.name%>' properties?")){
+          //if(confirm("Modify page '<%=page.name%>' properties?")){
             popup("/ccms_asp/editor/pageproperties.asp?pageid=" + form.pageid.value);
-          }
+          //}
         break;
         
         case "xx":

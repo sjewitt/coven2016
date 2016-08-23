@@ -71,7 +71,7 @@ if(currentUser){
   <meta name="generator" content="PSPad editor, www.pspad.com" />
   
 
-  <%=EDITOR_JAVASCRIPTS%>
+  
   
   <!-- TinyMCE main .js path -->
   <!--<script type="text/javascript" src="/ccms_asp/editor/tiny_mce/tiny_mce.js"></script>-->
@@ -79,34 +79,28 @@ if(currentUser){
   <script src="tinymce-4.4.1/tinymce.min.js" type="text/javascript"></script>
   <script src="tinymce-4.4.1/jquery.tinymce.min.js" type="text/javascript"></script>
   
+  <%=EDITOR_JAVASCRIPTS%>
+  
   <!-- and initialise TinyMCE to use ANY textarea (there is only one...) -->
   <script type="text/javascript">
   
-  tinyMCE.init({
-      selector:"textarea#text-editor",
-  height: 500,
-  plugins: [
-    'advlist autolink lists link image charmap print preview anchor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table contextmenu paste code'
-  ],
-  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-  content_css: [
-    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
-    '//www.tinymce.com/css/codepen.min.css'
-  ],
-      image_list : "/ccms_asp/editor/imagelist_JSON.asp",
-      link_list : "/ccms_asp/editor/linklistJSON.asp",    
-//      mode : "textareas",
-//      theme : "advanced",
-//      theme_advanced_toolbar_location : "top",
-//      theme_advanced_toolbar_align : "left",
-//      theme_advanced_statusbar_location : "bottom",
-//      theme_advanced_resizing : true,
-//      external_image_list_url : "/ccms_asp/editor/imagelist_JSON.asp",
-//      external_link_list_url : "/ccms_asp/editor/linklist_JSON.asp",
-//      style_formats : [{title : 'Shadowbox Block', block : 'div', classes : 'shadowbox_wrapper'}]
-    });
+//  tinyMCE.init({
+//      selector:"textarea#text-editor",
+//  height: 430,
+//  width:700,
+//  plugins: [
+//    'advlist autolink lists link image charmap print preview anchor',
+//    'searchreplace visualblocks code fullscreen',
+//    'insertdatetime media table contextmenu paste code'
+//  ],
+//  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+//  content_css: [
+//    '//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+//    '//www.tinymce.com/css/codepen.min.css'
+//  ],
+//      image_list : "/ccms_asp/editor/imagelistJSON.asp",
+//      link_list : "/ccms_asp/editor/linklistJSON.asp"    
+//    });
   
   //handler for version options:
   function manageVersion(frm){

@@ -119,8 +119,9 @@ if(currentUser){
     <div id="container">
       <div id="editor_content">
        <div style="height:130px;">
+          <h1>Add page to viewtree</h1>\n\
           <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Create page" />
-          <h1>Add page to viewtree</h1>
+          
           <p>
 <%
 if(submitted){

@@ -19,8 +19,8 @@ if(currentUser){
       refresher = editUtils.getOpenerParentReloadJavascript(inNode.getParent());
     }
   }
-%><?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%>
+<!DOCTYPE html>
 <html>
   <head>
 
@@ -35,9 +35,11 @@ if(currentUser){
       <div id="editor_content">
       
        <div style="height:130px;">
-          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtreeremove100x130.jpg" alt="Remove navigation item" />      
           <h1>Remove viewtree node</h1>
-          <p>Remove Viewtree navigation item '<%=(new Page(inNode.pageId)).linkText%>' from the Viewtree. This action only removes the 
+          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtreeremove100x130.jpg" alt="Remove navigation item" />      
+          
+            
+            <p>Remove Viewtree navigation item '<%=(new Page(inNode.pageId)).linkText%>' from the Viewtree. This action only removes the 
           reference to the page from the Viewtree and does not delete the page itself. The referenced page can be re-attached if desired.</p>
         </div>
         <div id="content">

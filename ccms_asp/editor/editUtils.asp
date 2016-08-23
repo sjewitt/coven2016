@@ -656,13 +656,13 @@ editUtils.getUploadedBinaryLinkArray = function(getImages,asJSON){
             if(asJSON){ //for V4 tinyMCE
                 //get images = true, configured image types, NOT download object type:
                 if(getImages && IMAGETYPES[currExtension.toUpperCase()] &! (INSERTABLEDOWNLOADTYPES[currExtension.toUpperCase()])){
-                    data.push('"{title : \"XXX\",value : \"YYY\"}"');   //TODO
+                    //data.push('"{title : \"XXX\",value : \"YYY\"}"');   //TODO
+                    data.push('{title : "' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '",value : "/' + UPLOADFILEPATH + '/' + currFile.Name + '"}');
                 }
 
                 //if we are not getting images and the filetype is in the configured list:
                 else if(!getImages && this.isDownloadableType(currExtension)){
                     //check here for configured MIME types:
-                  //data.push('{title : "' + currLinkText + '",value : "/ccms.asp?nodeid=' + treeNodes[a].id + '"}');
                     data.push('{title : "[' + currExtension + '] ' + currFile.Name.substring(0,currFile.Name.lastIndexOf(".")) + '",value : "/' + UPLOADFILEPATH + '/' + currFile.Name + '"}\n');
                 }
             }

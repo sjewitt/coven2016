@@ -1,13 +1,6 @@
 <%@ language="javascript" %>
 <!--#include virtual="/ccms_asp/engine/api.asp"-->
 <%
-/*
-TODO: PERMISSIONS!
-A user can only create content if:
- - they are logged in (doh!)
- - they have Permissions.CREATECONTENT (only in ATWORK state)
- - they have Permissions.CHANGESTATE (can optionally set to ACTIVE)
-*/
 
 //evaluate user session:
 var currentUser = userFactory.getCurrentUser();
@@ -141,18 +134,20 @@ if(currentUser){
   <script type='text/javascript' src='/ccms_asp/editor/datepicker/calendar.js'></script>
 
   <script type="text/javascript">
-  function popup(url,width,height){
-	 var win = window.open(url,'popup','width=' + width + ',height=' + height + ',toolbar=0,resizable=1,scrollbars=1');
-	 win.resizeTo(width,height);
-	 win.focus();
-  }
-  
-  window.onload = function(){
-  //date picker
-  	calendar.set("validfrom");
-  	calendar.set("validto");
-  }
+//  function popup(url,width,height){
+//	 var win = window.open(url,'popup','width=' + width + ',height=' + height + ',toolbar=0,resizable=1,scrollbars=1');
+//	 win.resizeTo(width,height);
+//	 win.focus();
+//  }
+//  
+////  window.onload = function(){
+////  //date picker
+////  	calendar.set("validfrom");
+////  	calendar.set("validto");
+////  }
 
+
+//TODO: Add handlers for activating the button if name/description are filled
   </script>
   <title>Create new content</title>
 
@@ -176,7 +171,7 @@ if(currentUser){
     </ul>
     </div>
     <p><%=msg%></p>
-    <form name="createcontent" method="post" action="<%=Request.ServerVariables("SCRIPT_NAME")%>">
+    <form id="createcontent" name="createcontent" method="post" action="<%=Request.ServerVariables("SCRIPT_NAME")%>">
       <input type="hidden" name="pageid" value="<%=pageId%>" />
       <input type="hidden" name="slotid" value="<%=slotId%>" />
       <input type="hidden" name="execute" value="ok" />
@@ -184,11 +179,11 @@ if(currentUser){
       <table>
         <tr>
           <td>Name:</td>
-          <td><input type="text" name="name" value="" style="width:320px;"/></td>
+          <td><input type="text" id="new_content_name" name="name" value="" style="width:320px;"/></td>
         </tr>
         <tr>
           <td>Description:</td>
-          <td><input type="text" name="description" value="" style="width:320px;" /></td>
+          <td><input type="text" id="new_content_description" name="description" value="" style="width:320px;" /></td>
         </tr>
         <tr>
           <td>Subtype:</td>
@@ -212,7 +207,7 @@ if(currentUser){
         </tr>      
         <tr>
           <td>&nbsp;</td>
-          <td><input type="submit" value="create" /></td>
+          <td><input id="content_create_submit" disabled="disabled" type="submit" value="create" /></td>
         </tr>      
       </table>
 

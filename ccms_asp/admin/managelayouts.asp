@@ -190,9 +190,9 @@ Select a template and choose an action:
   }
 %>
 </select>
-[<a href="#" onclick="layoutAction(1);return false;">edit source</a>] 
-[<a href="#" onclick="layoutAction(2);return false;">set availability</a>] 
-[<a href="#" onclick="layoutAction(3);return false;">delete</a>]
+[<a href="#" onclick="editScripts.layoutAction(1);return false;">edit source</a>] 
+[<a href="#" onclick="editScripts.layoutAction(2);return false;">set availability</a>] 
+[<a href="#" onclick="editScripts.layoutAction(3);return false;">delete</a>]
 <p>
 Or, enter the name to create a new, empty template:
 </p>

@@ -47,11 +47,19 @@ textarea.editor{width:350px;}
     border: 1px solid darkgray;
     background-color: lightgray;
 }
-#editor_content h2{padding:5px;margin-top:10px;font-size:1.2em;}
 
+/*#960,650*/
+#text-editor{
+    width:960px;
+    height:650px;
+}
+#editor_content h2{padding:5px;margin-top:10px;font-size:1.2em;}
+iframe#text-editor_ifr{
+/*    height:200px;*/
+}
 /* TinyMCE editor window height */
 #content_ifr{
-    height:470px;
+/*    height:270px;*/
 }
 tr.header{background-color:#aaa;}
 tr.odd{background-color:#eee;}
