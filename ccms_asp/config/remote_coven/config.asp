@@ -108,12 +108,12 @@ var SIZE_UPLOAD_BINARY        = "400,360";
 /*
 Editor location of CSS and javascript files. HTML include files:
 */
-var EDITOR_JAVASCRIPTS = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/editscripts.js\"></script>\n";
-var EDITOR_DOM_MANAGENAV = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_managenav.asp\"></script>\n";
-var EDITOR_DOM_MANAGELAYOUTS = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_managelayout.asp\"></script>\n";
-var EDITOR_DOM_MOVENODE = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_movenode.asp\"></script>\n";
-var EDITOR_CSS = "<link rel=\"stylesheet\" href=\"/ccms_asp/editor/styles/editstyles.css\" type=\"text/css\" />\n";
 
+var EDITOR_JAVASCRIPTS        = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/jquery/jquery.js\"></script>\n<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/jqueryui/jquery-ui.js\"></script>\n<script type=\"text/javascript\" src=\"/ccms_asp/editor/datatables/js/jquery.dataTables.min.js\"></script>\n<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/editscripts.js\"></script>\n";
+var EDITOR_DOM_MANAGENAV      = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_managenav.asp\"></script>\n";
+var EDITOR_DOM_MANAGELAYOUTS  = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_managelayout.asp\"></script>\n";
+var EDITOR_DOM_MOVENODE       = "<script type=\"text/javascript\" src=\"/ccms_asp/editor/scripts/dom_movenode.asp\"></script>\n";
+var EDITOR_CSS                = "<link rel=\"stylesheet\" href=\"/ccms_asp/editor/scripts/jqueryui/jquery-ui.css\" type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"/ccms_asp/editor/datatables/css/jquery.dataTables.min.css\" type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"/ccms_asp/editor/styles/editstyles.css\" type=\"text/css\" />\n";
 
 %>
 

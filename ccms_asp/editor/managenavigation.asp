@@ -45,10 +45,11 @@ if(currentUser){
       <div id="editor_content">
       
        <div style="height:230px;">
-          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Create page" />
+          
 
       
           <h1>Manage Navigation</h1>
+          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Create page" />
           <p>
          This option allows the manipulation and viewing of various aspects of the navigation hierarchy. These include:</p>
          <ul style="margin-left:100px;">
@@ -63,7 +64,7 @@ if(currentUser){
           </p>
           <h2>Viewtree</h2>
         </div>
-      <div id="vt">
+      <div id="vt" style="border:1px solid grey;">
       
       <form name="viewtreeactions" action="<%=Request.ServerVariables("SCRIPT_NAME")%>?nodeid=<%=Request.QueryString("nodeid")%>" method="post">
       <input type="hidden" name="nodeid" value="<%=node.id%>" />

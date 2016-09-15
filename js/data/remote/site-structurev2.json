@@ -98,7 +98,8 @@
             "id" : "1.1",
             "type" : "LANDING",
             "title":"Tech",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner14.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -125,6 +126,8 @@
             "url" : "/tech/tech-1.html",
             "id" : "1.1.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner10.jpg",
+            "banner_attachment":"cover",
             "title":"Tech 1",
             "panels": [
                 {
@@ -151,6 +154,8 @@
             "url" : "/tech/tech-2.html",
             "id" : "1.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner09.jpg",
+            "banner_attachment":"cover",
             "title":"Tech 2",
             "panels": [
                 {
@@ -178,7 +183,8 @@
             "id" : "1.2",
             "type" : "LANDING",
             "title":"Games",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner13.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
 
@@ -244,6 +250,8 @@
             "url" : "/games/quake.html",
             "id" : "1.2.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner08.jpg",
+            "banner_attachment":"cover",
             "title":"Quake",
             "panels": [
                 {
@@ -397,7 +405,7 @@
             "url" : "/code/librivox.html",
             "id" : "1.3.3",
             "type" : "CONTENT",
-            "banner":"/images/banners/banner_librivox2.png",
+            "banner":"/images/banners/banner_librivox.png",
             "title":"LibriVox",
             "panels": [
                 {
@@ -453,7 +461,8 @@
             "id" : "1.4",
             "type" : "LANDING",
             "title":"About",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner12.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -477,6 +486,8 @@
             "url" : "/me/me-1.html",
             "id" : "1.4.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner08.jpg",
+            "banner_attachment":"cover",
             "title":"Me",
             "panels": [
                 {
@@ -501,6 +512,8 @@
             "url" : "/me/me-2.html",
             "id" : "1.4.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner07.jpg",
+            "banner_attachment":"cover",
             "title":"Me again",
             "panels": [
                 {
@@ -528,7 +541,8 @@
             "id" : "1.5",
             "type" : "LANDING",
             "title":"Academic",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner11.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -563,6 +577,8 @@
             "url" : "/academic/phd.html",
             "id" : "1.5.1",
             "type" : "LANDING",
+            "banner":"/images/banners/banner06.jpg",
+            "banner_attachment":"cover",
             "title":"PhD",
             "panels": [
                 {
@@ -588,6 +604,8 @@
         {
             "url" : "/academic/phd/thesis.html",
             "id" : "1.5.1.1",
+            "banner":"/images/banners/banner05.jpg",
+            "banner_attachment":"cover",
             "type" : "HOME",
             "title":"Thesis",
             "panels": [
@@ -662,6 +680,8 @@
             "url" : "/academic/phd/thesis/introduction.html",
             "id" : "1.5.1.1.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner005.png",
+            "banner_attachment":"cover",
             "title":"Introduction",
             "panels": [
                 {
@@ -685,11 +705,12 @@
                 }
             ]
         },
-        
         {
             "url" : "/academic/phd/thesis/materials.html",
             "id" : "1.5.1.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner004.png",
+            "banner_attachment":"cover",
             "title":"Materials and Methods",
             "panels": [
                 {
@@ -716,6 +737,8 @@
             "url" : "/academic/phd/thesis/application.html",
             "id" : "1.5.1.1.3",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner003.png",
+            "banner_attachment":"cover",
             "title":"Application to the discrimination of oak",
             "panels": [
                 {
@@ -742,6 +765,8 @@
             "url" : "/academic/phd/thesis/discussion.html",
             "id" : "1.5.1.1.4",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner002.png",
+            "banner_attachment":"cover",
             "title":"Discussion",
             "panels": [
                 {
@@ -765,6 +790,8 @@
             "url" : "/academic/phd/thesis/bibliography.html",
             "id" : "1.5.1.1.5",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner20.jpg",
+            "banner_attachment":"cover",
             "title":"Bibliography",
             "panels": [
 
@@ -785,6 +812,8 @@
             "url" : "/academic/phd/thesis/appendicies.html",
             "id" : "1.5.1.1.6",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner16.jpg",
+            "banner_attachment":"cover",
             "title":"Appendicies",
             "panels": [
                 {
@@ -811,6 +840,8 @@
             "url" : "/academic/phd/thesis/acknowledgements.html",
             "id" : "1.5.1.1.7",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner17.jpg",
+            "banner_attachment":"cover",
             "title":"Acknowlegements",
             "panels": [
                 {
@@ -835,6 +866,8 @@
             "url" : "/academic/phd/presentations.html",
             "id" : "1.5.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner18.jpg",
+            "banner_attachment":"cover",
             "title":"Other presentations",
             "panels": [
                 {
@@ -858,6 +891,8 @@
         {
             "url" : "/academic/MSc.html",
             "id" : "1.5.2",
+            "banner":"/images/banners/banner19.jpg",
+            "banner_attachment":"cover",
             "type" : "CONTENT",
             "title":"MSc",
             "panels": [

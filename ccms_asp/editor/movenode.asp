@@ -62,8 +62,8 @@ if(currentUser){
   }
 
 
-%><?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%>
+<!DOCTYPE html>
 <html>
   <head>
 
@@ -83,7 +83,6 @@ else{
 %>
     //disableRecursiveMoveLocations();
   </script>
-
   
   <%=EDITOR_CSS%>
   <%=EDITOR_JAVASCRIPTS%>
@@ -91,22 +90,18 @@ else{
  
   <title>Manage Navigation</title>
   </head>
-  
   <body onload="buildTree(nodeToMove);">
   
   <!-- TODO: Add parent refresher when clicking on a link... -->
     <%=refresher%>
     <div id="container">
       <div id="editor_content">
-      
-       <div style="height:130px;">
-          <img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Create page" />
-
-      
-          <h1>Move node</h1>
-          <p>TODO: Set a hidden field to be whatever the user selects from the tree. Also, ensure that the new node is not SELF or a 
-          CHILD of SELF - that would be recursive...</p>
-          <p><%=msg%></p>
+      <h1>Move node</h1>
+       <div style="height:130px;border:1px solid lightgrey;">
+          
+          
+            <div><img style="float:left;padding-right:20px;" src="/ccms_asp/editor/images/viewtree100x130.jpg" alt="Move node" /></div>
+          <p id="msg"><%=msg%></p>
         </div>
       <div id="vt">
 <%
@@ -117,6 +112,7 @@ if(showForm && nodeToMove && nodeToMove.exists){
       <input type="hidden" id="targetid" name="targetid" value="" />
       <input type="hidden" name="action" value="movenode" />
       <!-- input type="button" name="submit" value="OK" onclick="javascript:confirm('Move page \'<%=page.linkText%>\' to selected location')" / -->
+      
       <div id="previewpanel">
         <div id="tree">
           <!-- render dynamic viewtree and options -->

@@ -61,13 +61,11 @@ function walkVT(node,spacer){
 var currentUser = userFactory.getCurrentUser();
 if(currentUser){
 %>
-
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
   <head>
-  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
-  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250" />
+  <meta name="generator" content="PSPad editor, www.pspad.com" />
   
   <%=EDITOR_CSS%>
   <%=EDITOR_JAVASCRIPTS%>
