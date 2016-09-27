@@ -1,0 +1,350 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06-Mar-2015, 20:31:20
+    Author     : silas
+
+*/
+
+body{
+    background-color: #000;    
+    color:#fff;
+    font-family: arial;
+}
+.amazonLink{
+    width:120px;
+    height:240px;
+    margin:0px;
+    border:none;
+}
+.row{
+    height:300px;
+}
+.row-small{
+    height:150px;
+    min-height:150px;
+}
+.row-tiny{
+    height:25px;
+}
+.top-bar{
+    height:50px;
+    color:#fff;
+}
+.top-bar-title{
+    font-size: 24pt;
+    letter-spacing: 2vw; /* See http://stackoverflow.com/questions/24557411/css-letter-spacing-percent-to-completely-fit-the-div-container */
+    margin-left: 15px;
+    margin-right: -15px;
+    margin-top: 7px
+}
+.border-bottom{
+    border-bottom:3px solid red;
+}
+.border-top{
+    border-top:3px solid red;    
+}
+
+/* breadcrumb */
+#breadcrumb{
+    height:auto;
+}
+#breadcrumb ul{
+    margin:0px;
+    padding:0px;
+    border:none;
+}
+#breadcrumb ul>li{
+    display:inline;
+    list-style-type: circle;
+    padding-left:10px;
+}
+#breadcrumb ul>li:first-of-type{
+    padding-left:5px;
+    font-weight:bold;
+}
+#breadcrumb ul>li>a{
+    text-decoration: none;
+    font-weight:normal;
+    color:#fff;
+    padding-right:10px;
+}
+#breadcrumb ul>li>a:hover{
+    text-decoration: underline;
+}
+/* end breadcrumb */
+
+/* end search */
+.search{}
+#search-btn{
+    float:right;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    background-image: url("/images/icons/search.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#search-btn-close{
+    float:right;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    background-image: url("/images/icons/close.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#search-btn-go{
+    float:right;
+    cursor:pointer;
+    height:50px;
+    width:50px;
+    background-image: url("/images/icons/go.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.search-panel-form{
+    border-top:3px solid red;
+    border-bottom:3px solid red;
+    /*padding-top:25px;*/
+    background-color: #000;
+}
+#search-panel > div.pure-g.search-panel-form > div.pure-u-7-8 > input[type="text"]{
+    border:none;
+    margin-left:3px;
+    margin-top:2px;
+    padding-left:5px;
+    width:100%;
+    height:44px;
+    font-size:24pt;
+    color:#000;
+}
+#search-panel > div.pure-g.search-panel-top > div.pure-u-7-8{
+    font-size: 24pt;
+    letter-spacing: 2vw; /* See http://stackoverflow.com/questions/24557411/css-letter-spacing-percent-to-completely-fit-the-div-container */
+    margin-left: 15px;
+    margin-right: -15px;
+    margin-top: 7px;
+    
+}
+#search-panel > div.pure-g.search-panel-form > div.pure-u-7-8{
+    background-color:#000;
+}
+#search-panel{
+    height:100px;
+    display:none;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-color:#000;
+}
+#search-results{
+    display:none;
+}
+/* end search */
+
+#header{
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+}
+#header > div.banner-landing{
+    background-image:url(/images/css/Haunted-House2.png);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+#footer{
+    border-top: 3px solid red;
+}
+#footer > div > div > div.pure-u-7-8.footer{
+    margin-left: 15px;
+    margin-right: -15px;
+    margin-top: 15px
+}
+.banner-landing{
+    height:300px;
+}
+
+/* content colour schemes */
+.scheme-black{
+    background-color: #000;
+    color:#fff;
+}
+.scheme-vlight{
+    background-color: #F3C9F5;
+    color:#000;
+}
+.scheme-light{
+    background-color: #E1B6E3;
+    color:#fff;
+    color:#000;
+}
+.scheme-mid{
+    background-color: #86378A;
+    color:#fff;
+}
+.scheme-dark{
+    background-color: #4D204F;
+    color:#fff;
+}
+.scheme-vdark{
+    background-color: #1E101F;
+    color:#fff;
+}
+/* end content colour schemes */
+
+.breadcrumb>div>ul>li{
+    display:inline;
+}
+
+
+
+/* content styles */
+.panel-title{
+    padding : 10px;
+}
+.panel-text{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.panel-title h2{
+    margin-top: 0px;
+    margin-bottom:0px;
+    font-weight:normal;
+}
+.panel-full-width{
+    width:100%;
+    height:auto;
+}
+
+.panel-sub-menu{
+    padding-left:0px;
+}
+.panel-sub-menu li{
+    list-style-type: none;
+}
+.panel-sub-menu li:hover{
+    text-decoration: underline;
+}
+/* home */
+
+
+/* librivox */
+/* these are JQuery-UI classes */
+.ui-autocomplete {
+        max-height: 100px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+        height: 100px;
+}
+
+/* GCSE over rides: */
+.gsc-above-wrapper-area{
+    display:none;
+}
+.ui-widget-header{
+    background: none;
+    border:none;
+}
+
+/*
+AJAX load spinner
+from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle-within-div
+*/
+/* div */
+#overlay{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    text-align: center; /*handles the horizontal centering*/
+}
+
+/* span */
+#vertical-centerer{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* image */
+#centered{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* librivox search form */
+#autocomplete-data{
+    width:80%;
+    height:15px;
+    padding-top:7px;
+}
+
+/* display panel min height */
+#body-content .row{
+    min-height:300px;
+}
+
+/* weddingfest gallery styling */
+.image_display_trigger_wrapper{
+    width:100%;
+    height: 250px;
+    overflow: auto;
+}
+/*  */
+#image_display_trigger{
+    display:inline;
+    width:70%;
+}
+
+
+/* TODO: media queries */
+@media screen and (max-width: 300px) {
+    
+}
+/* MQ - breakpoints as PureIO - TODO */
+/*
+@media screen and (max-width: 35.5em){
+    .row{
+        height:150px;
+    }
+    .top-bar-title{
+        font-size: 12pt;
+        letter-spacing: 2vw;
+        margin-left: 15px;
+        margin-right: -15px;
+        margin-top: 7px;
+    }
+}
+
+@media screen and (min-width: 48em){
+    .row{
+        height:150px;
+    }    
+}
+
+@media screen and (min-width: 64em){
+    .row{
+        height:200px;
+    }
+}
+
+@media screen and (min-width: 80em){
+    .row{
+        height:250px;
+    }    
+}
+*/

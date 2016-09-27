@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <link rel="stylesheet" href="/ccms_asp/editor/styles/editstyles.css" type="text/css" />
+<link rel="stylesheet" href="/ccms_asp/editor/scripts/jqueryui/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="/ccms_asp/editor/datatables/css/jquery.dataTables.min.css" type="text/css" />
+<script type="text/javascript" src="/ccms_asp/editor/scripts/editscripts.js"></script>
+<script type="text/javascript" src="/ccms_asp/editor/scripts/jquery/jquery.js"></script>
+<script type="text/javascript" src="/ccms_asp/editor/scripts/jqueryui/jquery-ui.js"></script>
+<script type="text/javascript" src="/ccms_asp/editor/datatables/js/jquery.dataTables.min.js"></script>
+
+  
+  <title>CCMS Administration</title>
+  
+  </head>
+  <body>
+    <div id="container" class="u">
+      <div id="editor_content">
+        <h1>Title</h1>
+        <p>Intro text intro text intro text intro text intro text intro text intro text </p>
+        <ul>
+          <li><a href="#" onclick="popup('/ccms_asp/admin/manageusers.asp');" title="Manage Users">Manage Users</a>: Manage CCMS users and their permissions.</li>
+          <li><a href="#" onclick="popup('/ccms_asp/admin/managecontenttypes.asp')" title="Manage Content Types">Manage Content Types</a>: Manage CCMS classification types for, e.g. news items.</li>
+          <li><a href="#" onclick="popup('/ccms_asp/admin/managelayouts.asp')" title="Manage Content Types">Manage Templates</a>: Manage available layout templates.</li>
+          <li>Manage Roles (TODO)</li>
+        </ul>
+        <p>
+        [<a href="#" onclick="javascript:window.close();">close</a>]
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
