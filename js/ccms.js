@@ -13,7 +13,7 @@
 
 var ccms = {
     
-    CCMS_PROXY_URL :"/ccms.aspx",
+    CCMS_PROXY_URL :"/proxy/ccms_proxy.aspx",
     
     buildSubnav : false,//DEFAULT TO NOT BUILDING SUBNAV/DUMMY BC
     
@@ -95,6 +95,7 @@ var ccms = {
      * Stand-alone methods to get 
      */
     renderCCMSContentItem : function(contentId,target,panelId){
+        console.log(this.CCMS_PROXY_URL + "?calltype=json&contentid=" + contentId)
         $.ajax(this.CCMS_PROXY_URL + "?calltype=json&contentid=" + contentId,{
             
             success : function(data, textStatus, jqXHR){

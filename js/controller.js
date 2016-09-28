@@ -52,8 +52,9 @@ var controller = {
                     /*
                      * load the breadcrumb
                      */
-                    controller.loadBreadcrumb();
-                    
+                    if(!controller.currentPage.suppress_breadcrumb){
+                        controller.loadBreadcrumb();
+                    }
                     //load content panels:
                     controller.loadContentPanels();
                     
@@ -85,6 +86,11 @@ var controller = {
                         case "1.3.4":
                             ccms.init();
                         break;
+                        case "1.7":
+                            //console.log("loading wufoo form...");
+                            //load wufoo contact form:
+                            wufoo.init(controller.currentPage);
+                        break;
                     }
                     
                 }
@@ -105,7 +111,7 @@ var controller = {
     loadCurrentPage : function(){
         this.currentPage = null;
         for(var a=0;a<this.data.pages.length;a++){
-
+            //console.log(this.getRelativeUrl(true));
             if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
                 this.currentPage = this.data.pages[a];
                 this.dataOk = true;
@@ -129,20 +135,10 @@ var controller = {
 
     loadBreadcrumb : function(){
         //load breadcrumb data:
+        console.log(this.currentPage);
         this.getPathArray();
         
         //then generate HTML:
-        /*
-        <div class="pure-g row-tiny border-bottom" id="breadcrumb">
-            <!-- JQuery controlled background image. Set ID and image array in javascript -->
-            <div class="pure-u-1 scheme-black">
-                <ul>
-                    <li><a href="/">Home</a><span>|</span></li>
-                    <li>Landing</li>
-                </ul>
-            </div>
-        </div>
-         */
         var _outer = $(document.createElement("div")).addClass("pure-g row-tiny border-bottom").attr("id","breadcrumb");
         var _inner = $(document.createElement("div")).addClass("pure-u-1 scheme-black");
         var _ul = document.createElement("ul");
@@ -245,7 +241,8 @@ var controller = {
      */
     getRelativeUrl : function(clean){
         var _url = window.location.pathname;
-        if(_url === "/") _url = _url + this.defaultPage;
+        //console.log(_url);
+        if((_url.charAt(_url.length-1)) === "/") _url = _url + this.defaultPage;
         if(!clean) _url += window.location.search;
         return _url;
     },

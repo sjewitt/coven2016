@@ -1,6 +1,6 @@
 
 {
-    "README": "Push colourscheme, link and title etc. on",
+    "README": "Push colourscheme, link and title etc. on. Collect all properties in the JS object",
     "CSS-SCHEMES" : [
         "scheme-black",
         "scheme-vlight",
@@ -34,7 +34,7 @@
                     "data": 
                     {
                         "title": "About",
-                        "intro": "intro text intro text 2",
+                        "intro": "Me, this site and it's purpose",
                         "class": "scheme-vdark",
                         "linkId":"1.1",
                         "link": "/about.html"
@@ -44,18 +44,17 @@
                     "data": 
                     {
                         "title": "Code",
-                        "intro": "intro text intro text 2",
+                        "intro": "Details of my coding projects, tinkerings etc.",
                         "class": "scheme-dark",
                         "linkId":"1.1",
                         "link": "/code.html"
                     }
-                },
-                
+                },                
                 {
                     "data": 
                     {
                         "title": "Tech",
-                        "intro": "intro text intro text 1",
+                        "intro": "Gadgets and tablets",
                         "class": "scheme-light",
                         "linkId":"1.1",
                         "link": "/tech.html"
@@ -65,7 +64,7 @@
                     "data": 
                     {
                         "title": "Games",
-                        "intro": "intro text intro text 2",
+                        "intro": "Fun stuff - DooM, Quake, HL/HL2 etc.",
                         "class": "scheme-mid",
                         "linkId":"1.1",
                         "link": "/games.html"
@@ -75,7 +74,7 @@
                     "data": 
                     {
                         "title": "Academic",
-                        "intro": "intro text intro text 2",
+                        "intro": "My PhD thesis, MSc work, posters and publication",
                         "class": "scheme-vlight",
                         "linkId":"1.1",
                         "link": "/academic.html"
@@ -85,7 +84,7 @@
                     "data": 
                     {
                         "title": "WeddingFest '07!",
-                        "intro": "intro text intro text 2",
+                        "intro": "Our wedding - festival and honeymoon.",
                         "class": "scheme-mid",
                         "linkId":"1.6",
                         "link": "/weddingfest07.html"
@@ -98,7 +97,8 @@
             "id" : "1.1",
             "type" : "LANDING",
             "title":"Tech",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner14.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -125,6 +125,8 @@
             "url" : "/tech/tech-1.html",
             "id" : "1.1.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner10.jpg",
+            "banner_attachment":"cover",
             "title":"Tech 1",
             "panels": [
                 {
@@ -151,6 +153,8 @@
             "url" : "/tech/tech-2.html",
             "id" : "1.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner09.jpg",
+            "banner_attachment":"cover",
             "title":"Tech 2",
             "panels": [
                 {
@@ -178,7 +182,8 @@
             "id" : "1.2",
             "type" : "LANDING",
             "title":"Games",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner13.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
 
@@ -213,7 +218,7 @@
                 }
             ]
         },
-                {
+        {
             "url" : "/games/doom.html",
             "id" : "1.2.1",
             "type" : "CONTENT",
@@ -244,6 +249,8 @@
             "url" : "/games/quake.html",
             "id" : "1.2.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner08.jpg",
+            "banner_attachment":"cover",
             "title":"Quake",
             "panels": [
                 {
@@ -397,7 +404,7 @@
             "url" : "/code/librivox.html",
             "id" : "1.3.3",
             "type" : "CONTENT",
-            "banner":"/images/banners/banner_librivox2.png",
+            "banner":"/images/banners/banner_librivox.png",
             "title":"LibriVox",
             "panels": [
                 {
@@ -453,26 +460,23 @@
             "id" : "1.4",
             "type" : "LANDING",
             "title":"About",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner12.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
                     {
                         "class": "scheme-vlight",
-                        "link": "/me/me-1.html",
-                        "linkId":"3",
-                        "content_id":"5",
-                        "id":"ccms_display4"
+                        "content_id":"59",
+                        "id":"ccms_display1"
                     }
                 },
                 {
                     "data":
                     {
-                        "intro": "intro text intro text 2",
-                        "class": "scheme-dark",
-                        "link": "/me/me-2.html",
-                        "content_id":"4",
-                        "id":"ccms_display2"
+                        "content_id":"58",
+                        "id":"ccms_display2",
+                        "class": "scheme-dark"
                     }
                 }
             ]
@@ -481,6 +485,8 @@
             "url" : "/me/me-1.html",
             "id" : "1.4.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner08.jpg",
+            "banner_attachment":"cover",
             "title":"Me",
             "panels": [
                 {
@@ -505,6 +511,8 @@
             "url" : "/me/me-2.html",
             "id" : "1.4.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner07.jpg",
+            "banner_attachment":"cover",
             "title":"Me again",
             "panels": [
                 {
@@ -532,7 +540,8 @@
             "id" : "1.5",
             "type" : "LANDING",
             "title":"Academic",
-            "banner":"/images/css/beaker-neg.png",
+            "banner":"/images/banners/banner11.jpg",
+            "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
@@ -567,6 +576,8 @@
             "url" : "/academic/phd.html",
             "id" : "1.5.1",
             "type" : "LANDING",
+            "banner":"/images/banners/banner06.jpg",
+            "banner_attachment":"cover",
             "title":"PhD",
             "panels": [
                 {
@@ -592,6 +603,8 @@
         {
             "url" : "/academic/phd/thesis.html",
             "id" : "1.5.1.1",
+            "banner":"/images/banners/banner05.jpg",
+            "banner_attachment":"cover",
             "type" : "HOME",
             "title":"Thesis",
             "panels": [
@@ -661,21 +674,21 @@
                     }
                 }
             ]
-        },
-        
+        },       
         {
             "url" : "/academic/phd/thesis/introduction.html",
             "id" : "1.5.1.1.1",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner005.png",
+            "banner_attachment":"cover",
             "title":"Introduction",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 1",
+                        "title": "Introduction",
                         "class": "scheme-vdark",
-                        "ajax_sub_menu_array":"[5,6]",
-                        "DO AS ARRAY FOR NAVIGATION?...":"...[1,2]?"
+                        "ajax_sub_menu_array":"[23,24,25,26,27,28,29,30,31,32,36,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55]"
                     }
                 },
                 {
@@ -684,25 +697,26 @@
                         "title": "Introduction",
                         "link":"#",
                         "class": "scheme-vlight",
-                        "content_id":"5",
+                        "content_id":"23",
                         "id":"ccms_display",
                         "IF CONTENT_ID IS SPECIFIED...":"...DYNAMICALLY PUSH AN ID AND USE THAT (ccms_content_[contentid]?)"
                     }
                 }
             ]
-        },
-        
+        },       
         {
             "url" : "/academic/phd/thesis/materials.html",
             "id" : "1.5.1.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner004.png",
+            "banner_attachment":"cover",
             "title":"Materials and Methods",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 2",
-                        "intro": "XXX",
+                        "title": "Materials and Methods",
+                        "ajax_sub_menu_array":"[56,57,60,61,62,63,64,67,68,69,71,73,74,77]",
                         "class": "scheme-vdark"
                     }
                 },
@@ -712,23 +726,25 @@
                         "title": "Materials and Methods",
                         "link":"#",
                         "class": "scheme-vlight",
-                        "content_id":"6"
+                        "content_id":"56",
+                        "id":"ccms_display"
                     }
                 }
             ]
         },
-        
-                {
+        {
             "url" : "/academic/phd/thesis/application.html",
             "id" : "1.5.1.1.3",
             "type" : "CONTENT",
-            "title":"Introduction",
+            "banner":"/images/banners/banner003.png",
+            "banner_attachment":"cover",
+            "title":"Application to the discrimination of oak",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 3",
-                        "intro": "XXX",
+                        "title": "Application to the discrimination of oak",
+                        "ajax_sub_menu_array":"[79,81,82,83,84,85,89,90,91,92]",
                         "class": "scheme-vdark"
                     }
                 },
@@ -737,23 +753,25 @@
                     {
                         "title": "Application to the discrimination of oak",
                         "link":"#",
-                        "class": "scheme-vlight"
+                        "class": "scheme-vlight",
+                        "content_id":"79",
+                        "id":"ccms_display"
                     }
                 }
             ]
         },
-        
-                {
+        {
             "url" : "/academic/phd/thesis/discussion.html",
             "id" : "1.5.1.1.4",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner002.png",
+            "banner_attachment":"cover",
             "title":"Discussion",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 4",
-                        "intro": "XXX",
+                        "title": "Discussion",
                         "class": "scheme-vdark"
                     }
                 },
@@ -767,44 +785,41 @@
                 }
             ]
         },
-        
-                {
+        {
             "url" : "/academic/phd/thesis/bibliography.html",
             "id" : "1.5.1.1.5",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner20.jpg",
+            "banner_attachment":"cover",
             "title":"Bibliography",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 5",
-                        "intro": "XXX",
-                        "class": "scheme-vdark"
-                    }
-                },
-                {
-                    "data": 
-                    {
                         "title": "Bibliography",
                         "link":"#",
-                        "class": "scheme-vlight"
+                        "class": "scheme-vlight",
+                        "content_id":"93",
+                        "id":"ccms_display",
+                        "modifier_class":"panel-full-width"
                     }
                 }
             ]
         },
-        
-                {
+        {
             "url" : "/academic/phd/thesis/appendicies.html",
             "id" : "1.5.1.1.6",
             "type" : "CONTENT",
-            "title":"Introduction",
+            "banner":"/images/banners/banner16.jpg",
+            "banner_attachment":"cover",
+            "title":"Appendicies",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "Section 6",
-                        "intro": "XXX",
-                        "class": "scheme-vdark"
+                        "title": "Appendicies",
+                        "class": "scheme-vdark",
+                        "ajax_sub_menu_array":"[94,95,96,97,98,99,100,101,102,103,104,105,106]"
                     }
                 },
                 {
@@ -812,16 +827,19 @@
                     {
                         "title": "Appendicies",
                         "link":"#",
-                        "class": "scheme-vlight"
+                        "class": "scheme-vlight",
+                        "content_id":"94",
+                        "id":"ccms_display"
                     }
                 }
             ]
         },
-        
-                {
+        {
             "url" : "/academic/phd/thesis/acknowledgements.html",
             "id" : "1.5.1.1.7",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner17.jpg",
+            "banner_attachment":"cover",
             "title":"Acknowlegements",
             "panels": [
                 {
@@ -842,23 +860,12 @@
                 }
             ]
         },
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         {
             "url" : "/academic/phd/presentations.html",
             "id" : "1.5.1.2",
             "type" : "CONTENT",
+            "banner":"/images/banners/banner18.jpg",
+            "banner_attachment":"cover",
             "title":"Other presentations",
             "panels": [
                 {
@@ -882,6 +889,8 @@
         {
             "url" : "/academic/MSc.html",
             "id" : "1.5.2",
+            "banner":"/images/banners/banner19.jpg",
+            "banner_attachment":"cover",
             "type" : "CONTENT",
             "title":"MSc",
             "panels": [
@@ -982,6 +991,35 @@
                     "data":
                     {
                         "title": "WeddingFest Gallery",
+                        "intro": "Select a category...",
+                        "class": "scheme-dark",
+                        "id":"content_flow_display"
+                    }
+                }
+            ]
+        },
+        {
+            "url" : "/jcms/index.html",
+            "id" : "1.7",
+            "type" : "LANDING",
+            "suppress_breadcrumb":true,
+            "banner":"/images/banners/logo-small.jpg",
+            "banner_attachment" : "contain",
+            "title":"JCMS",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "Contact Us",
+                        "intro": "",
+                        "class": "scheme-vlight",
+                        "id":"jcms_contact"
+                    }
+                },
+                {
+                    "data":
+                    {
+                        "title": "About",
                         "intro": "Select a category...",
                         "class": "scheme-dark",
                         "id":"content_flow_display"
