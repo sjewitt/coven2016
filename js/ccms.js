@@ -95,7 +95,25 @@ var ccms = {
      * Stand-alone methods to get 
      */
     renderCCMSContentItem : function(contentId,target,panelId){
-        console.log(this.CCMS_PROXY_URL + "?calltype=json&contentid=" + contentId)
+        //console.log(this.CCMS_PROXY_URL + "?calltype=json&contentid=" + contentId);
+        
+        
+        
+        //set the row heights to flexible:
+//        console.log(target);
+//        
+//        console.log(panelId);
+//        
+//        console.log($(panelId).css({"height":""}));
+//        console.log($(target).css({"height":""}));
+//        console.log($(panelId).parent().parent());
+//        
+        
+                   console.log("setting height to null");     
+                $("#body-content.row").css({"height":"", "color":"green"});
+
+                //$("#body-content.row").css({"height":""});
+        
         $.ajax(this.CCMS_PROXY_URL + "?calltype=json&contentid=" + contentId,{
             
             success : function(data, textStatus, jqXHR){
@@ -126,7 +144,7 @@ var ccms = {
                 }
                 
                 $(target).html(data.data);
-                $("#body-content>div.row").css({"min-height":"300px","height":"initial"});
+                //$("#body-content>div.row").css({"min-height":"300px","height":"initial"});
                 
                 //push the title onto the HTML title and the main headings:
                 $("title").text(data.name);

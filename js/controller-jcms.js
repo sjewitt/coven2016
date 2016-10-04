@@ -6,36 +6,12 @@
  * 
  * TODO: Add handler to inject link based on linkID to element?
  * 
+ * 
+ * TODO: Do something with page.prototype.hasProperty to better control the
+ * JSON source. I can also identify the different properties I currently use.
+ * 
  */
 var controller = {
-    
-    /*
-     * Definition for PAGE/PANEL objects. Use to check incoming property exists,  and also as a handy reference
-     * for propertuies to use in the JSON...
-     * @type type
-     */
-    PANEL_PROTOTYPE : {
-        "title":true,                   //panel title
-        "intro":true,                   //panel 
-        "class":true,                   //base class to apply: scheme-xxx
-        "id":true,                      //DOM ID for JQuery etc. targetting
-        "link":true,                    //the HREF that the panel click will go to
-        "linkId":true,                  //no longer used?
-        "ajax_sub_menu_array":true,     //array of CCMS content object IDs (as string: "[1,2,3]".
-        "content_id":true,              //individual CCMS content ID to render
-        "modifier_class":true,          //arbitrary class to additionally apply to panel (e.g. 'panel-full-width') 
-    },
-    PAGE_PROTOTYPE : {
-        "url":true,
-        "id" : true,                    //no longer used?
-        "type" : true,                  //HOME, LANDING, CONTENT
-        "title" : true,                 //page title
-        "banner" : true,                //URL of banner graphic
-        "banner_attachment" : true,     //valid background-size css value: cover, etc. default is 'contain'
-        "break":true,                   //PURE break point (defaults to 'sm'. options: sm, md, lg, xl)
-        "panels" : true                 //the content panels
-    },
-    
     
     TYPE_HOME : "HOME",
     TYPE_LANDING :"LANDING",
@@ -115,7 +91,7 @@ var controller = {
                             ccms.init();
                         break;
                         case "1.7":
-                            console.log("loading wufoo form...");
+                            //console.log("loading wufoo form...");
                             //load wufoo contact form:
                             wufoo.init(controller.currentPage);
                         break;
@@ -138,19 +114,9 @@ var controller = {
     loadCurrentPage : function(){
         this.currentPage = null;
         for(var a=0;a<this.data.pages.length;a++){
-            console.log(this.getRelativeUrl(true));
+            //console.log(this.getRelativeUrl(true));
             if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
-                
                 this.currentPage = this.data.pages[a];
-                //*********DO SOMETHING WITH THIS???
-                var _pageOK = true;
-                for(p in this.currentPage){
-                    //console.log(p+" = "+this.PAGE_PROTOTYPE[p]);
-                    if(this.PAGE_PROTOTYPE[p] === undefined){
-                        _pageOK = false;
-                    }
-                }
-                //END*******************************
                 this.dataOk = true;
             }
         }
@@ -217,23 +183,14 @@ var controller = {
                 if(this.currentPage.banner_attachment && this.currentPage.banner_attachment !== null){
                     _imageAttachment = this.currentPage.banner_attachment;
                 }
-
-//TO CMPLETE
-console.log("TYPE: "+this.currentPage.type);
                 //banner
-                console.log(this.getCleanUrl());
-                var height = "150px";
-                if(this.getCleanUrl() === "/index.html"){
-                    height = "300px";
-                }
                 $(".banner-content").css({
                     "background-image":"url(" + this.currentPage.banner + ")",
                     //base switch here on banner_scale: default to contain.
                     "background-size": _imageAttachment,
                     "background-position": "left",
                     "background-repeat": "no-repeat",
-                    "background-attachment":"top-left",
-                    "height" : height
+                    "background-attachment":"top-left"
                 });
                 /*
                  * Build panels sequentially from data and inject into body area: 
@@ -471,6 +428,9 @@ Basic Structure:
 *                                  pure-u-1 pure-u-sm-3-4 contentpanel row [scheme]
 
 I only need panelNum on content pages to determine whether left or right panel
+
+TODO: Use page object flag to control breakpoints:
+                                
      */
     buildPanel : function(panelData,pageType,panelNum,data){
         var basePanelClass1 = null;
@@ -485,31 +445,23 @@ I only need panelNum on content pages to determine whether left or right panel
             linkPanelClass = "linkpanel";
         }
   
-        //02/10/16 - control media breakpoints from JSON:
-        var CSSbreak = "sm";
-        if(this.currentPage.break !== undefined){
-            CSSbreak = this.currentPage.break;
-        }
-        console.log(this.currentPage);
-  
-  
         //var url = this.getLinkFromId(data,panelData.linkId);
-        //console.table(panelData);
-        //console.log(addLink);
+        console.table(panelData);
+        console.log(addLink);
         switch(pageType){
             case this.TYPE_HOME :
-                basePanelClass1 = "pure-u-1-2 pure-u-" + CSSbreak + "-1-4 " + linkPanelClass + " row-small";
+                basePanelClass1 = "pure-u-1-2 pure-u-md-1-4 " + linkPanelClass + " row-small";
                 //addLink = true;
             break;
                 
             case this.TYPE_LANDING :
-                basePanelClass1 = "pure-u-1 pure-u-" + CSSbreak + "-1-2 " + linkPanelClass + " row";
+                basePanelClass1 = "pure-u-1 pure-u-md-1-2 " + linkPanelClass + " row";
                 //addLink = true;
             break;
                 
             case this.TYPE_CONTENT :
-                basePanelClass1 = "pure-u-1 pure-u-" + CSSbreak + "-1-4 contentpanel row";
-                basePanelClass2 = "pure-u-1 pure-u-" + CSSbreak + "-3-4 contentpanel row";
+                basePanelClass1 = "pure-u-1 pure-u-md-1-4 contentpanel row";
+                basePanelClass2 = "pure-u-1 pure-u-md-3-4 contentpanel row";
             break;
         }
 
@@ -550,7 +502,7 @@ I only need panelNum on content pages to determine whether left or right panel
          * maybe...
          * */
         if(panelData.intro === undefined){
-            $(_outer).css({"min-height":"75px"});   //was height
+            $(_outer).css({"height":"75px"});
         }
         else{
             $(_text).html(panelData.intro);

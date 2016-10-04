@@ -177,26 +177,45 @@ body{
     color:#fff;
 }
 .scheme-vlight{
-    background-color: #F3C9F5;
+    background-color: #ebe3f3;
     color:#000;
 }
 .scheme-light{
-    background-color: #E1B6E3;
-    color:#fff;
+    background-color: #ecdaff;
+    /*color:#fff;*/
     color:#000;
 }
 .scheme-mid{
-    background-color: #86378A;
+    background-color: #c39dea;
     color:#fff;
 }
 .scheme-dark{
-    background-color: #9933FF;
+    background-color: #6922b1;
     color:#fff;
 }
 .scheme-vdark{
-    background-color: #1E101F;
+    background-color: #330165;
     color:#fff;
 }
+
+/* links */
+.scheme-black a, .scheme-vdark a, .scheme-dark a, .scheme-mid a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.scheme-black a:hover, .scheme-vdark a:hover, .scheme-dark a:hover, .scheme-mid a:hover{
+    text-decoration: underline;
+}
+.scheme-vlight a, .scheme-light a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.scheme-vlight a:hover, .scheme-light a:hover{
+    text-decoration: underline;
+}
+
 /* end content colour schemes */
 
 .breadcrumb>div>ul>li{
@@ -211,6 +230,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .panel-title h2{
     margin-top: 0px;
     margin-bottom:0px;

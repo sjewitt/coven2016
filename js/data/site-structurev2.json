@@ -999,30 +999,32 @@
             ]
         },
         {
-            "url" : "/jcms/index.html",
+            "url" : "/XXX/jcms/index.html",
             "id" : "1.7",
             "type" : "LANDING",
             "suppress_breadcrumb":true,
+            "break" : "lg",
             "banner":"/images/banners/logo-small.jpg",
             "banner_attachment" : "contain",
             "title":"JCMS",
             "panels": [
-                {
-                    "data": 
-                    {
-                        "title": "Contact Us",
-                        "intro": "",
-                        "class": "scheme-vlight",
-                        "id":"jcms_contact"
-                    }
-                },
+                
                 {
                     "data":
                     {
-                        "title": "About",
-                        "intro": "Select a category...",
-                        "class": "scheme-dark",
-                        "id":"content_flow_display"
+                        "title": "Summary",
+                        "intro": "",
+                        "class": "scheme-light",
+                        "content_id" : "107",
+                        "id":"jcms_intro"
+                    }
+                },{
+                    "data": 
+                    {
+                        "title": "Contact Us",
+                        "intro": "Contact form loading...",
+                        "class": "scheme-vlight",
+                        "id":"jcms_contact"
                     }
                 }
             ]

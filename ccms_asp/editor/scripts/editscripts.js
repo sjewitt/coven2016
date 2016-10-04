@@ -74,10 +74,12 @@ $(function(){
         });
     }
     catch(e){};
-    
+
     //initialize calendar widget on create content page:
-    calendar.set("validfrom");
-    calendar.set("validto");
+//    if(calendar && calendar !== undefined){
+//        calendar.set("validfrom");
+//        calendar.set("validto");
+//    }
     
     //manage enablement of create button:
     $("input#new_content_name").keyup(function(){
@@ -88,6 +90,7 @@ $(function(){
         if(_name){ $("#content_create_submit").prop("disabled",false);}
         else{      $("#content_create_submit").prop("disabled",true);}
     });
+    
 
     
     

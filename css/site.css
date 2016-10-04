@@ -14,6 +14,11 @@ body{
     color:#fff;
     font-family: arial;
 }
+
+/*div{
+    height:100%;
+}*/
+
 .amazonLink{
     width:120px;
     height:240px;
@@ -21,11 +26,16 @@ body{
     border:none;
 }
 .row{
-    height:300px;
+    min-height:300px;
 }
 .row-small{
-    height:150px;
+    /*height:150px;*/
     min-height:150px;
+}
+
+.row-small.banner-content{
+    height:150px;
+    background-color:#FFFF40;
 }
 .row-tiny{
     height:25px;

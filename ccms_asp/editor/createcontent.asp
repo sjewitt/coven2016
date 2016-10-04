@@ -145,7 +145,11 @@ if(currentUser){
 ////  	calendar.set("validfrom");
 ////  	calendar.set("validto");
 ////  }
-
+$(function(){
+  //date picker
+  	calendar.set("validfrom");
+  	calendar.set("validto");
+});
 
 //TODO: Add handlers for activating the button if name/description are filled
   </script>
