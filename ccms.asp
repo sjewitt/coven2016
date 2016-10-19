@@ -118,7 +118,6 @@ try{
             Response.Write(_out2);
 	}
   else{
-    Response.Write("RENDER...");
     //RETRIEVE START NODE - assume root, and check for a nodeID on the URL:
     var node = (new Viewtree()).getRoot(); 
     if((new String(Request("nodeid"))) != 'undefined'){
@@ -132,13 +131,11 @@ try{
     
     //IF CACHED, RETRIEVE:
     if(USECACHE && (cache.contains(key) &! currentUser)){ //sort out for logged-in browse users.
-      //Response.Write("using cache...<br />")
       out = cache.get(key);
     }
     
     //OTHERWISE, GENERATE THE OUTPUT AND POPULATE THE CACHE:
     else{
-      //Response.Write("rendering new...<br/>");
       //Retrieve layout (direct property, parent viewtree node or finally the default?): TODO
       var layout          = false;
       var layoutManager   = new LayoutManager();
@@ -230,7 +227,16 @@ try{
       //REPLACE CORE PROPS:
       out = renderUtils.replaceCoreProperties(out,page,map);
       
-      //REPLACE ANY CUSTOMISATIONS:
+/*******************************************************************************
+
+ADD ANY CUSTOMISATIONS:
+
+This block is important because it is the hook into bespoke development for the 
+CMS. Basically, insertCustomisedLayout() is a stub method that is adapted for 
+each deployment and can hold any necessary code (news listings, integrations 
+etc.).
+
+*******************************************************************************/
       out = insertCustomisedLayout(out,node);
   
       //only cache if there is no session:
