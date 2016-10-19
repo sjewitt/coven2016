@@ -999,32 +999,77 @@
             ]
         },
         {
-            "url" : "/XXX/jcms/index.html",
-            "id" : "1.7",
+            "url" : "/jcms/index.html",
+            "id" : "10.1",
             "type" : "LANDING",
-            "suppress_breadcrumb":true,
-            "break" : "lg",
-            "banner":"/images/banners/logo-small.jpg",
-            "banner_attachment" : "contain",
             "title":"JCMS",
+            "banner":"/images/banners/logo5.png",
+            "banner_attachment":"fixed",
             "panels": [
-                
                 {
-                    "data":
+                    "data": 
                     {
-                        "title": "Summary",
                         "intro": "",
                         "class": "scheme-light",
-                        "content_id" : "107",
-                        "id":"jcms_intro"
+                        "content_id":"108",
+                        "id":"ccms_display3",
+                        "transparency":"255,255,255,.5"
                     }
-                },{
+                },
+                
+                {
+                    "data": 
+                    {
+                        "title": "#",
+                        "intro": "",
+                        "class": "scheme-vdark",
+                        "content_id":"107",
+                        "id":"ccms_display1"
+                    }
+                },
+                
+                
+                
+                {
+                    "data": 
+                    {
+                        "title": "#",
+                        "intro": "",
+                        "class": "scheme-vlight",
+                        "content_id":"109",
+                        "id":"ccms_display4"
+                    }
+                },
+                
+                {
                     "data": 
                     {
                         "title": "Contact Us",
-                        "intro": "Contact form loading...",
                         "class": "scheme-vlight",
-                        "id":"jcms_contact"
+                        "id":"wufoo_contact_form",
+                        "transparency":"255,255,255,.5"
+                    }
+                },
+                
+                {
+                    "data": 
+                    {
+                        "title": "#",
+                        "intro": "",
+                        "class": "scheme-light",
+                        "content_id":"110",
+                        "id":"ccms_display5",
+                        "transparency":"255,255,255,.5"
+                    }
+                },
+                
+                {
+                    "data": 
+                    {
+                        "title": "Tweets",
+                        "intro": "",
+                        "class": "scheme-vlight",
+                        "id":"twitter_widget"
                     }
                 }
             ]

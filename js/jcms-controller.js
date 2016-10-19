@@ -6,10 +6,6 @@
  * 
  * TODO: Add handler to inject link based on linkID to element?
  * 
- * 
- * TODO: Do something with page.prototype.hasProperty to better control the
- * JSON source. I can also identify the different properties I currently use.
- * 
  */
 var controller = {
     
@@ -26,9 +22,14 @@ var controller = {
     dataOk : false,
     loading : "/images/icons/ajax-loader-2.gif",
     
+    //wufoo:
+    wufoo_dialog_width : window.innerWidth * 0.9,
+    wufoo_dialog_height : window.innerHeight * 0.9,
+    
+    
     init : function(){
         this.loadData();
-        this.loadSearchBanner();     //AJAX load
+        //this.loadSearchBanner();     //AJAX load
         //this.loadBannerImages();     //from JSON TODO
         this.loadCommonElements();
     },
@@ -56,9 +57,8 @@ var controller = {
                     /*
                      * load the breadcrumb
                      */
-                    if(!controller.currentPage.suppress_breadcrumb){
-                        controller.loadBreadcrumb();
-                    }
+                    //controller.loadBreadcrumb();
+                    
                     //load content panels:
                     controller.loadContentPanels();
                     
@@ -78,25 +78,43 @@ var controller = {
                      * Handlers for custom pages/functions
                      */
                     switch(controller.currentPage.id){
-                        case "1.3.3":   //librivox
-                            //call librivox lib
-                            librivox.init();  
-                        
-                        break;
-                        case "1.6.1":
-                            weddingfest07.init({displaytargetId : "content_flow_display",linksTargetId : "content_flow_links", loadContentFlow : true});
+                        case "10.1":
+                            
+                            //insert wufoo form:
+                            var wufoo_wrapper = document.createElement("div");
+                            wufoo_wrapper.setAttribute("id","wufoo-z157nixr1oirgiy");
+                            
+                            //lazy...
+                            var formStructure = '<div id="containerXXX" class="ltr"><form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://jcmssilas.wufoo.com/forms/z157nixr1oirgiy/#public"><ul><li id="foli107" class="notranslate"><label class="desc" id="title107" for="Field107">Name</label><div><input id="Field107" name="Field107" type="text" class="field text large" value="" maxlength="255" tabindex="1" onkeyup=""/> </div></li><li id="foli3" class="notranslate"><label class="desc" id="title3" for="Field3">Email<span id="req_3" class="req">*</span></label><div><input id="Field3" name="Field3" type="email" spellcheck="false" class="field text large" value="" maxlength="255" tabindex="2" required /></div></li><li id="foli4" class="notranslate"><label class="desc" id="title4" for="Field4">Your message</label><div><textarea id="Field4" name="Field4" class="field textarea small" spellcheck="true" rows="10" cols="50" tabindex="3" onkeyup=""></textarea></div></li> <li class="buttons"><div><input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit"/></div></li><li class="hide"><label for="comment">Do Not Fill This Out</label><textarea name="comment" id="comment" rows="1" cols="1"></textarea><input type="hidden" id="idstamp" name="idstamp" value="4OmMIKthKce7wuHEVj62nALcj1oJFs3sD8tfYS/mWgU=" /></li></ul></form></div>';
+                            
+                            //add form:
+                            wufoo_wrapper.innerHTML = formStructure;
+                            
+                            //calculate and set iframe size:
+                            $("#wufoo_iframe").css({
+                                width : (controller.wufoo_dialog_width - 40) + "px",
+                                height : (controller.wufoo_dialog_height - 80) + "px"
+                            });
+                            
+                            //add to panel:
+                            $("#wufoo_contact_form > .panel-text").append(wufoo_wrapper);
+                            $('form#form1 input:submit').click(function(){
+                                
+                                $("#_dialog").css({
+                                    "display":""
+                                }).dialog({
+                                   width: controller.wufoo_dialog_width,
+                                   height: controller.wufoo_dialog_height
+                                });
 
-                        break;
-                        case "1.3.4":
-                            ccms.init();
-                        break;
-                        case "1.7":
-                            //console.log("loading wufoo form...");
-                            //load wufoo contact form:
-                            wufoo.init(controller.currentPage);
+                                $('form#form1').attr("target","wufoo_iframe");
+                            });
+                            
+                            //also want to inject the tweets:
+                            var twitter_code = '<a class="twitter-timeline" data-height="400" href="https://twitter.com/JCMSConsulting">Tweets by JCMSConsulting</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
+                            $("#twitter_widget").html(twitter_code);
                         break;
                     }
-                    
                 }
                 else{
                     //load content not found:
@@ -110,11 +128,12 @@ var controller = {
             }
         });
     },
+
     
     loadCurrentPage : function(){
         this.currentPage = null;
         for(var a=0;a<this.data.pages.length;a++){
-            //console.log(this.getRelativeUrl(true));
+            //console.log(this.data.pages[a].url + ":" + this.getRelativeUrl(true))
             if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
                 this.currentPage = this.data.pages[a];
                 this.dataOk = true;
@@ -138,10 +157,20 @@ var controller = {
 
     loadBreadcrumb : function(){
         //load breadcrumb data:
-        console.log(this.currentPage);
         this.getPathArray();
         
         //then generate HTML:
+        /*
+        <div class="pure-g row-tiny border-bottom" id="breadcrumb">
+            <!-- JQuery controlled background image. Set ID and image array in javascript -->
+            <div class="pure-u-1 scheme-black">
+                <ul>
+                    <li><a href="/">Home</a><span>|</span></li>
+                    <li>Landing</li>
+                </ul>
+            </div>
+        </div>
+         */
         var _outer = $(document.createElement("div")).addClass("pure-g row-tiny border-bottom").attr("id","breadcrumb");
         var _inner = $(document.createElement("div")).addClass("pure-u-1 scheme-black");
         var _ul = document.createElement("ul");
@@ -175,23 +204,24 @@ var controller = {
     loadContentPanels : function(){
 
             if(this.currentPage !== undefined){
+                console.log("TEST");
                 var pageType = this.currentPage.type;
                 $("title").html(this.currentPage.title);
                 $(".top-bar-title").html(this.currentPage.title);
 
-                var _imageAttachment = "contain";
-                if(this.currentPage.banner_attachment && this.currentPage.banner_attachment !== null){
-                    _imageAttachment = this.currentPage.banner_attachment;
-                }
+//                var _imageAttachment = "contain";
+//                if(this.currentPage.banner_attachment && this.currentPage.banner_attachment !== null){
+//                    _imageAttachment = this.currentPage.banner_attachment;
+//                }
                 //banner
-                $(".banner-content").css({
-                    "background-image":"url(" + this.currentPage.banner + ")",
-                    //base switch here on banner_scale: default to contain.
-                    "background-size": _imageAttachment,
-                    "background-position": "left",
-                    "background-repeat": "no-repeat",
-                    "background-attachment":"top-left"
-                });
+//                $(".banner-content").css({
+//                    "background-image":"url(" + this.currentPage.banner + ")",
+//                    //base switch here on banner_scale: default to contain.
+//                    "background-size": _imageAttachment,
+//                    "background-position": "left",
+//                    "background-repeat": "no-repeat",
+//                    "background-attachment":"top-left"
+//                });
                 /*
                  * Build panels sequentially from data and inject into body area: 
                  */
@@ -200,9 +230,9 @@ var controller = {
                 }
 
                 /*
-                 * Attach the handlers once we have the HREFs added:
+                 * Attach the handlers once we have hte HREFs added:
                  */
-                this.initLinkPanels();
+                //this.initLinkPanels();
             }
             else{
                 //console.log("no data defined for " + this.getPageFilename());
@@ -244,8 +274,7 @@ var controller = {
      */
     getRelativeUrl : function(clean){
         var _url = window.location.pathname;
-        //console.log(_url);
-        if((_url.charAt(_url.length-1)) === "/") _url = _url + this.defaultPage;
+        if(_url === "/") _url = _url + this.defaultPage;
         if(!clean) _url += window.location.search;
         return _url;
     },
@@ -327,11 +356,6 @@ var controller = {
 
         //attach handlers to panels:
         $(".linkpanel").each(function(){
-            
-            /*
-             * only append if teh panel has a 'link' property.
-             * @type @call;$@call;css
-             */
             
             var _currFontColour = null;
             var currentColour = null;
@@ -428,40 +452,28 @@ Basic Structure:
 *                                  pure-u-1 pure-u-sm-3-4 contentpanel row [scheme]
 
 I only need panelNum on content pages to determine whether left or right panel
-
-TODO: Use page object flag to control breakpoints:
-                                
      */
     buildPanel : function(panelData,pageType,panelNum,data){
+        //console.table(panelData);
         var basePanelClass1 = null;
         var basePanelClass2 = null;
-        
-        var addLink = false;
-        var linkPanelClass = "";
-        
-        //do we have a link?
-        if(panelData.link && panelData.link !== null){
-            addLink = true;
-            linkPanelClass = "linkpanel";
-        }
   
         //var url = this.getLinkFromId(data,panelData.linkId);
-        console.table(panelData);
-        console.log(addLink);
+        var addLink = false;
         switch(pageType){
             case this.TYPE_HOME :
-                basePanelClass1 = "pure-u-1-2 pure-u-md-1-4 " + linkPanelClass + " row-small";
-                //addLink = true;
+                basePanelClass1 = "pure-u-1-2 pure-u-sm-1-4 linkpanel row-small";
+                addLink = true;
             break;
                 
             case this.TYPE_LANDING :
-                basePanelClass1 = "pure-u-1 pure-u-md-1-2 " + linkPanelClass + " row";
-                //addLink = true;
+                basePanelClass1 = "pure-u-1 pure-u-sm-1-2 linkpanel row";
+                addLink = true;
             break;
                 
             case this.TYPE_CONTENT :
-                basePanelClass1 = "pure-u-1 pure-u-md-1-4 contentpanel row";
-                basePanelClass2 = "pure-u-1 pure-u-md-3-4 contentpanel row";
+                basePanelClass1 = "pure-u-1 pure-u-sm-1-4 contentpanel row";
+                basePanelClass2 = "pure-u-1 pure-u-sm-3-4 contentpanel row";
             break;
         }
 
@@ -472,13 +484,14 @@ TODO: Use page object flag to control breakpoints:
             baseClass = basePanelClass2;
         }
         
-        //do we have an arbitrary modifier-class? This is defined in the JSON data
-        if(
-            panelData.modifier_class !== null 
-            && panelData.modifier_class !== undefined
-            && panelData.modifier_class !== ""
-            ){
+        //do we have a modifier-class? This is defined in the JSON data
+        if(panelData.modifier_class !== null && panelData.modifier_class !== undefined && panelData.modifier_class !== ""){
             baseClass += " " + panelData.modifier_class;
+        }
+        
+        //do we have 'transparency' flag?
+        if(panelData.transparency !== null && panelData.transparency !== undefined && panelData.transparency !== ""){
+            $(_outer).attr("style","background:rgba(" + panelData.transparency +")");
         }
         
         $(_outer).attr("class",baseClass);
@@ -488,8 +501,10 @@ TODO: Use page object flag to control breakpoints:
         if(addLink) $(_outer).attr("data-url",panelData.link);   //conditional
         $(_outer).addClass(panelData.class);
         
-        var _title = document.createElement("div");
-        $(_title).addClass("panel-title");
+        if(panelData.title !== null && panelData.title !== undefined && panelData.title !== ""){
+            var _title = document.createElement("div");
+            $(_title).addClass("panel-title");
+        }
         
         var _headline = document.createElement("h2");
         $(_headline).html(panelData.title);
@@ -499,7 +514,6 @@ TODO: Use page object flag to control breakpoints:
         
         /*
          * If intro text is omitted, convert to a narrow title bar:
-         * maybe...
          * */
         if(panelData.intro === undefined){
             $(_outer).css({"height":"75px"});
@@ -509,6 +523,7 @@ TODO: Use page object flag to control breakpoints:
         }
         
         if(panelData.content_id !== undefined){
+            //todo: Add logic for taking title from ONE panel or none. For now, just suppress.
             ccms.renderCCMSContentItem(panelData.content_id,"#"+panelData.id+" > div.panel-text","#" + panelData.id);
         }
         
@@ -524,8 +539,11 @@ TODO: Use page object flag to control breakpoints:
         } 
         
         //build structure:
-        _title.appendChild(_headline);
-        _outer.appendChild(_title);
+        if(panelData.title !== null && panelData.title !== undefined && panelData.title !== ""){
+            _title.appendChild(_headline);
+            _outer.appendChild(_title);
+        }
+        
         _outer.appendChild(_text);
         
         return(_outer);
@@ -572,6 +590,11 @@ $(function(){
      * Start controller:
      */
     controller.init();
+    
+    
+    
+    
+
 });
 
 
@@ -589,7 +612,6 @@ $(function(){
 
     var loading = document.createElement("img");
     loading.setAttribute("id","centered");
-
     loading.setAttribute("src",controller.loading);
     overlay.appendChild(loading);
 
@@ -621,3 +643,21 @@ $(document).ajaxStart(function(){
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+  
+$(window).resize(function(){
+
+    //set wufoo size:
+    controller.wufoo_dialog_height = window.innerHeight * 0.9;
+    controller.wufoo_dialog_width = window.innerWidth * 0.9;
+
+    //calculate and set dialog width/height:
+    $("#_dialog").dialog( "option", "width", controller.wufoo_dialog_width );
+    $("#_dialog").dialog( "option", "height", controller.wufoo_dialog_height );
+
+    //calculate and set iframe size:
+    $("#wufoo_iframe").css({
+      width : (controller.wufoo_dialog_width - 40) + "px",
+      height : (controller.wufoo_dialog_height - 80) + "px"
+    });
+
+});

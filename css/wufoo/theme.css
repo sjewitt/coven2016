@@ -106,7 +106,7 @@ html{
 	color:#333333;
 	font-size:100%;
 }
-{* Custom Fonts Break Dropdown Selection in IE *}
+/* Custom Fonts Break Dropdown Selection in IE */
 .wufoo input.text, .wufoo textarea.textarea, .wufoo input.file{ 
 	font-family:inherit;
 }

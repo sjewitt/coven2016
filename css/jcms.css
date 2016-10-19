@@ -1,7 +1,10 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+CSS for mobile
+https://varvy.com/mobile/legible-font-size.html
+http://stackoverflow.com/questions/16387400/getting-the-right-font-size-on-every-mobile-device
+http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/
+http://www.leemunroe.com/designing-for-high-resolution-retina-displays/
+https://css-tricks.com/snippets/css/retina-display-media-query/ ***
 */
 /* 
     Created on : 06-Mar-2015, 20:31:20
@@ -10,22 +13,22 @@ and open the template in the editor.
 */
 
 body{
-    background-color: #000;    
-    color:#fff;
+    /*background-color: #000;*/    
+    /*color:#fff;*/
     font-family: arial;
+    font-size:16px;
+    background-image: url("/images/css/background.jpg");
+    background-size:cover;
 }
-.amazonLink{
-    width:120px;
-    height:240px;
-    margin:0px;
-    border:none;
-}
+
 .row{
-    height:300px;
+    min-height:300px;
 }
 .row-small{
-    height:150px;
     min-height:150px;
+}
+.row-smaller{
+    min-height:75px;
 }
 .row-tiny{
     height:25px;
@@ -77,7 +80,7 @@ body{
 }
 /* end breadcrumb */
 
-/* search */
+/*  search */
 .search{}
 #search-btn{
     float:right;
@@ -172,7 +175,7 @@ body{
 }
 
 /* content colour schemes */
-.scheme-black{
+/*.scheme-black{
     background-color: #000;
     color:#fff;
 }
@@ -182,7 +185,7 @@ body{
 }
 .scheme-light{
     background-color: #ecdaff;
-    /*color:#fff;*/
+    color:#fff;
     color:#000;
 }
 .scheme-mid{
@@ -196,7 +199,7 @@ body{
 .scheme-vdark{
     background-color: #330165;
     color:#fff;
-}
+}*/
 
 /* links */
 .scheme-black a, .scheme-vdark a, .scheme-dark a, .scheme-mid a{
@@ -230,7 +233,6 @@ body{
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .panel-title h2{
     margin-top: 0px;
     margin-bottom:0px;
@@ -325,4 +327,32 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
 #image_display_trigger{
     display:inline;
     width:70%;
+}
+
+
+/* Wufoo overrides */
+.wufoo li {
+    width: 98%;
+}
+
+#container ul{
+    padding-left:10px;
+}
+
+#container li{
+    padding-left:5px;
+    padding:0px;
+}
+
+.social_wrapper{
+    padding: 10px;
+    text-align: right;
+}
+.copyright{
+    padding:15px;
+    font-size: 8pt;
+}
+/* accomodate TinyMCE auto-insertion of P tags... */
+.nomargin{
+    margin:0px;
 }

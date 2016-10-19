@@ -14,7 +14,7 @@ if(currentUser.permissions & Permissions.ADMINISTRATOR){
       var action = parseInt(Request.QueryString("doaction"));  
       //load the layout:
       var currLayout = new Layout(parseInt(Request.QueryString("layout")));
-      //showObject(currLayout)
+      showObject(currLayout)
       currLayout.parse();
       
       var layoutManager = new LayoutManager();
