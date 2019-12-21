@@ -20,7 +20,7 @@ var controller = {
     currentPath : [],
     data : null,
     dataOk : false,
-    loading : "/images/icons/ajax-loader-2.gif",
+    //loading : "/images/icons/ajax-loader-2.gif",
     
     //wufoo:
     wufoo_dialog_width : window.innerWidth * 0.9,
@@ -31,7 +31,7 @@ var controller = {
         this.loadData();
         //this.loadSearchBanner();     //AJAX load
         //this.loadBannerImages();     //from JSON TODO
-        this.loadCommonElements();
+        //this.loadCommonElements();
     },
 
     loadData : function(){
@@ -113,6 +113,42 @@ var controller = {
                             //also want to inject the tweets:
                             var twitter_code = '<a class="twitter-timeline" data-height="400" href="https://twitter.com/JCMSConsulting">Tweets by JCMSConsulting</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
                             $("#twitter_widget").html(twitter_code);
+                            
+                            //and the blogspot stuff:
+                            $("#blogspot div.panel-text").css({"overflow":"auto","height":"300px"});
+                            
+                            //points at: http://jcms-consulting.blogspot.com/feeds/posts/default
+                            $.ajax("/proxy/Passthrough-proxy.aspx",{
+                                success:function(data){ //changes context for data
+                                    var _out = "";
+                                    var title = data.getElementsByTagName("title")[0].firstChild.nodeValue;
+                                    
+                                    _out += "<h3><a href='http://jcms-consulting.blogspot.com' target='_blank' title='JCMS Blog'><img src='/images/Blogger.svg.png' alt='Blogger logo' style='width:30px;vertical-align:middle;padding-right:10px;padding-bottom:5px;' /></a>"+title+"</h3>";
+                                    var entries = data.getElementsByTagName("entry");
+                                    _out += "<ul>"
+                                    for(var a=entries.length-1;a>=0;a--){
+                                        var entryText = entries[a].getElementsByTagName("title")[0].firstChild.nodeValue;
+                                        
+                                        //var _date = new Date(Date.parse(date));
+                                        var published = controller.formatBlogDate(new Date(Date.parse(entries[a].getElementsByTagName("published")[0].firstChild.nodeValue))); //a Date
+                                        var entryUrl;
+                                        
+                                        $(entries[a]).find('link').each(function(){
+                                            if($(this).attr("rel") === "alternate"){
+                                                entryUrl = $(this).attr("href");
+                                            }
+                                        });
+         
+                                        _out += "<li><a href='" + entryUrl + "' title='" + entryText + "' target='_blank'>" + entryText + "</a> [" + published + "]</li>";
+                                    }
+                                    _out += "</ul>";
+                                    
+                                    $("#blogspot div.panel-text").html(_out);
+                                },
+                                error:function(){},
+                                complete:function(){}
+                            });
+
                         break;
                     }
                 }
@@ -123,9 +159,7 @@ var controller = {
             error : function(e){
                 console.log(e);
             },
-            complete : function(){
-
-            }
+            complete : function(){}
         });
     },
 
@@ -133,7 +167,6 @@ var controller = {
     loadCurrentPage : function(){
         this.currentPage = null;
         for(var a=0;a<this.data.pages.length;a++){
-            //console.log(this.data.pages[a].url + ":" + this.getRelativeUrl(true))
             if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
                 this.currentPage = this.data.pages[a];
                 this.dataOk = true;
@@ -144,67 +177,67 @@ var controller = {
     /*
      * Push search box onto all pages:
      */
-    loadSearchBanner : function(){
-        $.ajax("/inc/searchblock.html",
-        {
-            success : function(data){
-                $("#search-panel").append(data);
-                controller.initSearchComponents();
-            }
-        }
-        );
-    },
+//    loadSearchBanner : function(){
+//        $.ajax("/inc/searchblock.html",
+//        {
+//            success : function(data){
+//                $("#search-panel").append(data);
+//                controller.initSearchComponents();
+//            }
+//        }
+//        );
+//    },
 
-    loadBreadcrumb : function(){
-        //load breadcrumb data:
-        this.getPathArray();
-        
-        //then generate HTML:
-        /*
-        <div class="pure-g row-tiny border-bottom" id="breadcrumb">
-            <!-- JQuery controlled background image. Set ID and image array in javascript -->
-            <div class="pure-u-1 scheme-black">
-                <ul>
-                    <li><a href="/">Home</a><span>|</span></li>
-                    <li>Landing</li>
-                </ul>
-            </div>
-        </div>
-         */
-        var _outer = $(document.createElement("div")).addClass("pure-g row-tiny border-bottom").attr("id","breadcrumb");
-        var _inner = $(document.createElement("div")).addClass("pure-u-1 scheme-black");
-        var _ul = document.createElement("ul");
-        for(var a=this.currentPath.length-1; a>=0; a--){
-            var _li = document.createElement("li");
-            var _a = $(document.createElement("a")).attr("href",this.currentPath[a].url);
-            var _pipe = document.createElement("span").appendChild(document.createTextNode(">"));
-            var _txt = document.createTextNode(this.currentPath[a].title);
-            _a[0].appendChild(_txt);
-            if(a === 0){
-                //text only
-                _li.appendChild(_txt);
-            }
-            else{
-                //link
-                _li.appendChild(_a[0]);
-                _li.appendChild(_pipe);
-            }
-            
-            _ul.appendChild(_li);
-        }
-        _inner[0].appendChild(_ul);
-        _outer[0].appendChild(_inner[0]);
-        
-        //and push as next sibling of header:
-        if(this.currentPath.length > 1){
-            $("#header").after(_outer);
-        }
-    },
+//    loadBreadcrumb : function(){
+//        //load breadcrumb data:
+//        this.getPathArray();
+//        
+//        //then generate HTML:
+//        /*
+//        <div class="pure-g row-tiny border-bottom" id="breadcrumb">
+//            <!-- JQuery controlled background image. Set ID and image array in javascript -->
+//            <div class="pure-u-1 scheme-black">
+//                <ul>
+//                    <li><a href="/">Home</a><span>|</span></li>
+//                    <li>Landing</li>
+//                </ul>
+//            </div>
+//        </div>
+//         */
+//        var _outer = $(document.createElement("div")).addClass("pure-g row-tiny border-bottom").attr("id","breadcrumb");
+//        var _inner = $(document.createElement("div")).addClass("pure-u-1 scheme-black");
+//        var _ul = document.createElement("ul");
+//        for(var a=this.currentPath.length-1; a>=0; a--){
+//            var _li = document.createElement("li");
+//            var _a = $(document.createElement("a")).attr("href",this.currentPath[a].url);
+//            var _pipe = document.createElement("span").appendChild(document.createTextNode(">"));
+//            var _txt = document.createTextNode(this.currentPath[a].title);
+//            _a[0].appendChild(_txt);
+//            if(a === 0){
+//                //text only
+//                _li.appendChild(_txt);
+//            }
+//            else{
+//                //link
+//                _li.appendChild(_a[0]);
+//                _li.appendChild(_pipe);
+//            }
+//            
+//            _ul.appendChild(_li);
+//        }
+//        _inner[0].appendChild(_ul);
+//        _outer[0].appendChild(_inner[0]);
+//        
+//        //and push as next sibling of header:
+//        if(this.currentPath.length > 1){
+//            $("#header").after(_outer);
+//        }
+//    },
 
     loadContentPanels : function(){
 
             if(this.currentPage !== undefined){
-                console.log("TEST");
+                //console.log("TEST");
                 var pageType = this.currentPage.type;
                 $("title").html(this.currentPage.title);
                 $(".top-bar-title").html(this.currentPage.title);
@@ -575,8 +608,15 @@ I only need panelNum on content pages to determine whether left or right panel
             }
         }
         return page;
-    }
+    },
     
+    
+    formatBlogDate : function(date){
+        console.log(date);
+        var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+    }
  
 };
 

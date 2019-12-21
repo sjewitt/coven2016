@@ -138,7 +138,7 @@ var controller = {
     loadCurrentPage : function(){
         this.currentPage = null;
         for(var a=0;a<this.data.pages.length;a++){
-            console.log(this.getRelativeUrl(true));
+            //console.log(this.getRelativeUrl(true));
             if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
                 
                 this.currentPage = this.data.pages[a];
@@ -172,7 +172,7 @@ var controller = {
 
     loadBreadcrumb : function(){
         //load breadcrumb data:
-        console.log(this.currentPage);
+        //console.log(this.currentPage);
         this.getPathArray();
         
         //then generate HTML:
@@ -219,11 +219,11 @@ var controller = {
                 }
 
 //TO CMPLETE
-console.log("TYPE: "+this.currentPage.type);
+//console.log("TYPE: "+this.currentPage.type);
                 //banner
-                console.log(this.getCleanUrl());
+                console.log(this.getRelativeUrl());
                 var height = "150px";
-                if(this.getCleanUrl() === "/index.html"){
+                if(this.getRelativeUrl() === "/index.html"){
                     height = "300px";
                 }
                 $(".banner-content").css({
@@ -490,7 +490,7 @@ I only need panelNum on content pages to determine whether left or right panel
         if(this.currentPage.break !== undefined){
             CSSbreak = this.currentPage.break;
         }
-        console.log(this.currentPage);
+        //console.log(this.currentPage);
   
   
         //var url = this.getLinkFromId(data,panelData.linkId);
@@ -533,7 +533,14 @@ I only need panelNum on content pages to determine whether left or right panel
         if(panelData.id !== null){
             $(_outer).attr("id",panelData.id);
         }
-        if(addLink) $(_outer).attr("data-url",panelData.link);   //conditional
+        if(addLink){
+            $(_outer).attr("data-url",panelData.link);   //conditional
+            var _a_hidden = document.createElement("a");
+            _a_hidden.setAttribute("href",panelData.link);
+            _outer.appendChild(_a_hidden);
+        } 
+        
+        
         $(_outer).addClass(panelData.class);
         
         var _title = document.createElement("div");

@@ -15,8 +15,9 @@ https://css-tricks.com/snippets/css/retina-display-media-query/ ***
 body{
     /*background-color: #000;*/    
     /*color:#fff;*/
-    font-family: arial;
+    font-family: tahoma;
     font-size:16px;
+    color:#111;
     background-image: url("/images/css/background.jpg");
     background-size:cover;
 }
@@ -33,13 +34,13 @@ body{
 .row-tiny{
     height:25px;
 }
-.top-bar{
+/*.top-bar{
     height:50px;
     color:#fff;
 }
 .top-bar-title{
     font-size: 24pt;
-    letter-spacing: 2vw; /* See http://stackoverflow.com/questions/24557411/css-letter-spacing-percent-to-completely-fit-the-div-container */
+    letter-spacing: 2vw;  See http://stackoverflow.com/questions/24557411/css-letter-spacing-percent-to-completely-fit-the-div-container 
     margin-left: 15px;
     margin-right: -15px;
     margin-top: 7px
@@ -49,110 +50,10 @@ body{
 }
 .border-top{
     border-top:3px solid red;    
-}
+}*/
 
-/* breadcrumb */
-#breadcrumb{
-    height:auto;
-}
-#breadcrumb ul{
-    margin:0px;
-    padding:0px;
-    border:none;
-}
-#breadcrumb ul>li{
-    display:inline;
-    list-style-type: circle;
-    padding-left:10px;
-}
-#breadcrumb ul>li:first-of-type{
-    padding-left:5px;
-    font-weight:bold;
-}
-#breadcrumb ul>li>a{
-    text-decoration: none;
-    font-weight:normal;
-    color:#fff;
-    padding-right:10px;
-}
-#breadcrumb ul>li>a:hover{
-    text-decoration: underline;
-}
-/* end breadcrumb */
 
-/*  search */
-.search{}
-#search-btn{
-    float:right;
-    cursor:pointer;
-    height:50px;
-    width:50px;
-    background-image: url("/images/icons/search.jpg");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-#search-btn-close{
-    float:right;
-    cursor:pointer;
-    height:50px;
-    width:50px;
-    background-image: url("/images/icons/close.jpg");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-#search-btn-go{
-    float:right;
-    cursor:pointer;
-    height:50px;
-    width:50px;
-    background-image: url("/images/icons/go.jpg");
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-.search-panel-form{
-    border-top:3px solid red;
-    border-bottom:3px solid red;
-    /*padding-top:25px;*/
-    background-color: #000;
-}
-#search-panel > div.pure-g.search-panel-form > div.pure-u-7-8 > input[type="text"]{
-    border:none;
-    margin-left:3px;
-    margin-top:2px;
-    padding-left:5px;
-    width:100%;
-    height:44px;
-    font-size:24pt;
-    color:#000;
-}
-#search-panel > div.pure-g.search-panel-top > div.pure-u-7-8{
-    font-size: 24pt;
-    letter-spacing: 2vw; /* See http://stackoverflow.com/questions/24557411/css-letter-spacing-percent-to-completely-fit-the-div-container */
-    margin-left: 15px;
-    margin-right: -15px;
-    margin-top: 7px;
-    
-}
-#search-panel > div.pure-g.search-panel-form > div.pure-u-7-8{
-    background-color:#000;
-}
-#search-panel{
-    height:100px;
-    display:none;
-    position:absolute;
-    left:0px;
-    top:0px;
-    background-color:#000;
-}
-#search-results{
-    display:none;
-}
-/* end search */
-
-#header{
+/*#header{
     border-top: 3px solid #9933FF;
     border-bottom: 3px solid #9933FF;
 }
@@ -172,7 +73,7 @@ body{
 }
 .banner-landing{
     height:300px;
-}
+}*/
 
 /* content colour schemes */
 /*.scheme-black{
@@ -199,9 +100,10 @@ body{
 .scheme-vdark{
     background-color: #330165;
     color:#fff;
-}*/
-
+}
+*/
 /* links */
+/*
 .scheme-black a, .scheme-vdark a, .scheme-dark a, .scheme-mid a{
     color: #fff;
     text-decoration: none;
@@ -218,20 +120,18 @@ body{
 .scheme-vlight a:hover, .scheme-light a:hover{
     text-decoration: underline;
 }
-
+*/
 /* end content colour schemes */
-
-.breadcrumb>div>ul>li{
-    display:inline;
-}
 
 /* content styles */
 .panel-title{
     padding : 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .panel-text{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .panel-title h2{
     margin-top: 0px;
@@ -254,80 +154,27 @@ body{
 /* home */
 
 
-/* librivox */
-/* these are JQuery-UI classes */
-.ui-autocomplete {
-        max-height: 100px;
-        overflow-y: auto;
-        /* prevent horizontal scrollbar */
-        overflow-x: hidden;
-}
-/* IE 6 doesn't support max-height
- * we use height instead, but this forces the menu to always be this tall
- */
-* html .ui-autocomplete {
-        height: 100px;
-}
-
-/* GCSE over rides: */
-.gsc-above-wrapper-area{
-    display:none;
-}
-.ui-widget-header{
-    background: none;
-    border:none;
-}
-
-/*
-AJAX load spinner
-from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle-within-div
-*/
-/* div */
-#overlay{
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:100%;
-    text-align: center; /*handles the horizontal centering*/
-}
 
 /* span */
-#vertical-centerer{
+/*#vertical-centerer{
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
 
-/* image */
+ image 
 #centered{
     display: inline-block;
     vertical-align: middle;
-}
+}*/
 
-/* librivox search form */
-#autocomplete-data{
-    width:80%;
-    height:15px;
-    padding-top:7px;
-}
 
 /* display panel min height */
 #body-content .row{
     min-height:300px;
 }
 
-/* weddingfest gallery styling */
-.image_display_trigger_wrapper{
-    width:100%;
-    height: 250px;
-    overflow: auto;
-}
-/*  */
-#image_display_trigger{
-    display:inline;
-    width:70%;
-}
+
 
 
 /* Wufoo overrides */
@@ -344,10 +191,13 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
     padding:0px;
 }
 
+/* social media */
 .social_wrapper{
     padding: 10px;
     text-align: right;
 }
+
+/* footer */
 .copyright{
     padding:15px;
     font-size: 8pt;
@@ -355,4 +205,28 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
 /* accomodate TinyMCE auto-insertion of P tags... */
 .nomargin{
     margin:0px;
+}
+
+/* holding/homepage: */
+
+/* logo CARE with CSS ref here!! */
+#logo-panel{
+    float:left;
+}
+#logo_panel img.inline-logo{
+    width: 200px;
+    /*display:inline;*/
+    float:left;
+    padding-right:20px;
+    padding-bottom:20px;
+}
+#logo_panel div.panel-text p{
+    font-size:20pt;
+}
+
+/*
+Twitter feed
+*/
+timeline-tweet{
+    font-size:16px;
 }

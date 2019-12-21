@@ -1012,45 +1012,39 @@
                         "intro": "",
                         "class": "scheme-light",
                         "content_id":"108",
-                        "id":"ccms_display3",
-                        "transparency":"255,255,255,.5"
+                        "id":"logo_panel"
                     }
                 },
-                
                 {
                     "data": 
                     {
                         "title": "#",
                         "intro": "",
                         "class": "scheme-vdark",
-                        "content_id":"107",
-                        "id":"ccms_display1"
+                        "content_id":"109",
+                        "id":"ccms_display1",
+                        "transparency":"255,255,255,.5"
                     }
                 },
-                
-                
-                
                 {
                     "data": 
                     {
                         "title": "#",
                         "intro": "",
                         "class": "scheme-vlight",
-                        "content_id":"109",
-                        "id":"ccms_display4"
+                        "content_id":"107",
+                        "id":"ccms_display4",
+                        "transparency":"255,255,255,.5"
                     }
                 },
-                
                 {
                     "data": 
                     {
                         "title": "Contact Us",
                         "class": "scheme-vlight",
-                        "id":"wufoo_contact_form",
-                        "transparency":"255,255,255,.5"
+                        "id":"wufoo_contact_form"
                     }
                 },
-                
                 {
                     "data": 
                     {
@@ -1058,11 +1052,9 @@
                         "intro": "",
                         "class": "scheme-light",
                         "content_id":"110",
-                        "id":"ccms_display5",
-                        "transparency":"255,255,255,.5"
+                        "id":"ccms_display5"
                     }
                 },
-                
                 {
                     "data": 
                     {
@@ -1070,6 +1062,16 @@
                         "intro": "",
                         "class": "scheme-vlight",
                         "id":"twitter_widget"
+                    }
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Blogspot",
+                        "intro": "",
+                        "class": "scheme-vlight",
+                        "id":"blogspot",
+                        "transparency":"255,255,255,.5"
                     }
                 }
             ]
