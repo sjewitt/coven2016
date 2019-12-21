@@ -8,7 +8,7 @@ var engine = {
 	init : function(){
 		this.loadDirectories(false,'doom_container');
 		this.spinner = document.createElement('img');
-		this.spinner.setAttribute('src','images/spinner.gif');
+		this.spinner.setAttribute('src','/images/spinner.gif');
 	},
 	
 	loadDirectories : function(branch,target){
