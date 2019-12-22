@@ -191,7 +191,7 @@
                     "data": 
                     {
                         "title": "Doom",
-                        "intro": "intro text intro text 1",
+                        "intro": "Doomworld has a public API, so I built a browser...",
                         "class": "scheme-vlight",
                         "link": "/games/doom.html",
                         "linkId":"3"
@@ -231,7 +231,12 @@
                     "data": 
                     {
                         "title": "Doomworld API",
-                        "intro": "A simple IDGames database browser built using the <a href='https://www.doomworld.com/idgames/api/' target='_blank' tite='Doomworld public API'>Doomworld API</a>",
+                        "intro": [
+                        	"<p>A simple IDGames database browser built using the <a href='https://www.doomworld.com/idgames/api/' target='_blank' tite='Doomworld public API'>Doomworld API</a>.</p>",
+                        	"<p>The content of each branch is loaded on first click and appended to the DOM. Therefore, only the first click will make an AJAX request.",
+                        	"All subsequent toggles simply hide or show the content appended to the DOM on the first click.",
+                        	"Thus, the percieved performance is much better than trying to load the entire tree initially.</p>"
+                        ],
                         "class": "scheme-vlight",
                         "id":"doomworld_api",
                         "ajax": {"load":true, "codebase":"doomworldAPI"}
@@ -326,7 +331,8 @@
                         "title": "LibriVox",
                         "intro": "Simple LibriVox interface using AJAX",
                         "class": "scheme-vdark",
-                        "link": "/code/librivox.html"
+                        "link": "/code/librivox.html",
+                        "disabled":true
                     }
                 },
                 {
@@ -395,6 +401,7 @@
             ]
         },
         "/code/librivox.html":{
+        	"disabled":true,
             "url" : "/code/librivox.html",
             "id" : "1.3.3",
             "type" : "CONTENT",

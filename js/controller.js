@@ -100,7 +100,7 @@ var controller = {
                     }
                     
                     /*
-                     * Handlers for custom pages/functions
+                     * Handlers for custom pages/functions that do not make their own AJAX calls:
                      */
                     switch(controller.currentPage.id){
                         case "1.3.3":   //librivox
@@ -120,11 +120,7 @@ var controller = {
                             //load wufoo contact form:
                             wufoo.init(controller.currentPage);
                             break;
-                        
-//                        case "1.2.1":
-//                        	console.log();
-//                        	engine.init('fish')
-//                        	break;
+                  
                     }
                     
                 }
@@ -143,7 +139,6 @@ var controller = {
             	 * We need to do it here, so we can ensure the page structure has loaded based on the initial AJAX call to site structure JSON
             	 * file.
             	 * */
-            	console.log(_curr);
             	for(let a=0;a<_curr['panels'].length;a++){
             		if(_curr['panels'][a]['data']['ajax']){
             			console.log(_curr['panels'][a]['data']['ajax']);
@@ -160,7 +155,6 @@ var controller = {
      * This will overrode the default content for supplied panel:
      * */
     doCustomAjax : function(panel){
-    	console.log(panel);
     	switch(panel['data']['ajax'].codebase){
     	case 'doomworldAPI':
     		console.log(panel);
@@ -281,7 +275,10 @@ var controller = {
                  * Build panels sequentially from data and inject into body area: 
                  */
                 for(var a=0;a<this.currentPage.panels.length;a++){
-                    $("#body-content").append(controller.buildPanel(this.currentPage.panels[a].data,pageType,a,this.data));
+                	if(!this.currentPage.panels[a].data.disabled){
+                		$("#body-content").append(controller.buildPanel(this.currentPage.panels[a].data,pageType,a,this.data));
+                	}
+                    
                 }
 
                 /*

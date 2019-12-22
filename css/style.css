@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 div.tree-toggler{
-/* 	width: 15px; */
-/* 	height: 15px; */
 	display: inline-block;
 	cursor: pointer;
 	margin-right: 3px;
@@ -19,9 +17,11 @@ div.spinner_wrapper > img{
 ul.doombrowser li{
 	list-style-type: none;
 }
+ul.doombrowser li.loaded > div > i.fa-folder{
+	color: green;
+}
 div.closed{
-/* 	background-image:url('/images/tree_closed.png'); */
-/* 	background-color: red; */
+
 }
 
 ul.hidden{

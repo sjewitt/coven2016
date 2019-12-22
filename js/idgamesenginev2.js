@@ -5,11 +5,14 @@
  * 
  * v. 2: 
  *  - uses getcontents rather than geddirecoris/getfiles.
- *  - because there are a few cases where directories contain both efiles nd sub-directories.
+ *  - because there are a few cases where directories contain both files and sub-directories.
  * 
  */
 var idgamesengine = {
 	PROXY_LOCATION : '/proxy/proxy.php',	
+	/**
+	 * Start the code:
+	 * */
 	init : function(container){
 		let _container = 'doom_container';
 		if(container){
@@ -21,11 +24,12 @@ var idgamesengine = {
 	},
 
 	loadContents : function(branch,target,container){
-		console.log("load contents...");
+		console.log("load contents to " + target);
 		let _url = idgamesengine.PROXY_LOCATION + "?action=getcontents&id=0";
 		if(branch){
 			_url = idgamesengine.PROXY_LOCATION + "?action=getcontents&name=" + branch;
 		};
+		console.log($('#'+target).find('div.spinner_wrapper'));
 		$('#'+target).find('div.spinner_wrapper').append($(idgamesengine.spinner).clone());
 		var _target = target;
 		$.ajax({
@@ -93,6 +97,8 @@ var idgamesengine = {
 	    	$('#'+container+' li > div').each(function(){
 	    		$(this).off('click').click(function(){
 	    			if($(this).attr('data-loaded') === 'false'){
+	    				console.log($(this).parent());
+	    				$(this).parent().addClass('loaded');
 	    				$(this).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
 	    				$(this).attr({'data-loaded':'true'});
 	    				idgamesengine.loadContents($(this).attr('data-directory'),$(this).attr('data-target'),container);
@@ -162,16 +168,19 @@ var idgamesengine = {
 	 * and also the folder class of the toggler <div>
 	 * */
 	toggleBranch : function(togglerId){
-		var _thing = $('#'+togglerId).find('ul').first();
-		
-		if(_thing.hasClass('hidden')){
-			$('#'+togglerId).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
-			_thing.removeClass('hidden');
-		}
-		else{
-			$('#'+togglerId).find('i').first().removeClass('fa-folder-open').addClass('fa-folder');
-			_thing.addClass('hidden');
-		}
+		var _things = $('#'+togglerId).find('ul');
+		console.log(_things);
+		$(_things).each(function(){
+			console.log($(this));
+			if($(this).hasClass('hidden')){
+				$('#'+togglerId).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
+				$(this).removeClass('hidden');
+			}
+			else{
+				$('#'+togglerId).find('i').first().removeClass('fa-folder-open').addClass('fa-folder');
+				$(this).addClass('hidden');
+			}
+		});
 	},
 	
 	getQuerystring : function(){
