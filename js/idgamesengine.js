@@ -3,20 +3,26 @@
  * 
  * ?action=getdirs&name=levels/doom2/
  */
-var engine = {
+var idgamesengine = {
 	PROXY_LOCATION : '/proxy/proxy.php',	
-	init : function(){
-		this.loadDirectories(false,'doom_container');
+	init : function(container){
+		let _container = 'doom_container';
+		if(container){
+			_container = container;
+		}
+		console.log(container);
+		console.log(_container);
+		this.loadDirectories(false,_container,_container);
 		this.spinner = document.createElement('img');
 		this.spinner.setAttribute('src','/images/spinner.gif');
 	},
 	
-	loadDirectories : function(branch,target){
-		let _url = engine.PROXY_LOCATION + "?action=getdirs"
+	loadDirectories : function(branch,target,container){
+		let _url = idgamesengine.PROXY_LOCATION + "?action=getdirs"
 		if(branch){
-			_url = engine.PROXY_LOCATION + "?action=getdirs&name=" + branch;
+			_url = idgamesengine.PROXY_LOCATION + "?action=getdirs&name=" + branch;
 		};
-		$('#'+target).find('div.spinner_wrapper').append($(engine.spinner).clone());
+		$('#'+target).find('div.spinner_wrapper').append($(idgamesengine.spinner).clone());
 		var _target = target;
 		$.ajax({
             type: "GET",
@@ -26,11 +32,11 @@ var engine = {
         }).done(function(data){
         	/* check whether the response is a directory list: */
         	if(data['content'] && data['content']['dir']){
-        		engine.buildDirectoryLinks(data,_target);
+        		idgamesengine.buildDirectoryLinks(data,_target,container);
         	}
         	/* if not, assume a file list */
         	else{
-        		engine.loadFiles(branch,_target);
+        		idgamesengine.loadFiles(branch,_target);
         	};
         }).fail(function(a,b,c){
         	console.log(a,b,c);
@@ -38,7 +44,7 @@ var engine = {
 	},
 	
 	loadFiles : function(branch,target,loadedBefore){
-		var _url = engine.PROXY_LOCATION + "?action=getfiles&name=" + branch;
+		var _url = idgamesengine.PROXY_LOCATION + "?action=getfiles&name=" + branch;
 		var _target = target;
 		$.ajax({
             type: "GET",
@@ -47,14 +53,15 @@ var engine = {
             url : _url
         }).done(function(data){
         	if(data['content'] && data['content']['file']){
-        		engine.buildFileLinks(data,_target);
+        		idgamesengine.buildFileLinks(data,_target);
         	}
         });
 	},
 
-	buildDirectoryLinks : function(data,  target){
+	buildDirectoryLinks : function(data,  target,container){
 		var _out = "";
 		var _ul = document.createElement('ul');
+		_ul.setAttribute('class','doombrowser');
 		if(data.content.dir){
 			/* If only one entry, we don't get an array, we get an object: */
 			let _dirs = new Array();
@@ -92,15 +99,15 @@ var engine = {
 			$(_target).find('div.spinner_wrapper > img').remove();
 			
 			/* now append click handlers: */
-	    	$('#doom_container li > div').each(function(){
+	    	$('#'+container+' li > div').each(function(){
 	    		$(this).off('click').click(function(){
 	    			if($(this).attr('data-loaded') === 'false'){
 	    				$(this).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
 	    				$(this).attr({'data-loaded':'true'});
-	    				engine.loadDirectories($(this).attr('data-directory'),$(this).attr('data-target'));
+	    				idgamesengine.loadDirectories($(this).attr('data-directory'),$(this).attr('data-target'),container);
 	    			}
 	    			else{
-	    				engine.toggleBranch($(this).attr('data-target'));
+	    				idgamesengine.toggleBranch($(this).attr('data-target'));
 	    			}
 	    		});
 	    	});
@@ -180,4 +187,4 @@ var engine = {
 		return(window.location.search);
 	}
 };
-$(function(){engine.init();})
+//$(function(){engine.init();})

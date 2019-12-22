@@ -40,6 +40,7 @@ var controller = {
     TYPE_HOME : "HOME",
     TYPE_LANDING :"LANDING",
     TYPE_CONTENT : "CONTENT",
+    TYPE_FULLWIDTH : "FULLWIDTH",
     TYPE_CUSTOM : "CUSTOM",
     TYPE_DEFAULT : this.TYPE_CONTENT,
     
@@ -58,7 +59,7 @@ var controller = {
     },
 
     loadData : function(){
-        $.ajax("/js/data/site-structurev2.json",
+        $.ajax("/js/data/site-structurev3.json",
         {
             success : function(data){
                 /*
@@ -106,19 +107,24 @@ var controller = {
                             //call librivox lib
                             librivox.init();  
                         
-                        break;
+                            break;
                         case "1.6.1":
                             weddingfest07.init({displaytargetId : "content_flow_display",linksTargetId : "content_flow_links", loadContentFlow : true});
 
-                        break;
+                            break;
                         case "1.3.4":
                             ccms.init();
-                        break;
+                            break;
                         case "1.7":
                             console.log("loading wufoo form...");
                             //load wufoo contact form:
                             wufoo.init(controller.currentPage);
-                        break;
+                            break;
+                        
+//                        case "1.2.1":
+//                        	console.log();
+//                        	engine.init('fish')
+//                        	break;
                     }
                     
                 }
@@ -130,30 +136,66 @@ var controller = {
                 console.log(e);
             },
             complete : function(){
-
+            	console.log('now load dynamic data.');
+            	_curr = controller.data.pages[controller.getRelativeUrl(true)];
+            	/*
+            	 * For the current page, loop over the panels and detect one that has a dynamic AJAX call.
+            	 * We need to do it here, so we can ensure the page structure has loaded based on the initial AJAX call to site structure JSON
+            	 * file.
+            	 * */
+            	console.log(_curr);
+            	for(let a=0;a<_curr['panels'].length;a++){
+            		if(_curr['panels'][a]['data']['ajax']){
+            			console.log(_curr['panels'][a]['data']['ajax']);
+            			controller.doCustomAjax(_curr['panels'][a]);
+            		}
+            	}
+            	console.log()
             }
         });
     },
     
+    /**
+     * do custom AJAX calls once the data is completed.
+     * This will overrode the default content for supplied panel:
+     * */
+    doCustomAjax : function(panel){
+    	console.log(panel);
+    	switch(panel['data']['ajax'].codebase){
+    	case 'doomworldAPI':
+    		console.log(panel);
+    		idgamesengine.init(panel.data.id);
+    		
+    		break;
+    		
+    	}
+    },
+    
     loadCurrentPage : function(){
-        this.currentPage = null;
-        for(var a=0;a<this.data.pages.length;a++){
+        //this.currentPage = null;
+        //for(var a=0;a<this.data.pages.length;a++){
             //console.log(this.getRelativeUrl(true));
-            if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
+            //if(this.data.pages[a].url === this.getRelativeUrl(true)){ //may need to change this to include path?
                 
-                this.currentPage = this.data.pages[a];
-                //*********DO SOMETHING WITH THIS???
-                var _pageOK = true;
-                for(p in this.currentPage){
-                    //console.log(p+" = "+this.PAGE_PROTOTYPE[p]);
-                    if(this.PAGE_PROTOTYPE[p] === undefined){
-                        _pageOK = false;
-                    }
-                }
-                //END*******************************
-                this.dataOk = true;
+                //this.currentPage = this.data.pages[a];
+        	this.currentPage = this.data.pages[this.getRelativeUrl(true)];
+            console.log(this.currentPage);
+            if(this.currentPage){
+            	this.dataOk = true;
             }
-        }
+                
+                //*********DO SOMETHING WITH THIS???
+                //var _pageOK = true;
+                //for(p in this.currentPage){
+                    //console.log(p+" = "+this.PAGE_PROTOTYPE[p]);
+                //    if(this.PAGE_PROTOTYPE[p] === undefined){
+//                        _pageOK = false;
+                //    }
+                //}
+                //END*******************************
+//               this.dataOk = true;
+            //}
+        //}
     },
     
     /*
@@ -361,7 +403,7 @@ var controller = {
          */
     },
 
-    /*
+    /**
      * Attach link handlers to panels, suppressing if link is undefined, null or #
      * Also, check that the defined URL actually exists...
      * @returns {undefined}
@@ -473,6 +515,7 @@ Basic Structure:
 I only need panelNum on content pages to determine whether left or right panel
      */
     buildPanel : function(panelData,pageType,panelNum,data){
+    	console.log(panelData);
         var basePanelClass1 = null;
         var basePanelClass2 = null;
         
@@ -510,6 +553,10 @@ I only need panelNum on content pages to determine whether left or right panel
             case this.TYPE_CONTENT :
                 basePanelClass1 = "pure-u-1 pure-u-" + CSSbreak + "-1-4 contentpanel row";
                 basePanelClass2 = "pure-u-1 pure-u-" + CSSbreak + "-3-4 contentpanel row";
+            break;
+            
+            case this.TYPE_FULLWIDTH :
+                basePanelClass1 = "pure-u-1 pure-u-" + CSSbreak + "-1 contentpanel row";
             break;
         }
 
@@ -563,6 +610,12 @@ I only need panelNum on content pages to determine whether left or right panel
             $(_text).html(panelData.intro);
         }
         
+        /*
+         * Dec 2019: add hook for executing code rather than loading static content 
+         * */
+        
+        
+        /* maybe resurrect this if I build a mysql version... */
         if(panelData.content_id !== undefined){
             ccms.renderCCMSContentItem(panelData.content_id,"#"+panelData.id+" > div.panel-text","#" + panelData.id);
         }

@@ -20,9 +20,9 @@
             ]
         }
     ],
-    "pages": 
-    [
-        {
+
+"pages": {
+        "/index.html": {
             "url" : "/index.html",
             "id" : "1",
             "type" : "HOME",
@@ -92,7 +92,8 @@
                 }
             ]
         },
-        {
+        
+        "/tech.html":{
             "url" : "/tech.html",
             "id" : "1.1",
             "type" : "LANDING",
@@ -121,7 +122,7 @@
                 }
             ]
         },
-        {
+        "/tech/tech-1.html":{
             "url" : "/tech/tech-1.html",
             "id" : "1.1.1",
             "type" : "CONTENT",
@@ -149,7 +150,7 @@
                 }
             ]
         },
-        {
+        "/tech/tech-2.html":{
             "url" : "/tech/tech-2.html",
             "id" : "1.1.2",
             "type" : "CONTENT",
@@ -177,7 +178,7 @@
                 }
             ]
         },
-        {
+        "/games.html":{
             "url" : "/games.html",
             "id" : "1.2",
             "type" : "LANDING",
@@ -218,7 +219,7 @@
                 }
             ]
         },
-        {
+        "/games/doom.html":{
             "url" : "/games/doom.html",
             "id" : "1.2.1",
             "type" : "FULLWIDTH",
@@ -229,16 +230,16 @@
                 {
                     "data": 
                     {
-                        "title": "topic 1",
-                        "intro": "intro text intro text 1",
+                        "title": "Doomworld API",
+                        "intro": "A simple IDGames database browser built using the <a href='https://www.doomworld.com/idgames/api/' target='_blank' tite='Doomworld public API'>Doomworld API</a>",
                         "class": "scheme-vlight",
-                        "id":"doomword_api",
-                        "execute": {"load":true, "codebase":"doomworldAPI"}
+                        "id":"doomworld_api",
+                        "ajax": {"load":true, "codebase":"doomworldAPI"}
                     }
                 }
             ]
         },
-        {
+        "/games/quake.html":{
             "url" : "/games/quake.html",
             "id" : "1.2.2",
             "type" : "CONTENT",
@@ -264,7 +265,7 @@
                 }
             ]
         },
-        {
+        "/games/half-life.html":{
             "url" : "/games/half-life.html",
             "id" : "1.2.3",
             "type" : "CONTENT",
@@ -292,7 +293,7 @@
                 }
             ]
         },
-        {
+        "/code.html":{
             "url" : "/code.html",
             "id" : "1.3",
             "type" : "HOME",
@@ -339,7 +340,7 @@
                 }
             ]
         },  
-        {
+        "/code/web.html":{
             "url" : "/code/web.html",
             "id" : "1.3.1",
             "banner":"/images/banners/banner_web2.jpg",
@@ -366,7 +367,7 @@
                 }
             ]
         },
-        {
+        "/code/java.html":{
             "url" : "/code/java.html",
             "id" : "1.3.2",
             "type" : "CONTENT",
@@ -393,7 +394,7 @@
                 }
             ]
         },
-        {
+        "/code/librivox.html":{
             "url" : "/code/librivox.html",
             "id" : "1.3.3",
             "type" : "CONTENT",
@@ -420,7 +421,7 @@
                 }
             ]
         },
-        {
+        "/code/ccms.html":{
             "url" : "/code/ccms.html",
             "id" : "1.3.4",
             "type" : "CONTENT",
@@ -448,7 +449,7 @@
                 }
             ]
         },
-        {
+        "/about.html":{
             "url" : "/about.html",
             "id" : "1.4",
             "type" : "LANDING",
@@ -474,7 +475,7 @@
                 }
             ]
         },
-        {
+        "/me/me-1.html":{
             "url" : "/me/me-1.html",
             "id" : "1.4.1",
             "type" : "CONTENT",
@@ -500,7 +501,7 @@
                 }
             ]
         },
-        {
+        "/me/me-2.html":{
             "url" : "/me/me-2.html",
             "id" : "1.4.2",
             "type" : "CONTENT",
@@ -528,7 +529,7 @@
                 }
             ]
         },
-        {
+        "/academic.html":{
             "url" : "/academic.html",
             "id" : "1.5",
             "type" : "LANDING",
@@ -565,7 +566,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd.html":{
             "url" : "/academic/phd.html",
             "id" : "1.5.1",
             "type" : "LANDING",
@@ -593,7 +594,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis.html":{
             "url" : "/academic/phd/thesis.html",
             "id" : "1.5.1.1",
             "banner":"/images/banners/banner05.jpg",
@@ -668,7 +669,7 @@
                 }
             ]
         },       
-        {
+        "/academic/phd/thesis/introduction.html":{
             "url" : "/academic/phd/thesis/introduction.html",
             "id" : "1.5.1.1.1",
             "type" : "CONTENT",
@@ -697,7 +698,7 @@
                 }
             ]
         },       
-        {
+        "/academic/phd/thesis/materials.html":{
             "url" : "/academic/phd/thesis/materials.html",
             "id" : "1.5.1.1.2",
             "type" : "CONTENT",
@@ -725,7 +726,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis/application.html":{
             "url" : "/academic/phd/thesis/application.html",
             "id" : "1.5.1.1.3",
             "type" : "CONTENT",
@@ -753,7 +754,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis/discussion.html":{
             "url" : "/academic/phd/thesis/discussion.html",
             "id" : "1.5.1.1.4",
             "type" : "CONTENT",
@@ -778,7 +779,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis/bibliography.html":{
             "url" : "/academic/phd/thesis/bibliography.html",
             "id" : "1.5.1.1.5",
             "type" : "CONTENT",
@@ -799,7 +800,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis/appendicies.html":{
             "url" : "/academic/phd/thesis/appendicies.html",
             "id" : "1.5.1.1.6",
             "type" : "CONTENT",
@@ -827,7 +828,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/thesis/acknowledgements.html":{
             "url" : "/academic/phd/thesis/acknowledgements.html",
             "id" : "1.5.1.1.7",
             "type" : "CONTENT",
@@ -853,7 +854,7 @@
                 }
             ]
         },
-        {
+        "/academic/phd/presentations.html":{
             "url" : "/academic/phd/presentations.html",
             "id" : "1.5.1.2",
             "type" : "CONTENT",
@@ -879,7 +880,7 @@
                 }
             ]
         },
-        {
+        "/academic/MSc.html":{
             "url" : "/academic/MSc.html",
             "id" : "1.5.2",
             "banner":"/images/banners/banner19.jpg",
@@ -905,7 +906,7 @@
                 }
             ]
         },
-        {
+        "/weddingfest07.html":{
             "url" : "/weddingfest07.html",
             "id" : "1.6",
             "type" : "LANDING",
@@ -963,7 +964,7 @@
                 }
             ]
         },
-        {
+        "/weddingfest07/gallery.html":{
             "url" : "/weddingfest07/gallery.html",
             "id" : "1.6.1",
             "type" : "CONTENT",
@@ -991,7 +992,7 @@
                 }
             ]
         },
-        {
+        "/jcms/index.html":{
             "url" : "/jcms/index.html",
             "id" : "10.1",
             "type" : "LANDING",
@@ -1069,8 +1070,7 @@
                 }
             ]
         }
-   ]
 
-
+}
 
 }

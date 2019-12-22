@@ -16,7 +16,7 @@ div.spinner_wrapper > img{
 	width: 15px;
 	height: 15px;
 }
-#doom_container li{
+ul.doombrowser li{
 	list-style-type: none;
 }
 div.closed{
