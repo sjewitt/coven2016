@@ -14,7 +14,7 @@ div.spinner_wrapper > img{
 	width: 15px;
 	height: 15px;
 }
-ul.doombrowser li{
+ul li{
 	list-style-type: none;
 }
 ul.doombrowser li.loaded > div > i.fa-folder{
@@ -29,4 +29,17 @@ ul.hidden{
 }
 i.fa-folder-open{
 	color: blue;
+}
+
+#search_options_table th,
+#search_options_table td{
+	text-align: left;
+	padding:5px;
+}
+#search_options_table th{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+#search_options_table thead{
+	border-bottom:1px solid #eee;
 }

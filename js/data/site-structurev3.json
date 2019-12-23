@@ -232,7 +232,7 @@
                     {
                         "title": "Doomworld API",
                         "intro": [
-                        	"<p>A simple IDGames database browser built using the <a href='https://www.doomworld.com/idgames/api/' target='_blank' tite='Doomworld public API'>Doomworld API</a>.</p>",
+                        	"<p>A simple IDGames database browser and search tool built using the <a href='https://www.doomworld.com/idgames/api/' target='_blank' tite='Doomworld public API'>Doomworld API</a>.</p>",
                         	"<p>The content of each branch is loaded on first click and appended to the DOM. Therefore, only the first click will make an AJAX request.",
                         	"All subsequent toggles simply hide or show the content appended to the DOM on the first click.",
                         	"Thus, the percieved performance is much better than trying to load the entire tree initially.</p>"

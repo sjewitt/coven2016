@@ -357,7 +357,15 @@ var controller = {
             }
         });
 
-        $(document).keyup(function(evt){
+        $(document).keypress(function(evt){
+        	/*
+        	 * TODO: Account for currently focussed field, and also detect keypresses to
+        	 * open appropriate thing... (srch vs doom search)
+        	 * */
+//        	console.log(evt.keyCode);
+//        	if(evt.altKey){
+//        		console.log('alt key pressed');
+//        	}
             switch(evt.keyCode){
                 case 13:        //enter
                     $("#search-btn-go").click();
