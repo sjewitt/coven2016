@@ -1,0 +1,4519 @@
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script language="JavaScript" src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT3}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script language="javascript" type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script language="JavaScript" src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT3}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script language="javascript" type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/templateXX/layout.tmpl
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script language="JavaScript" src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT3}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script language="javascript" type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script language="JavaScript" src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT3}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script language="javascript" type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmplXX
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/templateXXX/layout.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/templateXXX/layout.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/templateXXX/layout.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script language="JavaScript" src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT3}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script language="javascript" type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layoutXXX.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layoutXXX.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layoutXXX.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layoutXXX.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/layoutXXX.tmpl
+Returning 
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="/script/lib.js"></script>
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+  </head>
+  
+<body class="background">
+{CMS_EDITLINK}
+ <script language="javascript" type="text/javascript">
+ document.write(getHomepageNav());
+ </script>
+<div class="homepagecontent">
+{CMS_CONTENT1}
+</div>
+</body> 
+</html>
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+Returning <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script language="JavaScript" src="/script/edit.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="/script/lib.js"></script>
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script language="javascript" type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+  </head>
+  
+<body class="background">
+{CMS_EDITLINK}
+ <script language="javascript" type="text/javascript">
+ document.write(getHomepageNav());
+ </script>
+<div class="homepagecontent">
+{CMS_CONTENT1}
+</div>
+</body> 
+</html>
+
+
+beginning test...
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+************************** beginning test...
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): beginning...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): starting for /...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for /...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+in getAuth()...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=no
+ user=silas
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+getPage(): user is authorised: false
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+in getAuth()...
+in getAuth()...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>hello... test</content1>
+        <content2 datatype="text" friendlyname="Right content">{CMS_CONTENT2}</content2>
+        <content3 datatype="image" friendlyname="Right hand image">clare_lge.jpg</content3>
+        <content4 datatype="image" friendlyname="Content title image">indi.gif</content4>
+        <content5 datatype="text" friendlyname="">{CMS_CONTENT5}</content5>
+        <content6 datatype="string" friendlyname="Right content title">{CMS_CONTENT6}</content6>
+        <content7 datatype="text" friendlyname="Right content">{CMS_CONTENT7}</content7>
+    </content>
+</doc>
+</xmp>
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for 01_andi...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: 01_andi
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//01_andi.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): 01_andi
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for 01_andi...
+getPage(): starting for 02_indi...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: 02_indi
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//02_indi.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): 02_indi
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for 02_indi...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//food//index.xml
+fileExists(): C:/Dev/TheCoven2//food/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning food
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /gigs/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//gigs//index.xml
+fileExists(): C:/Dev/TheCoven2//gigs/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning gigs
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for 01_andi...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: 01_andi
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//01_andi.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for 01_andi...
+getPage(): starting for 02_indi...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: 02_indi
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//02_indi.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for 02_indi...
+getPage(): starting for 01_andi...
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: 01_andi
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//01_andi.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for 01_andi...
+in getAuth()...
+authorised=no
+ user=silas
+in getAuth()...
+authorised=no
+ user=silas
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>
+hello... test</content1>
+        <content2 datatype="image" friendlyname="Right hand image">clare.jpg
+</xmp>
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+getPage(): starting for index...
+in getAuth()...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2///index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname="">index.tmpl</layoutpage>
+        <owner datatype="core" friendlyname="">silas</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">::-The Coven-::</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">Home</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">a,b,c,d</keywords>
+        <description datatype="property" friendlyname="Page description">home page test</description>
+        <author datatype="property" friendlyname="Page author">silas</author>
+    </metadata>
+    <content>
+      <content1 datatype="text" friendlyname="Main content">Welcome to The Coven's website. The Coven are Indi, Andi, Mandy and Clare. We all went to school together and have been causing trouble in London and surroundings area ever since. We thought it was about time we let the rest of the world in on what we get up to.  We're still in the process of building the site as we drink too much to dedicate too much time to the site but interesting stuff will begin to appear here soon, so keep coming back... ta poppets.<img src="/images/andi_lge.jpg"></content1>
+    </content>
+</doc>
+</xmp>
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//index.xml - yes
+getFile(): C:/Dev/TheCoven2///index.xml
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+in getAuth()...
+authorised=yes
+getFile(): C:/Dev/TheCoven2/food/index.xml
+ user=silas
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+yes
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2///index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname="">index.tmpl</layoutpage>
+        <owner datatype="core" friendlyname="">silas</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">::-The Coven-::</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">Home</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">a,b,c,d</keywords>
+        <description datatype="property" friendlyname="Page description">home page test</description>
+        <author datatype="property" friendlyname="Page author">silas</author>
+    </metadata>
+    <content>
+      <content1 datatype="text" friendlyname="Main content">Welcome to The Coven's website. The Coven are Indi, Andi, Mandy and Clare. We all went to school together and have been causing trouble in London and surroundings area ever since. We thought it was about time we let the rest of the world in on what we get up to.  We're still in the process of building the site as we drink too much to dedicate too much time to the site but interesting stuff will begin to appear here soon, so keep coming back... ta poppets.</content1>
+    </content>
+</doc>
+</xmp>
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+in getAuth()...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>
+hello... test</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">scotland.gif
+</xmp>
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>
+hello... test</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">clare_sml.jpg
+</xmp>
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>
+hello... test</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">clare_sml.jpg
+</xmp>
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getFile(): C:/Dev/TheCoven2///us/index.xml
+updating file 
+NEW XML:<xmp><?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">clare</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">About us TTL</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">About us</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">About us KWDS</keywords>
+        <description datatype="property" friendlyname="Page description">About us DESC</description>
+        <author datatype="property" friendlyname="Page author">clare</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content"><strong>About The Coven</strong>
+hello... test</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">clare_lge.jpg
+</xmp>
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+getPage(): starting for index...
+in getAuth()...
+authorised=yes
+ user=silas
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2//us//index.xml
+fileExists(): C:/Dev/TheCoven2//us/defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//us/defaults.cfg
+getPureFileName(): index
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning us
+getPage(): ending for index...
+in getAuth()...
+authorised=yes
+ user=silas
+fileExists(): C:/Dev/TheCoven2//us/index.xml - yes
+getFile(): C:/Dev/TheCoven2///us/index.xml
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+fileExists(): C:/Dev/TheCoven2//defaults.cfg - yes
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFile(): C:/Dev/TheCoven2/template/layout.tmpl
+getFile(): C:/Dev/TheCoven2///index.xml
+getFile(): C:/Dev/TheCoven2/template/index.tmpl
+getFolderNavData(): 
+getFile(): C:/Dev/TheCoven2//defaults.cfg
+getFile(): C:/Dev/TheCoven2/us/01_andi.xml
+getFile(): C:/Dev/TheCoven2/us/02_indi.xml
+getFile(): C:/Dev/TheCoven2/us/index.xml
+getFile(): C:/Dev/TheCoven2/food/a.xml
+getFile(): C:/Dev/TheCoven2/food/b.xml
+getFile(): C:/Dev/TheCoven2/food/index.xml
+getFile(): C:/Dev/TheCoven2/gigs/index.xml
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPath: returning /
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for 01_andi...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: 01_andi
+getPage(): ending for 01_andi...
+getPage(): starting for 02_indi...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: 02_indi
+getPage(): ending for 02_indi...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /food/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /gigs/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+at beginning of login: currently logged in=false
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: xx
+getPage(): ending for xx...
+getPage(): starting for xx...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: xx
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): ending for xx...
+at beginning of login: currently logged in=false
+at beginning of login: currently logged in=false
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: false
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+at beginning of login: currently logged in=false
+at beginning of login: currently logged in=false
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /; FILE: index
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): starting for index...
+getPage(): user is authorised: true
+getPage(): PATH: /us/; FILE: index
+getPage(): ending for index...
+getPage(): user is authorised: false
+getPage(): ending for index...
+getPage(): user is authorised: false
+getFolderNavData(): 
+getPage(): ending for index...
+at beginning of login: currently logged in=false
+at beginning of login: currently logged in=false
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+at beginning of login: currently logged in=false
+at beginning of login: currently logged in=false
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+submitted textarea string: line 1
+line 2
+lin3
+submitted textarea string: line 1
+
+line 2
+
+lin3
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+submitted textarea string: line 1line 2lin3
+submitted textarea string: line 1line 2lin3
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+submitted textarea string: line 1line 2lin3
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+submitted textarea string: line 1line 2lin3
+submitted textarea string: line 1line 2lin3
+getPage(): user is authorised: true
+getFolderNavData(): 
+getPage(): ending for index...
+15:28 10/28/2007 - getPage(): user is authorised: true
+15:28 10/28/2007 - getFolderNavData(): 
+15:28 10/28/2007 - getPage(): ending for index...
+ 15/29/0010  28:2007: 0 - getPage(): user is authorised: true
+ 15/29/0010  28:2007: 0 - getFolderNavData(): 
+ 15/29/0010  28:2007: 0 - getPage(): ending for index...
+28-10-2007 02d:15:42 - getPage(): user is authorised: true
+28-10-2007 02d:15:42 - getFolderNavData(): 
+28-10-2007 02d:15:42 - getPage(): ending for index...
+28-10-2007 15:43:41 - getPage(): user is authorised: true
+28-10-2007 15:43:41 - getFolderNavData(): 
+28-10-2007 15:43:41 - getPage(): ending for index...
+28-10-2007 15:46:05 - getPage(): user is authorised: true
+28-10-2007 15:46:05 - getFolderNavData(): 
+28-10-2007 15:46:05 - getPage(): ending for index...
+28-10-2007 15:57:16 - getPage(): user is authorised: true
+28-10-2007 15:57:16 - getFolderNavData(): 
+28-10-2007 15:57:16 - getPage(): ending for index...
+28-10-2007 15:57:35 - getPage(): user is authorised: true
+28-10-2007 15:57:35 - getFolderNavData(): 
+28-10-2007 15:57:35 - getPage(): ending for index...
+28-10-2007 15:57:45 - getPage(): user is authorised: true
+28-10-2007 15:57:45 - getFolderNavData(): 
+28-10-2007 15:57:45 - getPage(): ending for index...
+28-10-2007 15:58:08 - getPage(): user is authorised: true
+28-10-2007 15:58:08 - getFolderNavData(): 
+28-10-2007 15:58:08 - getPage(): ending for index...
+28-10-2007 15:58:09 - getPage(): user is authorised: true
+28-10-2007 15:58:09 - getFolderNavData(): 
+28-10-2007 15:58:09 - getPage(): ending for index...
+28-10-2007 15:58:22 - getPage(): user is authorised: true
+28-10-2007 15:58:22 - getFolderNavData(): 
+28-10-2007 15:58:22 - getPage(): ending for index...
+28-10-2007 15:58:24 - getPage(): user is authorised: true
+28-10-2007 15:58:24 - getFolderNavData(): 
+28-10-2007 15:58:24 - getPage(): ending for index...
+28-10-2007 15:58:25 - getPage(): user is authorised: true
+28-10-2007 15:58:25 - getFolderNavData(): 
+28-10-2007 15:58:25 - getPage(): ending for index...
+28-10-2007 15:58:26 - getPage(): user is authorised: true
+28-10-2007 15:58:26 - getFolderNavData(): 
+28-10-2007 15:58:26 - getPage(): ending for index...
+28-10-2007 15:58:27 - getPage(): user is authorised: true
+28-10-2007 15:58:27 - getFolderNavData(): 
+28-10-2007 15:58:27 - getPage(): ending for index...
+28-10-2007 15:58:38 - getPage(): user is authorised: true
+28-10-2007 15:58:38 - getFolderNavData(): 
+28-10-2007 15:58:38 - getPage(): ending for index...
+28-10-2007 16:00:10 - getPage(): user is authorised: true
+28-10-2007 16:00:10 - getFolderNavData(): 
+28-10-2007 16:00:10 - getPage(): ending for index...
+28-10-2007 16:00:11 - getPage(): user is authorised: true
+28-10-2007 16:00:11 - getFolderNavData(): 
+28-10-2007 16:00:12 - getPage(): ending for index...
+28-10-2007 16:00:16 - getPage(): user is authorised: true
+28-10-2007 16:00:16 - getFolderNavData(): 
+28-10-2007 16:00:16 - getPage(): ending for index...
+28-10-2007 16:00:17 - getPage(): user is authorised: true
+28-10-2007 16:00:17 - getFolderNavData(): 
+28-10-2007 16:00:17 - getPage(): ending for index...
+28-10-2007 16:00:23 - getPage(): user is authorised: true
+28-10-2007 16:00:23 - getFolderNavData(): 
+28-10-2007 16:00:23 - getPage(): ending for index...
+28-10-2007 16:00:28 - getPage(): user is authorised: true
+28-10-2007 16:00:28 - getFolderNavData(): 
+28-10-2007 16:00:28 - getPage(): ending for index...
+28-10-2007 16:01:56 - getPage(): user is authorised: true
+28-10-2007 16:01:56 - getFolderNavData(): 
+28-10-2007 16:01:56 - getPage(): ending for index...
+28-10-2007 16:02:27 - getPage(): user is authorised: true
+28-10-2007 16:02:27 - getFolderNavData(): 
+28-10-2007 16:02:27 - getPage(): ending for index...
+28-10-2007 16:03:25 - getPage(): user is authorised: true
+28-10-2007 16:03:25 - getFolderNavData(): 
+28-10-2007 16:03:25 - getPage(): ending for index...
+28-10-2007 16:03:28 - getPage(): user is authorised: true
+28-10-2007 16:03:28 - getPage(): ending for index...
+28-10-2007 16:04:33 - getPage(): user is authorised: true
+28-10-2007 16:04:33 - getPage(): ending for index...
+28-10-2007 16:08:10 - getPage(): user is authorised: true
+28-10-2007 16:08:10 - getPage(): ending for index...
+28-10-2007 16:08:20 - getPage(): user is authorised: true
+28-10-2007 16:08:20 - getPage(): ending for index...
+28-10-2007 16:08:24 - getPage(): user is authorised: true
+28-10-2007 16:08:24 - getPage(): ending for index...
+28-10-2007 16:12:04 - getPage(): user is authorised: true
+28-10-2007 16:12:04 - getPage(): ending for index...
+28-10-2007 16:14:20 - getPage(): user is authorised: true
+28-10-2007 16:14:20 - getPage(): ending for index...
+28-10-2007 16:14:29 - getPage(): user is authorised: true
+28-10-2007 16:14:29 - getPage(): ending for index...
+28-10-2007 16:14:37 - getPage(): user is authorised: true
+28-10-2007 16:14:37 - getPage(): ending for index...
+28-10-2007 16:16:08 - getPage(): user is authorised: true
+28-10-2007 16:16:08 - getPage(): ending for index...
+28-10-2007 16:17:33 - getPage(): user is authorised: true
+28-10-2007 16:17:33 - getPage(): ending for index...
+28-10-2007 16:19:21 - getPage(): user is authorised: true
+28-10-2007 16:19:21 - getPage(): ending for index...
+28-10-2007 16:19:35 - getPage(): user is authorised: true
+28-10-2007 16:19:35 - getPage(): ending for index...
+28-10-2007 16:19:55 - getPage(): user is authorised: true
+28-10-2007 16:19:55 - getPage(): ending for index...
+28-10-2007 16:22:40 - getPage(): user is authorised: true
+28-10-2007 16:22:40 - getPage(): ending for index...
+28-10-2007 16:25:57 - getPage(): ending for index...
+28-10-2007 16:26:46 - getPage(): ending for index...
+28-10-2007 16:34:20 - getPage(): ending for index...
+28-10-2007 16:34:22 - getFolderNavData(): 
+28-10-2007 16:34:22 - getPage(): ending for index...
+28-10-2007 16:41:54 - Using alternate layout '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script src="/script/edit.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/script/lib.js"></script>
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+  </head>
+  
+<body class="background">
+{CMS_EDITLINK}
+ <script type="text/javascript">
+ document.write(getHomepageNav());
+ </script>
+<div class="homepagecontent">
+{CMS_CONTENT1}
+</div>
+</body> 
+</html>
+
+' for page '/'
+28-10-2007 16:41:54 - getFolderNavData(): 
+28-10-2007 16:43:04 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:43:04 - getFolderNavData(): 
+28-10-2007 16:43:20 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:43:20 - getFolderNavData(): 
+28-10-2007 16:44:29 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:44:29 - getFolderNavData(): 
+28-10-2007 16:48:53 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:48:53 - getFolderNavData(): 
+28-10-2007 16:48:53 - Defaults config file 'daefaults.cfg' found: Using default values from this.
+28-10-2007 16:51:17 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:51:17 - getFolderNavData(): 
+28-10-2007 16:51:17 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 16:51:17 -  --> defaultpage: index
+28-10-2007 16:51:17 -  --> currentdirectory: 
+28-10-2007 16:52:42 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 16:52:42 -  --> defaultpage: index
+28-10-2007 16:52:42 -  --> currentdirectory: 
+28-10-2007 16:58:14 - Using default layout 'template/layout.tmpl' for page '/us/'
+28-10-2007 16:58:14 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 16:58:14 -  --> defaultpage: index
+28-10-2007 16:58:14 -  --> currentdirectory: 
+28-10-2007 16:58:27 - Using alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 16:58:27 - getFolderNavData(): 
+28-10-2007 16:58:27 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 16:58:27 -  --> defaultpage: index
+28-10-2007 16:58:27 -  --> currentdirectory: 
+28-10-2007 17:05:38 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:05:38 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:05:38 - getFolderNavData(): 
+28-10-2007 17:05:38 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:05:38 -  --> defaultpage: index
+28-10-2007 17:05:38 -  --> currentdirectory: 
+28-10-2007 17:05:49 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:05:49 -  --> defaultpage: index
+28-10-2007 17:05:49 -  --> currentdirectory: 
+28-10-2007 17:07:23 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 17:07:23 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:07:23 -  --> defaultpage: index
+28-10-2007 17:07:23 -  --> currentdirectory: 
+28-10-2007 17:08:51 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 17:08:51 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:08:51 -  --> defaultpage: index
+28-10-2007 17:08:51 -  --> currentdirectory: 
+28-10-2007 17:09:02 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:09:02 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:09:02 - getFolderNavData(): 
+28-10-2007 17:09:02 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:09:02 -  --> defaultpage: index
+28-10-2007 17:09:02 -  --> currentdirectory: 
+28-10-2007 17:28:47 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:28:47 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:28:47 - getFolderNavData(): 
+28-10-2007 17:28:47 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:28:47 -  --> defaultpage: index
+28-10-2007 17:28:47 -  --> currentdirectory: 
+28-10-2007 17:31:15 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:31:15 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:31:15 - getFolderNavData(): 
+28-10-2007 17:31:15 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:31:15 -  --> defaultpage: index
+28-10-2007 17:31:15 -  --> currentdirectory: 
+28-10-2007 17:34:51 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:34:51 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:34:51 - getFolderNavData(): 
+28-10-2007 17:34:51 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:34:51 -  --> defaultpage: index
+28-10-2007 17:34:51 -  --> currentdirectory: 
+28-10-2007 17:36:25 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:36:25 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:36:25 - getFolderNavData(): 
+28-10-2007 17:36:25 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:36:25 -  --> defaultpage: index
+28-10-2007 17:36:25 -  --> currentdirectory: 
+28-10-2007 17:36:41 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:36:41 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:36:41 - getFolderNavData(): 
+28-10-2007 17:36:41 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:36:41 -  --> defaultpage: index
+28-10-2007 17:36:41 -  --> currentdirectory: 
+28-10-2007 17:37:07 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:37:07 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:37:07 - getFolderNavData(): 
+28-10-2007 17:37:07 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:37:07 -  --> defaultpage: index
+28-10-2007 17:37:07 -  --> currentdirectory: 
+28-10-2007 17:37:17 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:37:17 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:37:17 - getFolderNavData(): 
+28-10-2007 17:37:17 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:37:17 -  --> defaultpage: index
+28-10-2007 17:37:17 -  --> currentdirectory: 
+28-10-2007 17:37:42 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:37:42 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:37:42 - getFolderNavData(): 
+28-10-2007 17:37:42 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:37:42 -  --> defaultpage: index
+28-10-2007 17:37:42 -  --> currentdirectory: 
+28-10-2007 17:37:54 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:37:54 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:37:54 - getFolderNavData(): 
+28-10-2007 17:37:54 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:37:54 -  --> defaultpage: index
+28-10-2007 17:37:54 -  --> currentdirectory: 
+28-10-2007 17:38:00 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:38:00 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:38:00 - getFolderNavData(): 
+28-10-2007 17:38:00 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:38:00 -  --> defaultpage: index
+28-10-2007 17:38:00 -  --> currentdirectory: 
+28-10-2007 17:38:38 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:38:38 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:38:38 - getFolderNavData(): 
+28-10-2007 17:38:38 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:38:38 -  --> defaultpage: index
+28-10-2007 17:38:38 -  --> currentdirectory: 
+28-10-2007 17:39:06 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:39:06 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:39:06 - getFolderNavData(): 
+28-10-2007 17:39:06 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:39:06 -  --> defaultpage: index
+28-10-2007 17:39:06 -  --> currentdirectory: 
+28-10-2007 17:39:21 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 17:39:21 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 17:39:21 - getFolderNavData(): 
+28-10-2007 17:39:21 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 17:39:21 -  --> defaultpage: index
+28-10-2007 17:39:21 -  --> currentdirectory: 
+28-10-2007 18:13:58 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:13:58 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:13:58 - getFolderNavData(): 
+28-10-2007 18:13:58 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:13:58 -  --> defaultpage: index
+28-10-2007 18:13:58 -  --> currentdirectory: 
+28-10-2007 18:14:47 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:14:47 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:14:47 - getFolderNavData(): 
+28-10-2007 18:14:47 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:14:47 -  --> defaultpage: index
+28-10-2007 18:14:47 -  --> currentdirectory: 
+28-10-2007 18:14:54 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:14:54 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:14:54 - getFolderNavData(): 
+28-10-2007 18:14:54 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:14:54 -  --> defaultpage: index
+28-10-2007 18:14:54 -  --> currentdirectory: 
+28-10-2007 18:14:57 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:14:57 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:14:57 - getFolderNavData(): 
+28-10-2007 18:14:57 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:14:57 -  --> defaultpage: index
+28-10-2007 18:14:57 -  --> currentdirectory: 
+28-10-2007 18:14:58 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:14:58 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:14:58 - getFolderNavData(): 
+28-10-2007 18:14:58 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:14:58 -  --> defaultpage: index
+28-10-2007 18:14:58 -  --> currentdirectory: 
+28-10-2007 18:17:12 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:17:12 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:17:12 - getFolderNavData(): 
+28-10-2007 18:17:12 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:17:12 -  --> defaultpage: index
+28-10-2007 18:17:12 -  --> currentdirectory: 
+28-10-2007 18:19:48 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:19:48 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:19:48 - getFolderNavData(): 
+28-10-2007 18:19:48 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:19:48 -  --> defaultpage: index
+28-10-2007 18:19:48 -  --> currentdirectory: 
+28-10-2007 18:20:48 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:20:48 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:20:48 -  --> defaultpage: index
+28-10-2007 18:20:48 -  --> currentdirectory: 
+28-10-2007 18:23:10 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:23:10 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:23:10 -  --> defaultpage: index
+28-10-2007 18:23:10 -  --> currentdirectory: 
+28-10-2007 18:23:24 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:23:24 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:23:24 -  --> defaultpage: index
+28-10-2007 18:23:24 -  --> currentdirectory: 
+28-10-2007 18:23:26 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:23:26 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:23:26 - getFolderNavData(): 
+28-10-2007 18:23:26 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:23:26 -  --> defaultpage: index
+28-10-2007 18:23:26 -  --> currentdirectory: 
+28-10-2007 18:25:15 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:25:15 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:25:15 - getFolderNavData(): 
+28-10-2007 18:25:15 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:15 -  --> defaultpage: index
+28-10-2007 18:25:15 -  --> currentdirectory: 
+28-10-2007 18:25:16 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:25:16 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:16 -  --> defaultpage: index
+28-10-2007 18:25:16 -  --> currentdirectory: 
+28-10-2007 18:25:26 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:25:26 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:26 -  --> defaultpage: index
+28-10-2007 18:25:26 -  --> currentdirectory: 
+28-10-2007 18:25:30 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:25:30 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:30 -  --> defaultpage: index
+28-10-2007 18:25:30 -  --> currentdirectory: 
+28-10-2007 18:25:32 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:25:32 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:32 -  --> defaultpage: index
+28-10-2007 18:25:32 -  --> currentdirectory: 
+28-10-2007 18:25:38 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:25:39 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:25:39 -  --> defaultpage: index
+28-10-2007 18:25:39 -  --> currentdirectory: 
+28-10-2007 18:26:04 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:26:04 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:26:04 -  --> defaultpage: index
+28-10-2007 18:26:04 -  --> currentdirectory: 
+28-10-2007 18:26:37 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:26:37 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:26:37 -  --> defaultpage: index
+28-10-2007 18:26:37 -  --> currentdirectory: 
+28-10-2007 18:27:29 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:27:29 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:27:29 -  --> defaultpage: index
+28-10-2007 18:27:29 -  --> currentdirectory: 
+28-10-2007 18:29:48 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:29:48 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:29:48 -  --> defaultpage: index
+28-10-2007 18:29:48 -  --> currentdirectory: 
+28-10-2007 18:30:03 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:30:03 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:30:03 -  --> defaultpage: index
+28-10-2007 18:30:03 -  --> currentdirectory: 
+28-10-2007 18:30:06 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+28-10-2007 18:30:06 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+28-10-2007 18:30:06 - getFolderNavData(): 
+28-10-2007 18:30:06 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:30:06 -  --> defaultpage: index
+28-10-2007 18:30:06 -  --> currentdirectory: 
+28-10-2007 18:30:07 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+28-10-2007 18:30:07 - Defaults config file 'defaults.cfg' found: Using default values from this.
+28-10-2007 18:30:07 -  --> defaultpage: index
+28-10-2007 18:30:07 -  --> currentdirectory: 
+24-11-2007 17:57:04 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+24-11-2007 17:57:04 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+24-11-2007 17:57:04 - getFolderNavData(): 
+24-11-2007 17:57:04 - Defaults config file 'defaults.cfg' found: Using default values from this.
+24-11-2007 17:57:04 -  --> defaultpage: index
+24-11-2007 17:57:04 -  --> currentdirectory: 
+03-12-2007 18:15:10 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+03-12-2007 18:15:10 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+03-12-2007 18:15:10 - getFolderNavData(): 
+03-12-2007 18:15:10 - Defaults config file 'defaults.cfg' found: Using default values from this.
+03-12-2007 18:15:10 -  --> defaultpage: index
+03-12-2007 18:15:10 -  --> currentdirectory: 
+03-12-2007 18:15:20 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+03-12-2007 18:15:20 - Defaults config file 'defaults.cfg' found: Using default values from this.
+03-12-2007 18:15:20 -  --> defaultpage: index
+03-12-2007 18:15:20 -  --> currentdirectory: 
+03-12-2007 18:15:37 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+03-12-2007 18:15:37 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+03-12-2007 18:15:37 - getFolderNavData(): 
+03-12-2007 18:15:37 - Defaults config file 'defaults.cfg' found: Using default values from this.
+03-12-2007 18:15:37 -  --> defaultpage: index
+03-12-2007 18:15:37 -  --> currentdirectory: 
+03-12-2007 18:24:07 - at beginning of login: currently logged in=false
+03-12-2007 18:33:20 - at beginning of login: currently logged in=false
+03-12-2007 18:34:26 - at beginning of login: currently logged in=false
+03-12-2007 18:34:56 - at beginning of login: currently logged in=false
+03-12-2007 18:39:47 - at beginning of login: currently logged in=false
+03-12-2007 18:54:43 - at beginning of login: currently logged in=false
+03-12-2007 18:58:39 - at beginning of login: currently logged in=false
+03-12-2007 19:01:33 - at beginning of login: currently logged in=false
+03-12-2007 19:01:37 - at beginning of login: currently logged in=false
+03-12-2007 19:01:41 - at beginning of login: currently logged in=false
+03-12-2007 20:20:04 - at beginning of login: currently logged in=false
+15-12-2007 15:27:24 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+15-12-2007 15:27:24 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+15-12-2007 15:27:24 - getFolderNavData(): 
+15-12-2007 15:27:24 - Defaults config file 'defaults.cfg' found: Using default values from this.
+15-12-2007 15:27:24 -  --> defaultpage: index
+15-12-2007 15:27:24 -  --> currentdirectory: 
+03-09-2010 19:11:22 - over-riding with folder alternate layout 'template/testfolder.tmpl' for page '/'
+03-09-2010 19:11:22 - over-riding with page alternate layout 'template/index.tmpl' for page '/'
+03-09-2010 19:11:22 - getFolderNavData(): 
+03-09-2010 19:11:22 - Defaults config file 'defaults.cfg' found: Using default values from this.
+03-09-2010 19:11:22 -  --> defaultpage: index
+03-09-2010 19:11:22 -  --> currentdirectory: 
+03-09-2010 19:11:34 - over-riding with folder alternate layout 'template/layout_us.tmpl' for page '/us/'
+03-09-2010 19:11:34 - Defaults config file 'defaults.cfg' found: Using default values from this.
+03-09-2010 19:11:34 -  --> defaultpage: index
+03-09-2010 19:11:34 -  --> currentdirectory: 

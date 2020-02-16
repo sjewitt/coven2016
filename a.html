@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>About us TTL</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script type="text/javascript" src="/script/edit.js" />
+    <script type="text/javascript" src="/script/lib.js"></script>
+    <meta name="keywords"       content="About us KWDS" />
+    <meta name="description"    content="About us DESC" />
+    <meta name="author"         content="clare" />
+    <script type="text/javascript">
+var primarynav = new Array();
+var homenav = new Array();
+
+primarynav[0] = {url: "us", linktext: "The&nbsp;Coven", image: "/images/navicons/us_sml.jpg"};
+homenav[0] = {url: "us", linktext: "The&nbsp;Coven", image: "/images/navicons/us.jpg"};
+primarynav[1] = {url: "food", linktext: "My food", image: "/images/navicons/food_sml.jpg"};
+homenav[1] = {url: "food", linktext: "My food", image: "/images/navicons/food.jpg"};
+primarynav[2] = {url: "gigs", linktext: "Gigs", image: "/images/navicons/gigs_sml.jpg"};
+homenav[2] = {url: "gigs", linktext: "Gigs", image: "/images/navicons/gigs.jpg"};
+primarynav[3] = {url: "gizmo", linktext: "Gizmo", image: "/images/navicons/gizmo_sml.jpg"};
+homenav[3] = {url: "gizmo", linktext: "Gizmo", image: "/images/navicons/gizmo.jpg"};
+primarynav[4] = {url: "scot2004", linktext: "Scotland 2004", image: "/images/navicons/scot2004_sml.jpg"};
+homenav[4] = {url: "scot2004", linktext: "Scotland 2004", image: "/images/navicons/scot2004.jpg"};
+var nav=new Object();
+nav.usnav=new Array();
+nav.usnav[0]=new Object();
+nav.usnav[0].page={url: "/us/01_andi.pl", linktext: "Andi"};
+nav.usnav[1]=new Object();
+nav.usnav[1].page={url: "/us/02_indi.pl", linktext: "Indi"};
+nav.usnav[2]=new Object();
+nav.usnav[2].page={url: "/us/index.pl", linktext: "About us"};
+nav.foodnav=new Array();
+nav.foodnav[0]=new Object();
+nav.foodnav[0].page={url: "/food/a.pl", linktext: "a"};
+nav.foodnav[1]=new Object();
+nav.foodnav[1].page={url: "/food/b.pl", linktext: "b"};
+nav.foodnav[2]=new Object();
+nav.foodnav[2].page={url: "/food/index.pl", linktext: "Food"};
+nav.gigsnav=new Array();
+nav.gigsnav[0]=new Object();
+nav.gigsnav[0].page={url: "/gigs/index.pl", linktext: "Gigs"};
+nav.gizmonav=new Array();
+nav.scot2004nav=new Array();
+
+    </script>
+    
+  </head>
+
+  <body>
+
+    
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      <img src="/images/clare.gif" />
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+
+    
+        <!-- content title -->
+        <h1>About us</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        <strong>About The Coven</strong><br />hello... test
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script type="text/javascript">
+document.write(getprimarynav("us",primarynav));
+</script>
+
+    <!-- RH nav -->
+
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('usnav','/us/index.pl','About us TTL',nav));
+    </script>
+    </div>
+  </body>
+</html>
+
+

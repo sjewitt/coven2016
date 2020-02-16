@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Gigs</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="gigs,concerts,reviews" />
+    <meta name="description"    content="Gigs" />
+    <meta name="author"         content="silas" />
+    <script type="text/javascript">
+      //nav array:
+      var primarynav = new Array();
+var homenav = new Array();
+primarynav[0] = {url: "us", linktext: "The&nbsp;Coven", image: "/images/navicons/us_sml.jpg"};
+homenav[0] = {url: "us", linktext: "The&nbsp;Coven", image: "/images/navicons/us.jpg"};
+primarynav[1] = {url: "food", linktext: "My food", image: "/images/navicons/food_sml.jpg"};
+homenav[1] = {url: "food", linktext: "My food", image: "/images/navicons/food.jpg"};
+primarynav[2] = {url: "gigs", linktext: "Gigs", image: "/images/navicons/gigs_sml.jpg"};
+homenav[2] = {url: "gigs", linktext: "Gigs", image: "/images/navicons/gigs.jpg"};
+primarynav[3] = {url: "gizmo", linktext: "Gizmo", image: "/images/navicons/gizmo_sml.jpg"};
+homenav[3] = {url: "gizmo", linktext: "Gizmo", image: "/images/navicons/gizmo.jpg"};
+primarynav[4] = {url: "scot2004", linktext: "Scotland 2004", image: "/images/navicons/scot2004_sml.jpg"};
+homenav[4] = {url: "scot2004", linktext: "Scotland 2004", image: "/images/navicons/scot2004.jpg"};
+var nav=new Object();
+nav.usnav=new Array();
+nav.usnav[0]=new Object();
+nav.usnav[0].page={url: "/us/index.pl", linktext: "About us"};
+nav.foodnav=new Array();
+nav.foodnav[0]=new Object();
+nav.foodnav[0].page={url: "/food/index.pl", linktext: "Food"};
+nav.gigsnav=new Array();
+nav.gigsnav[0]=new Object();
+nav.gigsnav[0].page={url: "/gigs/index.pl", linktext: "Gigs"};
+nav.gizmonav=new Array();
+nav.scot2004nav=new Array();
+
+    </script>
+    <script src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    
+
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      <img src="/images/logos/{CMS_CONTENT2}" />
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>Gigs</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script type="text/javascript">
+document.write(getprimarynav("gigs"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('gigsnav','/gigs/index.pl','Gigs'));
+    </script>
+    </div>
+  </body>
+</html>
+
+
