@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">silas</owner>
+    </defaults>
+    <metadata>
+        <pagetitle datatype="property" friendlyname="Page title">Gigs</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">Gigs</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">gigs,concerts,reviews</keywords>
+        <description datatype="property" friendlyname="Page description">Gigs</description>
+        <author datatype="property" friendlyname="Page author">silas</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content">{CMS_CONTENT1}</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">{CMS_CONTENT2}</content2>
+    </content>
+</doc>

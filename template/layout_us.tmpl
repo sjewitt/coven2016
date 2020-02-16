@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{CMS_PAGETITLE}</title>
+    <link rel="stylesheet" href="/styles/coven.css" type="text/css" />
+    <script src="/script/edit.js" type="text/javascript"></script>
+    
+    <meta name="keywords"       content="{CMS_KEYWORDS}" />
+    <meta name="description"    content="{CMS_DESCRIPTION}" />
+    <meta name="author"         content="{CMS_AUTHOR}" />
+    <script type="text/javascript">
+      //nav array:
+      {CMS_JSNAVARRAY}
+    </script>
+    <script src="/script/lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    {CMS_EDITLINK}
+    <h1>US!!</h1>
+    <div class="contentlogo"></div>
+    <div class="contentheader">
+      <div class="thumbheader"></div>
+      {CMS_CONTENT2}
+    </div>
+
+    <!-- sub page content -->
+    <div class="content">
+    
+        <!-- content title -->
+        <h1>{CMS_LINKTEXT}</h1>
+        <!-- end content title -->
+        
+        <!-- content text -->
+        {CMS_CONTENT1}
+        <!-- end content text -->
+    </div>
+    
+    <!-- link to homepage -->
+    <div class="homelink">
+        <a href="/" title="Back to homepage">
+            <img src="/images/structure/transpacer.gif" width="150" height="30" alt="spacer" />
+        </a>
+    </div>
+    
+    <!-- LH nav -->
+
+<script type="text/javascript">
+document.write(getprimarynav("{CMS_CURRPATH}"));
+</script>
+
+    <!-- RH nav -->
+    <div class="contentsubnav">
+    <script type="text/javascript">
+      document.write(getNav('{CMS_CURRPATH}nav','{ENV_SCRIPT_NAME}','{CMS_PAGETITLE}'));
+    </script>
+    </div>
+  </body>
+</html>
+
+

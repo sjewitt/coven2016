@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage>index</defaultpage>
+        <owner>{CMS_OWNER}</owner>
+    </defaults>
+    <metadata>
+        <heading>{CMS_PAGETITLE}</heading>
+        <linktext>{CMS_LINKTEXT}</linktext>
+        <keywords>{CMS_KEYWORDS}</keywords>
+        <description>{CMS_DESCRIPTION}</description>
+        <author>{CMS_AUTHOR}</author>
+    </metadata>
+    <content>
+        <body>{CMS_CONTENT}</body>
+        <lhboxout_title>{CMS_LHBOXOUT_TITLE}</lhboxout_title>
+        <lhboxout_content>{CMS_LHBOXOUT_CONTENT}</lhboxout_content>
+        <rhboxout_title>{CMS_RHBOXOUT_TITLE}</rhboxout_title>
+        <rhboxout_content>{CMS_RHBOXOUT_CONTENT}</rhboxout_content>
+    </content>
+</doc>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage datatype="core" friendlyname="">index</defaultpage>
+        <layoutpage datatype="core" friendlyname=""></layoutpage>
+        <owner datatype="core" friendlyname="">{CMS_OWNER}</owner>
+    </defaults>
+    <metadata>
+        <navorder>0</navorder>
+        <pagetitle datatype="property" friendlyname="Page title">{CMS_PAGETITLE}</pagetitle>
+        <linktext datatype="property" friendlyname="Page linktext">{CMS_LINKTEXT}</linktext>
+        <keywords datatype="property" friendlyname="Keyword list">{CMS_KEYWORDS}</keywords>
+        <description datatype="property" friendlyname="Page description">{CMS_DESCRIPTION}</description>
+        <author datatype="property" friendlyname="Page author">{CMS_AUTHOR}</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content">{CMS_CONTENT1}</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">{CMS_CONTENT3}</content3>
+    </content>
+</doc>

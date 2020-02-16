@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<doc>
+    <defaults>
+        <defaultpage>fish</defaultpage>
+        <owner>{CMS_OWNER}</owner>
+    </defaults>
+    <metadata>
+        <heading>The Coven</heading>
+        <linktext>The Coven</linktext>
+        <keywords>The Coven</keywords>
+        <description>The Coven</description>
+        <author>MIJE 2006</author>
+    </metadata>
+    <content>
+        <content1 datatype="text" friendlyname="Body content">{CMS_CONTENT1}</content1>
+        <content2 datatype="image" friendlyname="Right hand image" imagepath="logos">{CMS_CONTENT2}</content3>
+    </content>
+</doc>
