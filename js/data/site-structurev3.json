@@ -1076,8 +1076,28 @@
                     }
                 }
             ]
+        },
+        "/covid19.html":{
+            "url" : "/covid19.html",
+            "id" : "11",
+            "type" : "FULLWIDTH",
+            "title":"COVID 19",
+            "banner" : "",
+            "banner_attachment":"cover",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "COVID 19 APIs",
+                        "intro": [
+                        	"Example: https://www.programmableweb.com/api/about-corona-covid-19-rest-api-v1"
+                        ],
+                        "class": "scheme-vlight",
+                        "id":"covid19_api",
+                        "ajax": {"load":true, "codebase":"covid19API"}
+                    }
+                }
+            ]
         }
-
-}
-
+	}
 }

@@ -161,7 +161,11 @@ var controller = {
     		idgamesengine.init(panel.data.id);
     		
     		break;
+    	case 'covid19API':
+    		console.log(panel);
+    		covid19engine.init(panel.data.id);
     		
+    		break;	
     	}
     },
     
