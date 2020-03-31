@@ -26,10 +26,20 @@
             "url" : "/index.html",
             "id" : "1",
             "type" : "HOME",
-            "title":"TheCoven",
+            "title":"The Coven",
             "banner":"/images/banners/WP_20140926_030.jpg",
             "banner_attachment":"cover",
             "panels": [
+            	{
+                    "data": 
+                    {
+                        "title": "COVID 19",
+                        "intro": "Example AJAX REST application following a COVID 19 data API",
+                        "class": "scheme-light",
+                        "linkId":"1.10",
+                        "link": "/covid19.html"
+                    }
+                },
                 {
                     "data": 
                     {
