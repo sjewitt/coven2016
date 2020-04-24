@@ -201,7 +201,7 @@
                     "data": 
                     {
                         "title": "Doom",
-                        "intro": "Doomworld has a public API, so I built a browser...",
+                        "intro": "Doom stuff - Doomworld IDGames API demo, my levels, screenshots etc.",
                         "class": "scheme-vlight",
                         "link": "/games/doom.html",
                         "linkId":"3"
@@ -232,8 +232,46 @@
         "/games/doom.html":{
             "url" : "/games/doom.html",
             "id" : "1.2.1",
+            "type" : "HOME",
+            "banner":"/images/doombar.jpg",
+            "banner_attachment":"cover",
+            "title":"Doom",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "My WADs",
+                        "intro": "Download links for my WADs. Some are unfinished or not very good",
+                        "class": "scheme-vlight",
+                        "link" : "/games/doom/wads.html"
+                    }
+                },
+                {
+                	"data":
+                    {
+                        "title": "Screenshots",
+                        "intro": "Screenshots from my WADs",
+                        "class": "scheme-vdark",
+                        "link" : "/games/doom/screenshots.html"
+                    }
+                },
+                {
+                	"data":
+                    {
+                        "title": "Doomworld API",
+                        "intro": "An IDGames Browser. An AJAX, Javascript and PHP implementation view on the ID Games Doom resources database",
+                        "class": "scheme-dark",
+                        "link" : "/games/doom/doomworld.html"
+                    }
+                }
+            ]
+        },
+        
+        "/games/doom/doomworld.html":{
+            "url" : "/games/doom.html",
+            "id" : "1.2.1.1",
             "type" : "FULLWIDTH",
-            "title":"DooM",
+            "title":"Doomworld API",
             "banner" : "/images/doombar.jpg",
             "banner_attachment":"cover",
             "panels": [
@@ -254,6 +292,94 @@
                 }
             ]
         },
+        
+        
+        "/games/doom/screenshots.html":{
+            "url" : "/games/doom/screenshots.html",
+            "id" : "1.2.1.2",
+            "type" : "CONTENT",
+            "title":"Screenshots",
+            "banner" : "/images/doombar.jpg",
+            "banner_attachment":"cover",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "Screenshots",
+                        "intro": [
+                        	"<p>Screenshots from my Doom levels</p>"
+                        ],
+                        "class": "scheme-vlight"
+                    }
+                    
+                },
+                {
+                    "data": 
+                    {
+                        "intro": [
+                        	"<h3>Hell Breach v1</h3>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/2.png' alt=''><div class='caption'>Start position</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/3.png' alt=''><div class='caption'>Beginning of sewer system</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/4.png' alt=''><div class='caption'>Main hallway</div></div>",
+	                       	"<div class='screenshot'><img src='/images/screenshots/doom/17.png' alt=''><div class='caption'>Looking down on the breach</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/5.png' alt=''><div class='caption'>The breach</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/6.png' alt=''><div class='caption'>Outer hallway</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/7.png' alt=''><div class='caption'>Looking down on the sewer system</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/8.png' alt=''><div class='caption'>In the sewer system</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/9.png' alt=''><div class='caption'>First sewer tank</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/10.png' alt=''><div class='caption'>Back stairway out of sewer</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/11.png' alt=''><div class='caption'>Bunk room</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/12.png' alt=''><div class='caption'>Exit corridor</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/13.png' alt=''><div class='caption'>One of the computer rooms</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/14.png' alt=''><div class='caption'>Cacos in outside area</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/16.png' alt=''><div class='caption'>Exit door</div></div>"
+                        ],
+                        "class": "scheme-dark"
+                    }
+                    
+                }
+            ]
+        },
+        
+        "/games/doom/wads.html":{
+            "url" : "/games/doom/wads.html",
+            "id" : "1.2.1.3",
+            "type" : "CONTENT",
+            "title":"My WADs",
+            "banner" : "/images/doombar.jpg",
+            "banner_attachment":"cover",
+            "panels": [
+                {
+                    "data": 
+                    {
+                        "title": "My WADs",
+                        "intro": [
+                        	"<p>Downloads for my WADs.</p>",
+                        	"Made with <a href='https://zdoom.org/wiki/Doom_Builder#Doom_Builder_2' title='Doom Builder 2 Doom editor' target='_blank'>Doom Builder 2</a>",
+                        	" and <a href='http://eureka-editor.sourceforge.net/' target='_blank' title='Eureka Doom editor'>Eureka</a>.",
+                        	"<p>I will add more over time</p>"
+                        ],
+                        "class": "scheme-vlight"
+                    }
+                    
+                },
+                {
+                    "data": 
+                    {
+                        "title": "Download links",
+                        "intro": [
+                        	"<ul>",
+                        	"<li><a href='/downloads/hellbrch.zip' title='Hell Breach v1' >Hell Breach v1</a></li>",
+                        	"<ul>"
+                        ],
+                        "class": "scheme-dark"
+                    }
+                    
+                }
+            ]
+        },
+
+        
         "/games/quake.html":{
             "url" : "/games/quake.html",
             "id" : "1.2.2",

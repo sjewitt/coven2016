@@ -598,12 +598,15 @@ I only need panelNum on content pages to determine whether left or right panel
         
         
         $(_outer).addClass(panelData.class);
+        let _headline = null;
+        let _title = null;
+        if (panelData.title){
+        	_title = document.createElement("div");
+        	$(_title).addClass("panel-title");
+        	_headline = document.createElement("h2");
+        	$(_headline).html(panelData.title);
+        }
         
-        var _title = document.createElement("div");
-        $(_title).addClass("panel-title");
-        
-        var _headline = document.createElement("h2");
-        $(_headline).html(panelData.title);
         
         var _text = document.createElement("div");
         $(_text).attr("class","panel-text");
@@ -641,8 +644,10 @@ I only need panelNum on content pages to determine whether left or right panel
         } 
         
         //build structure:
-        _title.appendChild(_headline);
-        _outer.appendChild(_title);
+        if(_headline){
+        	_title.appendChild(_headline);
+        	_outer.appendChild(_title);
+        }
         _outer.appendChild(_text);
         
         return(_outer);

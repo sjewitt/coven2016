@@ -213,7 +213,17 @@ body{
     display:inline;
 }
 
-
+/* overrides for links etc that fail on some schemes: */
+a{
+	text-decoration: dotted;
+}
+a:hover{
+	text-decoration: underline;
+}
+.scheme-dark a{
+	color: #eee;
+    
+}
 
 /* content styles */
 .panel-title{
@@ -242,6 +252,18 @@ body{
 .panel-sub-menu li:hover{
     text-decoration: underline;
 }
+
+div.screenshot{
+	padding-bottom: 10px;
+}
+div.screenshot img{
+	width: 100%;
+}
+div.screenshot > div.caption{
+	text-align: center;
+	font-style: italic;
+}
+
 /* home */
 
 
