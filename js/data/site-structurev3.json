@@ -317,7 +317,12 @@
                     "data":
                     {
                         "intro": [
-                        	"<h3>Hell Breach v1</h3>",
+                        	"<h2>Hell Breach v2</h2>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/21.png' alt=''><div class='caption'>Key colour coding</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/22.png' alt=''><div class='caption'>More key colour coding</div></div>",
+                        	"<div class='screenshot'><img src='/images/screenshots/doom/23.png' alt=''><div class='caption'>MUCH improved outside area</div></div>",
+	                       	"<div class='screenshot'><img src='/images/screenshots/doom/24.png' alt=''><div class='caption'>More of new outside area</div></div>",
+                        	"<h2>Hell Breach v1</h2>",
                         	"<div class='screenshot'><img src='/images/screenshots/doom/2.png' alt=''><div class='caption'>Start position</div></div>",
                         	"<div class='screenshot'><img src='/images/screenshots/doom/3.png' alt=''><div class='caption'>Beginning of sewer system</div></div>",
                         	"<div class='screenshot'><img src='/images/screenshots/doom/4.png' alt=''><div class='caption'>Main hallway</div></div>",
@@ -333,6 +338,7 @@
                         	"<div class='screenshot'><img src='/images/screenshots/doom/13.png' alt=''><div class='caption'>One of the computer rooms</div></div>",
                         	"<div class='screenshot'><img src='/images/screenshots/doom/14.png' alt=''><div class='caption'>Cacos in outside area</div></div>",
                         	"<div class='screenshot'><img src='/images/screenshots/doom/16.png' alt=''><div class='caption'>Exit door</div></div>"
+                        	
                         ],
                         "class": "scheme-dark"
                     }
@@ -369,7 +375,8 @@
                         "title": "Download links",
                         "intro": [
                         	"<ul>",
-                        	"<li><a href='/downloads/hellbrch.zip' title='Hell Breach v1' >Hell Breach v1</a></li>",
+                        	"<li><a href='/downloads/hellbrch_v2.zip' title='Hell Breach version 2' >Hell Breach version 2</a></li>",
+                        	"<li><a href='/downloads/hellbrch.zip' title='Hell Breach version 1' >Hell Breach version 1</a></li>",
                         	"<ul>"
                         ],
                         "class": "scheme-dark"
