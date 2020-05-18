@@ -343,6 +343,19 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
 }
 
 
+/* D3 tests: */
+/* See https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js */
+svg rect {
+        fill: orange;
+    }
+
+    svg text {
+        fill:white;
+        font: 10px sans-serif;
+        text-anchor: end;
+    }
+
+
 /* TODO: media queries */
 @media screen and (max-width: 300px) {
     

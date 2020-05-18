@@ -83,6 +83,45 @@ var covid19engine = {
         	//console.log('#'+container + " > div.panel-text");
         	$('#'+container + " > div.panel-text").empty();
         	$('#'+container + " > div.panel-text").append(covid19engine.buildCountryDetails(data));
+        	
+        	//D3 hook:
+        	console.log('D3 hook start');
+        	//see https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js
+        	let d3data = data.data.timeline;
+        	
+        	let width = 1200,
+            scaleFactor = 1,
+            barHeight = 20;
+        	let graph = d3.select("body").append('svg')
+            .attr("width", width)
+            .attr("height", barHeight * d3data.length);
+
+        	console.log(d3data.length);
+        	 let bar = graph.selectAll("g")
+             .data(d3data)
+             .enter()
+             .append("g")
+             .attr("transform", function(d, i) {
+                   return "translate(0," + i * barHeight + ")";
+             });
+        	
+        	 
+        	 bar.append("rect")
+             .attr("width", function(d) {
+            	 console.log(d['recovered']);
+                 return d['recovered'] * scaleFactor;
+		        })
+		        .attr("height", barHeight - 1);
+		
+		     bar.append("text")
+		        .attr("x", function(d) { return (d['recovered']*scaleFactor); })
+		        .attr("y", barHeight / 2)
+		        .attr("dy", ".35em")
+		        .text(function(d) { return d['recovered']; });
+		     
+		     
+		     
+        	
         	//add handler for return:
         	$('#cv19_home').click(function(){
         		$('#'+container + " > div.panel-text").empty();
@@ -96,9 +135,16 @@ var covid19engine = {
 	
 	/**
 	 * return HTML for dountry details
+	 * 
+	 * 17052020: Add D3 hooks:
+	 *  - 
+	 * 
 	 * */
 	buildCountryDetails : function(data){
 		console.log(data);
+		
+		
+		
 		//summary:
 		let _table1 = document.createElement('table');
 		let _thead1 = document.createElement('thead');
