@@ -1,0 +1,16 @@
+[17-May-2020 13:06:09 UTC] PHP Warning:  file_get_contents(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:06:09 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:06:09 UTC] PHP Warning:  file_get_contents(https://corona-api.com/countries): failed to open stream: operation failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:07:52 UTC] PHP Warning:  file_get_contents(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:07:52 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:07:52 UTC] PHP Warning:  file_get_contents(https://corona-api.com/countries): failed to open stream: operation failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:08:31 UTC] PHP Warning:  file_get_contents(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:08:31 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:08:31 UTC] PHP Warning:  file_get_contents(https://corona-api.com/countries): failed to open stream: operation failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:09:39 UTC] PHP Warning:  file_get_contents(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:09:39 UTC] PHP Warning:  file_get_contents(): Failed to enable crypto in C:\Work\coven2016\proxy\includes\lib.php on line 39
+[17-May-2020 13:09:39 UTC] PHP Warning:  file_get_contents(https://corona-api.com/countries): failed to open stream: operation failed in C:\Work\coven2016\proxy\includes\lib.php on line 39
