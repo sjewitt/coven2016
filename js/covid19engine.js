@@ -37,24 +37,41 @@ var covid19engine = {
 
 	buildCountryLinks : function(data, container){
 		var _out = "";
+		let _sel = document.createElement('select');
 		var _ul = document.createElement('ul');
 		_ul.setAttribute('class','doombrowser');
 		
 		console.log(data);
 		for(let a=0;a<data.data.length;a++){
+			let _opt = document.createElement('option');
 			let _li = document.createElement('li');
 			var _a1 = document.createElement('a');
 			_a1.setAttribute('href',covid19engine.PROXY_LOCATION + "?code=" + data.data[a].code);
 			_a1.setAttribute('data-countrycode',data.data[a].code);
+			_opt.setAttribute('value',data.data[a].code);
+			_opt.setAttribute('data-countrycode',data.data[a].code);
 			var _txt = document.createTextNode(data.data[a].name);
 			_a1.appendChild(_txt);
+			_opt.appendChild(_txt);
 			_li.appendChild(_a1);
 			_ul.appendChild(_li);
+			_sel.appendChild(_opt);
 		}
 		console.log(_ul);
+		console.log(_sel);
 		console.log('#'+container + " > div.panel-text")
 		var _target = $('#'+container + " > div.panel-text");
-		_target.append(_ul);
+		//_target.append(_ul);
+		_target.append(_sel);
+		$(_target).on('change',function(){
+			let _elm = $('#covid19_api select')[0];
+			console.log(_elm);
+			let _selected = _elm[_elm.selectedIndex].value;
+			
+			console.log(_selected);
+			covid19engine.loadCountryDetails(_selected,container);
+		});
+		
 		this.buildCountryClickHandlers(container);
 	},
 	
@@ -82,7 +99,7 @@ var covid19engine = {
        		//call func to build details panel
         	//console.log('#'+container + " > div.panel-text");
         	$('#'+container + " > div.panel-text").empty();
-        	$('#'+container + " > div.panel-text").append(covid19engine.buildCountryDetails(data));
+        	//$('#'+container + " > div.panel-text").append(covid19engine.buildCountryDetails(data));
         	
         	//D3 hook:
         	console.log('D3 hook start');
@@ -92,7 +109,8 @@ var covid19engine = {
         	let width = 1200,
             scaleFactor = 1,
             barHeight = 20;
-        	let graph = d3.select("body").append('svg')
+        	//let graph = d3.select("body").append('svg')
+        	let graph = d3.select('#'+container + " > div.panel-text").append('svg')
             .attr("width", width)
             .attr("height", barHeight * d3data.length);
 
@@ -121,7 +139,11 @@ var covid19engine = {
 		     
 		     
 		     
-        	
+        	let _return = document.createElement('div');
+        	_return.setAttribute('id','cv19_home');
+        	let _txt = document.createTextNode('[Back]');
+        	_return.appendChild(_txt);
+        	$('#'+container + " > div.panel-text").append(_return);
         	//add handler for return:
         	$('#cv19_home').click(function(){
         		$('#'+container + " > div.panel-text").empty();
