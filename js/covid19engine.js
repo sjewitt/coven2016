@@ -145,6 +145,7 @@ var covid19engine = {
 			_opt.appendChild(_txt);
 			_sel.appendChild(_opt);
 		}
+
 		_target.empty();
 		_target.append(_sel);
 	},
@@ -155,9 +156,13 @@ var covid19engine = {
 	appendButtonHandler : function(container){
 		$('#load_data').click(function(){
 			//collect the data to send 
+//=======
+//		$(_target).off('change click').on('change',function(){
+//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
 			let _elm = $('#covid19_api select')[0];
 			console.log(_elm);
 			let _selected = _elm[_elm.selectedIndex].value;
+//<<<<<<< HEAD
 			//let _dataBlocks = {};
 			
 			/* collect checked data blocks and populate global var: */
@@ -165,13 +170,21 @@ var covid19engine = {
 			
 			
 			
+//=======
+//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
 			console.log(_selected);
 			covid19engine.loadCountryDetails(_selected,container);
 
 			//we need to use the new scalefactor code here!
 		});
+//<<<<<<< HEAD
+//=======
+		
+		//this.buildCountryClickHandlers(container);
+//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
 	},
 	
+//<<<<<<< HEAD
 	/**
 	 * set the global this.dataBlocks[n].display values accordinng to 
 	 * selected checkboxes:
@@ -188,7 +201,7 @@ var covid19engine = {
 		});
 	},
 	
-	
+
 
 	/**
 	 * retrieve the specified country details as JSON via AJAX call, using local PHP proxy:
@@ -205,6 +218,7 @@ var covid19engine = {
             dataType: 'json',
             url : covid19engine.PROXY_LOCATION + "?code=" + cc
         }).done(function(data){
+//<<<<<<< HEAD
 
         	console.log(data);
        		//call func to build details panel
@@ -227,6 +241,82 @@ var covid19engine = {
         	covid19engine.SCALEFACTOR = covid19engine.GRAPH_HEIGHT/_TESTcurrmax
 //        	console.log("scale (test):", covid19engine.SCALEFACTOR);
         	covid19engine.buildOutput(data);
+//=======
+//        	//call func to build details panel
+//        	$('#'+container + " > div.panel-text").empty();
+//        	//see https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js
+//        	
+//        	let d3data = data.data.timeline;
+//        	console.log(d3data.length);
+//        	let width = 1200;
+//        	let barHeight = 20;
+//        	let graph = d3.select('#'+container + " > div.panel-text")
+//        		.append('svg')
+//        		.attr("width", width)
+//        		.attr("height", barHeight * d3data.length);
+//        	
+//        	//in preparation for stacking:
+//        	let _fields = ['recovered'];
+//        	
+//        	//make a STACK object: https://github.com/d3/d3-shape/blob/v1.3.7/README.md#_stack
+//        	let _stack = d3.stack();
+//        	//set headings:
+//        	_stack.keys(_fields);
+//        	let _series = _stack(d3data);
+//        	
+//        	console.log(_series);
+//        	//let _x = d3.scaleBand
+//        	
+//        	
+//        	let scaleFactor = 1;
+//            
+//        	let maxCombinedValue = 0;
+//        	let _currentCombinedValue = 0;
+//        	for(let a=0;a<d3data.length; a++){
+//        		for(let b=0; b<_fields.length; b++){
+//        			_currentCombinedValue = d3data[a][_fields[b]];
+//        		}
+//        		if(maxCombinedValue < _currentCombinedValue){
+//        			maxCombinedValue = _currentCombinedValue;
+//        		}
+//            }
+//            //work out the scalefactor:
+//            // - max value from data. This needs to be the max for selected field(s). IE max(f1+f2) 'cos we want a ROW
+//            scaleFactor = width / maxCombinedValue;
+//
+//        	 let bar = graph.selectAll("g")
+//             .data(d3data)
+//             .enter()
+//             .append("g")
+//             .attr("transform", function(d, i) {
+//                   return "translate(0," + i * barHeight + ")";
+//             });
+//        	 
+//        	 bar.append("rect")
+//             .attr("width", function(d) {
+//            	 //console.log(d['recovered']);
+//                 return d['recovered'] * scaleFactor;
+//		        })
+//		        .attr("height", barHeight - 1);
+//		
+//		     bar.append("text")
+//		        .attr("x", function(d) { return (d['recovered']*scaleFactor); })
+//		        .attr("y", barHeight / 2)
+//		        .attr("dy", ".35em")
+//		        .text(function(d) { return d['recovered']; });
+//		     
+//        	let _return = document.createElement('div');
+//        	_return.setAttribute('id','cv19_home');
+//        	let _txt = document.createTextNode('[Back]');
+//        	_return.appendChild(_txt);
+//        	$('#'+container + " > div.panel-text").append(_return);
+//        	//add handler for return:
+//        	$('#cv19_home').click(function(){
+//        		$('#'+container + " > div.panel-text").empty();
+//        		covid19engine.loadCountries(container);
+//        	});
+        	//then apend a link to go back
+//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
         }).fail(function(a,b,c){
         	console.log(a,b,c);
         });
@@ -314,27 +404,16 @@ var covid19engine = {
 	},
 	
 	/**
-	 * TODO: I need a UI to flag which data blocks we are going to graph...
-	 * 
 	 * get a scalefactor for height, based on max height of selected data blocks
 	 * data = all data
 	 * dataBlocks = array of data block names to consider as {name:bool,name:bool}
-	 * 
-	 * 
-		active: 23536
-		confirmed: 56254
-		deaths: 1153
-		new_confirmed: 2829
-		new_deaths: 55
-		new_recovered: 2813
-		recovered: 31565
-	 * 
 	 * 
 	 * */
 	getScaleFactor : function(data){
 		let _currmax = 0;
    		//work out max
 		
+//<<<<<<< HEAD
 		//need individual vars for each total:
 		let _m = {
 			'active':0,
