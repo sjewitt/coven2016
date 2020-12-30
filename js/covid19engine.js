@@ -4,6 +4,7 @@
  */
 var covid19engine = {
 	PROXY_LOCATION : '/proxy/proxycv19_a.php',	
+	COUNTRY_LIST_WRAPPER : 'country_list_wrapper',
 	container : null,
 	GRAPH_HEIGHT : 1000,
 	COL_WIDTH : 5,
@@ -50,7 +51,6 @@ var covid19engine = {
 		 * once we have the basic famework, load the country dropdowm. This is an AJAX call:
 		 * */
 		this.loadCountries(_container);
-		//console.log(this.buildBlocksToDisplayCheckboxes());
 	},
 	
 	/**
@@ -64,18 +64,17 @@ var covid19engine = {
 		let row1 = document.createElement('div');
 		row1.setAttribute('class','pure-g');	//3 elems
 		
-		//country dropdown () AJAX-targeted once built:
+		//Build country dropdown container. AJAX-targeted once built:
 		let cell_1_1 = document.createElement('div');
 		cell_1_1.setAttribute('class','pure-u-1-5');
-		cell_1_1.setAttribute('id','country_list_wrapper');
+		cell_1_1.setAttribute('id',this.COUNTRY_LIST_WRAPPER);
 		
-		//data blocks to display (checkboxes). Call function with default selected (deaths):
+		/* build checkboxes for data blocks to display. Default to deaths: */
 		let cell_1_2 = document.createElement('div');
 		cell_1_2.setAttribute('class','pure-u-3-5 legend');
-		
 		cell_1_2.appendChild(this.buildBlocksToDisplayCheckboxes());
 		
-		//go button
+		/* build submit button: */
 		let cell_1_3 = document.createElement('div');
 		cell_1_3.setAttribute('class','pure-u-1-10');
 		let _go = document.createElement('input');
@@ -86,8 +85,8 @@ var covid19engine = {
 		_go.setAttribute('id','load_data');
 		cell_1_3.appendChild(_go);
 		
+		/* append to cells in row: */
 		row1.appendChild(cell_1_1);
-		
 		row1.appendChild(cell_1_3);
 		row1.appendChild(cell_1_2);
 		
@@ -100,6 +99,7 @@ var covid19engine = {
 		cell_2_1.setAttribute('id','output_target');
 		row2.appendChild(cell_2_1);
 		
+		/* append to outer container and return: */
 		_outer.appendChild(row1);
 		_outer.appendChild(row2);
 		return(_outer);
@@ -110,19 +110,20 @@ var covid19engine = {
 	 * */
 	loadCountries : function(container){
 		let _url = this.PROXY_LOCATION;
-		$('#country_list_wrapper').append(this.spinner);
+		$('#' + this.COUNTRY_LIST_WRAPPER).append(this.spinner);
 		$.ajax({
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             url : _url
         }).done(function(data){
+        	/* sort by name, not country code: */
         	data.data.sort(function(a,b){
-        		console.log('sortin')
         		if(a.name<b.name) return(-1);
         		if(a.name>b.name) return(1);
         		return(0);
         	})
+        	console.log('All countries: ',data);
        		covid19engine.buildCountrySelector(data);
        		covid19engine.appendButtonHandler(container);
         }).fail(function(a,b,c){
@@ -134,7 +135,7 @@ var covid19engine = {
 	 * Build dropdown of all countries:
 	 * */
 	buildCountrySelector : function(data){
-		let _target = $("#country_list_wrapper");
+		let _target = $("#" + this.COUNTRY_LIST_WRAPPER);
 		let _sel = document.createElement('select');
 		
 		for(let a=0;a<data.data.length;a++){
@@ -156,43 +157,21 @@ var covid19engine = {
 	appendButtonHandler : function(container){
 		$('#load_data').click(function(){
 			//collect the data to send 
-//=======
-//		$(_target).off('change click').on('change',function(){
-//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
 			let _elm = $('#covid19_api select')[0];
-			console.log(_elm);
 			let _selected = _elm[_elm.selectedIndex].value;
-//<<<<<<< HEAD
-			//let _dataBlocks = {};
-			
+
 			/* collect checked data blocks and populate global var: */
 			covid19engine.getSelectedBlockValues();
-			
-			
-			
-//=======
-//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
-			console.log(_selected);
 			covid19engine.loadCountryDetails(_selected,container);
-
-			//we need to use the new scalefactor code here!
 		});
-//<<<<<<< HEAD
-//=======
-		
-		//this.buildCountryClickHandlers(container);
-//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
 	},
-	
-//<<<<<<< HEAD
+
 	/**
 	 * set the global this.dataBlocks[n].display values accordinng to 
 	 * selected checkboxes:
 	 */
 	getSelectedBlockValues : function(){
 		$('#chk_datablock').find('input').each(function(){
-			console.log($(this).attr('data-block'));
-			console.log($(this)[0].checked);
 			//reset
 			covid19engine.dataBlocks[$(this).attr('data-block')]['display'] = false;
 			if($(this)[0].checked){
@@ -200,17 +179,13 @@ var covid19engine = {
 			}
 		});
 	},
-	
-
 
 	/**
 	 * retrieve the specified country details as JSON via AJAX call, using local PHP proxy:
 	 */
 	loadCountryDetails : function(cc,container){
 		
-		/*
-		 * AJAX to get details:
-		 * */
+		/* AJAX to get details: */
 		$('#output_target').append(this.spinner);
 		$.ajax({
             type: "GET",
@@ -218,105 +193,13 @@ var covid19engine = {
             dataType: 'json',
             url : covid19engine.PROXY_LOCATION + "?code=" + cc
         }).done(function(data){
-//<<<<<<< HEAD
-
-        	console.log(data);
+        	console.log('selected country:',data);
        		//call func to build details panel
         	$('#output_target').empty();
         	
-        	let width = 1200;
-        	console.log(covid19engine.dataBlocks);
-    		/*
-    		 * now we have the blocks to display, we calculate the scalefactor:
-    		 * */
-        	
-        	//covid19engine.buildD3Output(data);
-        	
-        	
-        	//let _TESTcurrmax = covid19engine.getScaleFactor(data,{'active':false,'confirmed':false,'new_confirmed':false,'deaths':true,'new_deaths':false,'new_recovered':false,'recovered':false});
-        	let _TESTcurrmax = covid19engine.getScaleFactor(data);
-        	let _TESTscalefactor = 1;
-        	_TESTscalefactor = width/_TESTcurrmax
-//        	console.log("scale (test):", _TESTscalefactor);
-        	covid19engine.SCALEFACTOR = covid19engine.GRAPH_HEIGHT/_TESTcurrmax
-//        	console.log("scale (test):", covid19engine.SCALEFACTOR);
+    		/* now we have the blocks to display, we calculate the scalefactor: * */
+        	covid19engine.SCALEFACTOR = covid19engine.GRAPH_HEIGHT/covid19engine.getScaleFactor(data);
         	covid19engine.buildOutput(data);
-//=======
-//        	//call func to build details panel
-//        	$('#'+container + " > div.panel-text").empty();
-//        	//see https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js
-//        	
-//        	let d3data = data.data.timeline;
-//        	console.log(d3data.length);
-//        	let width = 1200;
-//        	let barHeight = 20;
-//        	let graph = d3.select('#'+container + " > div.panel-text")
-//        		.append('svg')
-//        		.attr("width", width)
-//        		.attr("height", barHeight * d3data.length);
-//        	
-//        	//in preparation for stacking:
-//        	let _fields = ['recovered'];
-//        	
-//        	//make a STACK object: https://github.com/d3/d3-shape/blob/v1.3.7/README.md#_stack
-//        	let _stack = d3.stack();
-//        	//set headings:
-//        	_stack.keys(_fields);
-//        	let _series = _stack(d3data);
-//        	
-//        	console.log(_series);
-//        	//let _x = d3.scaleBand
-//        	
-//        	
-//        	let scaleFactor = 1;
-//            
-//        	let maxCombinedValue = 0;
-//        	let _currentCombinedValue = 0;
-//        	for(let a=0;a<d3data.length; a++){
-//        		for(let b=0; b<_fields.length; b++){
-//        			_currentCombinedValue = d3data[a][_fields[b]];
-//        		}
-//        		if(maxCombinedValue < _currentCombinedValue){
-//        			maxCombinedValue = _currentCombinedValue;
-//        		}
-//            }
-//            //work out the scalefactor:
-//            // - max value from data. This needs to be the max for selected field(s). IE max(f1+f2) 'cos we want a ROW
-//            scaleFactor = width / maxCombinedValue;
-//
-//        	 let bar = graph.selectAll("g")
-//             .data(d3data)
-//             .enter()
-//             .append("g")
-//             .attr("transform", function(d, i) {
-//                   return "translate(0," + i * barHeight + ")";
-//             });
-//        	 
-//        	 bar.append("rect")
-//             .attr("width", function(d) {
-//            	 //console.log(d['recovered']);
-//                 return d['recovered'] * scaleFactor;
-//		        })
-//		        .attr("height", barHeight - 1);
-//		
-//		     bar.append("text")
-//		        .attr("x", function(d) { return (d['recovered']*scaleFactor); })
-//		        .attr("y", barHeight / 2)
-//		        .attr("dy", ".35em")
-//		        .text(function(d) { return d['recovered']; });
-//		     
-//        	let _return = document.createElement('div');
-//        	_return.setAttribute('id','cv19_home');
-//        	let _txt = document.createTextNode('[Back]');
-//        	_return.appendChild(_txt);
-//        	$('#'+container + " > div.panel-text").append(_return);
-//        	//add handler for return:
-//        	$('#cv19_home').click(function(){
-//        		$('#'+container + " > div.panel-text").empty();
-//        		covid19engine.loadCountries(container);
-//        	});
-        	//then apend a link to go back
-//>>>>>>> branch 'html_php' of https://github.com/sjewitt/coven2016.git
         }).fail(function(a,b,c){
         	console.log(a,b,c);
         });
@@ -328,80 +211,14 @@ var covid19engine = {
 	 * time. Scale is different depending on which data blocks are selected.
 	 * */
 	buildOutput : function(data){
-//		for(let z=0;z<data.data.timeline.length;z++){
 		let colnum=0;
 		for(let z = data.data.timeline.length; z > 0; z--){
 			this.buildDataColumn(data.data.timeline[z-1],colnum);
 			colnum++;
 		}
+		console.log('total columns: ', colnum);
 	},
 	
-	buildD3Output : function(data){
-		//D3 hook:
-    	console.log('D3 hook start');
-    	let width = 1200;
-    	//see https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js
-    	let d3data = data.data.timeline;
-    	//console.log(data.data.timeline);
-    	
-    	
-    	let _currmax = 0;
-   		//work out max
-    	for(let z=0;z<data.data.timeline.length;z++){
-    		if(data.data.timeline[z].deaths){
-    			if(data.data.timeline[z].deaths > _currmax){
-    				_currmax = data.data.timeline[z].deaths;
-    			}
-    		}
-    	}
-    	
-    	
-    	
-   		//_currmax = data.data.timeline[data.data.timeline.length-1].deaths
-    	console.log("curr max: ",_currmax);
-   		
-    	
-        //scaleFactor = 1,
-    	scaleFactor = width/_currmax;
-    	
-    	console.log("scale:", scaleFactor);
-    	
-        barHeight = 20;
-    	//let graph = d3.select("body").append('svg')
-    	let graph = d3.select('#output_target').append('svg')
-        .attr("width", width)
-        .attr("height", barHeight * d3data.length);
-
-    	console.log(d3data.length);
-    	 let bar = graph.selectAll("g")
-         .data(d3data)
-         .enter()
-         .append("g")
-         .attr("transform", function(d, i) {
-               return "translate(0," + i * barHeight + ")";
-         });
-    	
-    	 
-    	 bar.append("rect")
-         .attr("width", function(d) {
-        	 //console.log(d['deaths']);
-             return d['deaths'] * scaleFactor;
-	        })
-	        .attr("height", barHeight - 1);
-	
-	     bar.append("text")
-	        .attr("x", function(d) { return (d['deaths']*scaleFactor); })
-	        .attr("y", barHeight / 2)
-	        .attr("dy", ".35em")
-	        .text(function(d) { return d['deaths']; });
-
-    	let _return = document.createElement('div');
-    	_return.setAttribute('id','cv19_home');
-    	let _txt = document.createTextNode('[Back]');
-    	_return.appendChild(_txt);
-    	$('#output_target').append(_return);
-    	return(true);
-	},
 	
 	/**
 	 * get a scalefactor for height, based on max height of selected data blocks
@@ -412,8 +229,6 @@ var covid19engine = {
 	getScaleFactor : function(data){
 		let _currmax = 0;
    		//work out max
-		
-//<<<<<<< HEAD
 		//need individual vars for each total:
 		let _m = {
 			'active':0,
@@ -428,10 +243,7 @@ var covid19engine = {
     	for(let z=0;z<data.data.timeline.length;z++){
     		for(prop in this.dataBlocks){
     			if(this.dataBlocks[prop]['display']){
-    				if( 
-    						data.data.timeline[z][prop] > _m[prop]
-    				){
-    					console.log(prop, _m[prop], data.data.timeline[z][prop]);
+    				if( data.data.timeline[z][prop] > _m[prop] ){
     					_m[prop] = data.data.timeline[z][prop];
     				}
     			}
@@ -468,7 +280,6 @@ var covid19engine = {
 			_chk.setAttribute('type','checkbox');
 			_chk.setAttribute('name','blockvalues');
 			_chk.setAttribute('data-block',prop);
-			
 			_chk.setAttribute('id','chk_'+prop);
 			for(thing in _active){
 				if(_active[thing] === true && prop === thing){
@@ -481,9 +292,8 @@ var covid19engine = {
 			_wrapper.appendChild(_li);
 		}
 		
-		//append click handlers:
+		/* append click handlers to chckboxes, to autoclick the go button: */
 		$(_wrapper).find('input').each(function(){
-			console.log('appendin')
 			$(this).click(function(){
 				console.log('klikkin')
 				$('#load_data').click();
@@ -498,9 +308,13 @@ var covid19engine = {
 	 * */
 	buildDataColumn : function(data, colnum){
 		let col = document.createElement('div');
-		col.setAttribute('class','datacol');
+		let cls = 'datacol';
+		if(colnum%2){
+			cls += ' odd';
+		}
+		col.setAttribute('class',cls);
 		col.setAttribute('data-date',data['date']);
-		col.setAttribute('title',data['date']);
+		col.setAttribute('title',data['date'] + ' colnum='+colnum);
 		col.setAttribute('style',';left:'+colnum*this.COL_WIDTH+'px;')
 		/*
 		 * here, I test each data against the flagged data blocks to display:
@@ -511,8 +325,9 @@ var covid19engine = {
 				block.setAttribute('class','datablock '+item);
 				block.setAttribute('title',data[item]);
 				block.setAttribute('data-total',data[item]);
-				block.setAttribute('data-datablock',item)
-				block.setAttribute('style','width:3px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
+				block.setAttribute('data-datablock',item);
+				block.setAttribute('style','width:'+(this.COL_WIDTH-1)+'px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
+				//block.setAttribute('style','width:3px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
 				col.appendChild(block);
 			}
 		}

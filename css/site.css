@@ -380,6 +380,7 @@ img.spinner{
 }
 #output_target{
     border: 1px solid red;
+    background-color: #fff;
 }
 
 /* columns */
@@ -387,6 +388,10 @@ div.datacol{
 	width: 5px;
 	float: left;
 	height: 100%;
+}
+
+div.datacol.odd{
+	background-color:#d8d8d8
 }
 
 /* colours */
