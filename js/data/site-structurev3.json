@@ -1224,15 +1224,15 @@
             "url" : "/covid19.html",
             "id" : "11",
             "type" : "FULLWIDTH",
-            "title":"COVID 19",
+            "title":"COVID 19 API",
             "banner" : "",
             "banner_attachment":"cover",
             "panels": [
                 {
                     "data": 
                     {
-                        "title": "COVID 19 APIs",
-                        "intro": [
+                        "title": "COVID 19 API",
+                        "intro_OLD": [
                         	"Example: https://www.programmableweb.com/api/about-corona-covid-19-rest-api-v1"
                         ],
                         "class": "scheme-vlight",

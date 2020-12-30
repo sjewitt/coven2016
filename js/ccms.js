@@ -10,6 +10,12 @@
  *  PULL OUT THE RELEVANT ITEMS FROM THE LOADED DATA
  *  
  */
+class reactTest{
+    let func1 = function(){
+        
+    }
+};
+
 
 var ccms = {
     

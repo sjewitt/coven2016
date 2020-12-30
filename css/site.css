@@ -40,6 +40,10 @@ body{
 .row-tiny{
     height:25px;
 }
+
+row-divider{
+	
+}
 .top-bar{
     height:50px;
     color:#fff;
@@ -163,6 +167,10 @@ body{
     border-top: 3px solid red;
     border-bottom: 3px solid red;
 }
+#header-thin{
+    border-top: 3px solid red;
+}
+
 #header > div.banner-landing{
     background-image:url(/images/css/Haunted-House2.png);
     background-size: contain;
@@ -295,6 +303,10 @@ div.screenshot > div.caption{
 AJAX load spinner
 from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle-within-div
 */
+img.spinner{
+	width: 30px;
+	height: 30px;
+}
 /* div */
 #overlay{
     position:absolute;
@@ -342,54 +354,62 @@ from http://stackoverflow.com/questions/4888223/align-image-in-center-and-middle
     width:70%;
 }
 
-
-/* D3 tests: */
-/* See https://www.tutorialsteacher.com/d3js/create-svg-chart-in-d3js */
-svg rect {
-        fill: orange;
-    }
-
-    svg text {
-        fill:white;
-        font: 10px sans-serif;
-        text-anchor: end;
-    }
-
-
-/* TODO: media queries */
-@media screen and (max-width: 300px) {
-    
-}
-/* MQ - breakpoints as PureIO - TODO */
-/*
-@media screen and (max-width: 35.5em){
-    .row{
-        height:150px;
-    }
-    .top-bar-title{
-        font-size: 12pt;
-        letter-spacing: 2vw;
-        margin-left: 15px;
-        margin-right: -15px;
-        margin-top: 7px;
-    }
+/* covid 19 UI pages */
+#covid19_api ul{
+	margin: 0px;
 }
 
-@media screen and (min-width: 48em){
-    .row{
-        height:150px;
-    }    
+#covid19_api li > input{
+	margin-right: 5px;
 }
 
-@media screen and (min-width: 64em){
-    .row{
-        height:200px;
-    }
+
+
+#country_list_wrapper select{
+	width: 100%;
+	max-width: 300px;
 }
 
-@media screen and (min-width: 80em){
-    .row{
-        height:250px;
-    }    
+#chk_datablock > li{
+	display: inline-block;
+	border: 1px solid grey;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    margin-right: 5px;
 }
-*/
+#output_target{
+    border: 1px solid red;
+}
+
+/* columns */
+div.datacol{
+	width: 5px;
+	float: left;
+	height: 100%;
+}
+
+/* colours */
+div.datacol > div.active, li.active{
+	background-color: #ffff80;
+}
+div.datacol > div.confirmed, li.confirmed{
+	background-color: #80ff80;
+}
+div.datacol > div.new_confirmed, li.new_confirmed{
+	background-color: #ff8080;
+}
+div.datacol > div.deaths, li.deaths{
+	background-color: #ff0000;
+}
+div.datacol > div.new_deaths,li.new_deaths{
+	background-color: #804040;
+}
+div.datacol > div.new_recovered, li.new_recovered{
+	background-color: #80ffff;
+}
+div.datacol > div.recovered,li.recovered{
+	background-color: #0080ff;
+}
+
+
