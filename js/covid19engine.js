@@ -1,6 +1,9 @@
 /**
  * JS to interface with covid 19 tracking API(s).
  * [adapted from my Doomworld API code]
+ * 
+ * See https://about-corona.net/documentation for source
+ * 
  */
 var covid19engine = {
 	PROXY_LOCATION : '/proxy/proxycv19_a.php',	
