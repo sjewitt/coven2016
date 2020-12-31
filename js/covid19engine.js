@@ -27,16 +27,6 @@ var covid19engine = {
 	/**
 	 * Dec 2020:
 	 * Load the framework and build the UI elements:
-	 * 
-	 *  - dropdown for countries
-	 *  - filter for data blocks (current, recovered, deaths etc.)
-	 *  - OK button
-	 *  - div for data (don't hide controls). Let this div be horizontally scrollable wih a fixed height
-	 *    (1000px?) and scale to that VERTICALLY rather than horizontally (better graph)
-	 *  - also, build graph manually as I don't get D3 yet...
-	 * 
-	 * 12/20: called by controller.js, based on the json hierarchy data.
-	 * This needs to retain the title block and populate the body block...
 	*/
 	init : function(container){
 		this.spinner = document.createElement('img');
@@ -50,9 +40,7 @@ var covid19engine = {
 		_f.empty();
 		_f[0].appendChild(this.buildUIFramework());
 		
-		/*
-		 * once we have the basic famework, load the country dropdowm. This is an AJAX call:
-		 * */
+		/* once we have the basic famework, load the country dropdowm. This is an AJAX call: * */
 		this.loadCountries(_container);
 	},
 	
@@ -125,10 +113,10 @@ var covid19engine = {
         		if(a.name<b.name) return(-1);
         		if(a.name>b.name) return(1);
         		return(0);
-        	})
-        	console.log('All countries: ',data);
+        	});
        		covid19engine.buildCountrySelector(data);
        		covid19engine.appendButtonHandler(container);
+       		$('#load_data').click();
         }).fail(function(a,b,c){
         	console.log(a,b,c);
         });
@@ -145,6 +133,9 @@ var covid19engine = {
 			let _opt = document.createElement('option');
 			_opt.setAttribute('value',data.data[a].code);
 			_opt.setAttribute('data-countrycode',data.data[a].code);
+			if(data.data[a].code === 'GB'){
+				_opt.setAttribute('selected','selected');
+			}
 			var _txt = document.createTextNode(data.data[a].name);
 			_opt.appendChild(_txt);
 			_sel.appendChild(_opt);
@@ -196,7 +187,6 @@ var covid19engine = {
             dataType: 'json',
             url : covid19engine.PROXY_LOCATION + "?code=" + cc
         }).done(function(data){
-        	console.log('selected country:',data);
        		//call func to build details panel
         	$('#output_target').empty();
         	
@@ -219,9 +209,7 @@ var covid19engine = {
 			this.buildDataColumn(data.data.timeline[z-1],colnum);
 			colnum++;
 		}
-		console.log('total columns: ', colnum);
 	},
-	
 	
 	/**
 	 * get a scalefactor for height, based on max height of selected data blocks
@@ -231,8 +219,7 @@ var covid19engine = {
 	 * */
 	getScaleFactor : function(data){
 		let _currmax = 0;
-   		//work out max
-		//need individual vars for each total:
+   		//work out max. need individual vars for each total:
 		let _m = {
 			'active':0,
 			'confirmed':0,
@@ -298,7 +285,6 @@ var covid19engine = {
 		/* append click handlers to chckboxes, to autoclick the go button: */
 		$(_wrapper).find('input').each(function(){
 			$(this).click(function(){
-				console.log('klikkin')
 				$('#load_data').click();
 			});
 		});
@@ -330,7 +316,6 @@ var covid19engine = {
 				block.setAttribute('data-total',data[item]);
 				block.setAttribute('data-datablock',item);
 				block.setAttribute('style','width:'+(this.COL_WIDTH-1)+'px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
-				//block.setAttribute('style','width:3px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
 				col.appendChild(block);
 			}
 		}
