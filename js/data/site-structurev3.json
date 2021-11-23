@@ -268,7 +268,7 @@
         },
         
         "/games/doom/doomworld.html":{
-            "url" : "/games/doom.html",
+            "url" : "/games/doomworld.html",
             "id" : "1.2.1.1",
             "type" : "FULLWIDTH",
             "title":"Doomworld API",
@@ -291,6 +291,26 @@
                     }
                 }
             ]
+        },
+        
+        "/games/doom/doomworld_raw.html":{
+            "url" : "/games/doomworld_raw.html",
+            "id" : "1.2.1.2",
+            "type" : "FULLWIDTH",
+            "title":"WAD Downloads",
+            "banner" : null,
+            "banner_attachment":null,
+            "panels": [
+             {
+                    "data": 
+                    {
+                        "title": "WAD Downloads",
+                        "intro": null,
+                        "class": "scheme-vlight",
+                        "id":"doomworld_api",
+                        "ajax": {"load":true, "codebase":"doomworldAPI"}
+                    }
+                }]
         },
         
         

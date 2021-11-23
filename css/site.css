@@ -15,6 +15,10 @@ body{
     font-family: arial;
 }
 
+body.dwbrowser{
+	background: none;
+}
+
 /*div{
     height:100%;
 }*/
@@ -216,7 +220,22 @@ row-divider{
     color:#fff;
 }
 /* end content colour schemes */
-
+/* overrides for content colour schemes: _raw */
+div.raw  .scheme-vlight{
+    background: none;
+}
+#doomworld_api div.panel-title{
+	background-color: darkred;
+}
+#doomworld_api div.panel-title > h2{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1em;
+}
+#doomworld_api div.panel-text.searchwrapper{
+	background-color: darkred;
+}
 .breadcrumb>div>ul>li{
     display:inline;
 }
@@ -307,6 +326,11 @@ img.spinner{
 	width: 30px;
 	height: 30px;
 }
+#output_target img.spinner{
+	z-index:5;
+	position:absolute;
+}
+
 /* div */
 #overlay{
     position:absolute;
@@ -381,17 +405,25 @@ img.spinner{
 #output_target{
     border: 1px solid red;
     background-color: #fff;
+    /* new */
+    min-height: 1000px;
+    display: block;
+    position: relative;
+    overflow: auto;
 }
 
 /* columns */
 div.datacol{
 	width: 5px;
-	float: left;
-	height: 100%;
+	/*new*/
+	/*float: left;
+	height: 100%;*/
+	position: absolute;
+    bottom: 0px;
 }
 
-div.datacol.odd{
-	background-color:#d8d8d8
+div.datacol > div.odd{
+	background-color:#f0f0f0
 }
 
 /* colours */
@@ -408,13 +440,38 @@ div.datacol > div.deaths, li.deaths{
 	background-color: #ff0000;
 }
 div.datacol > div.new_deaths,li.new_deaths{
-	background-color: #804040;
+	background-color: #b30000;
 }
 div.datacol > div.new_recovered, li.new_recovered{
-	background-color: #80ffff;
+	background-color: #22b56b;
 }
 div.datacol > div.recovered,li.recovered{
-	background-color: #0080ff;
+	background-color: #4652a4;
 }
+#popupmenu{
+    width: 2px;
+    border: 1px solid red;
+    height: 1000px;
+    position: absolute;
+    /*left: -130px;*/
+    left: 0px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#popupmenu > ul{
+	padding-left: 0px;
+	
+}
+#popupmenu > ul > li{
+	width:130px;
+	position: relative;
+	left: -130px;
+}
+
+#doomworld_api{
+	border: 2px solid darkred;
+}
+
 
 

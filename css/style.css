@@ -6,10 +6,20 @@ div.tree-toggler{
 	margin-right: 3px;
 }
 div.spinner_wrapper{
-	display: inline-block;
+	display: none;
 	width: 15px;
 	height: 15px;
 }
+
+div.raw div.spinner_wrapper{
+	width: 15px;
+    height: 15px;
+/*     border: 1px solid red; */
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
 div.spinner_wrapper > img{
 	width: 15px;
 	height: 15px;
@@ -17,8 +27,29 @@ div.spinner_wrapper > img{
 ul li{
 	list-style-type: none;
 }
+div.raw ul.doombrowser li > div > i.fa-folder{
+	color:#c1c100;
+}
+div.raw ul.doombrowser li.loaded > div > i.fa-folder{
+	color:#ff282e;
+}
+div.raw div.panel-text table{
+	width: 100%;
+}
+div.raw div.panel-text table tr > td, div.raw ul.doombrowser li, div.raw ul.doombrowser li > a{
+	color: white;
+}
+ div.raw ul.doombrowser li > a{
+ 	font-style: italic;
+ }
+ div.raw ul.doombrowser li > div{
+ 	padding-right: 10px;
+ }
 ul.doombrowser li.loaded > div > i.fa-folder{
 	color: green;
+}
+ul li{
+	list-style-type: none;
 }
 div.closed{
 
