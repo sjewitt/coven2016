@@ -63,7 +63,7 @@ var covid19engine = {
 		/* build checkboxes for data blocks to display. Default to deaths: */
 		let cell_1_2 = document.createElement('div');
 		cell_1_2.setAttribute('class','pure-u-3-5 legend');
-		cell_1_2.appendChild(this.buildBlocksToDisplayCheckboxes());
+		//cell_1_2.appendChild(this.buildBlocksToDisplayCheckboxes());
 		
 		/* build submit button: */
 		let cell_1_3 = document.createElement('div');
@@ -86,9 +86,16 @@ var covid19engine = {
 		row2.setAttribute('class','pure-g');	//1 elem
 		
 		let cell_2_1 = document.createElement('div');
-		cell_2_1.setAttribute('class','pure-u-1');
-		cell_2_1.setAttribute('id','output_target');
+		let cell_2_2 = document.createElement('div');
+		cell_2_1.setAttribute('class','pure-u-1-24');
+		cell_2_1.setAttribute('id','popupmenu');
+		cell_2_1.appendChild(this.buildBlocksToDisplayCheckboxes());
+		
+		cell_2_2.setAttribute('class','pure-u-23-24');
+		cell_2_2.setAttribute('id','output_target');
+		
 		row2.appendChild(cell_2_1);
+		row2.appendChild(cell_2_2);
 		
 		/* append to outer container and return: */
 		_outer.appendChild(row1);
@@ -286,8 +293,48 @@ var covid19engine = {
 		$(_wrapper).find('input').each(function(){
 			$(this).click(function(){
 				$('#load_data').click();
+				console.log($(this))
+				console.log($(this).is(':checked'))
+				if($(this).is(':checked')){
+					$(this).parent().off('mouseleave');
+				}
+				else{
+					$(this).parent().off('mouseleave').on('mouseleave',function(){
+						$(this).animate({
+							left:-130
+						},400)
+					})
+				}
 			});
 		});
+		console.log(_wrapper)
+		console.log('startin');
+		/* hover/pop-out handlers */
+		$(_wrapper).find('li').each(function(){
+			console.log('iterating...');
+			$(this).mouseenter(function(){
+				console.log('animating...',$(this));
+				$(this).animate({
+					left:0
+				},400)
+			})
+			if(!$(this).find('input').is(':checked')){
+				$(this).off('mouseleave').on('mouseleave',function(){
+					$(this).animate({
+					left:-130
+				},400)
+			})
+			}
+			else{
+				$(this).animate({
+					left:0
+				},400)
+			}
+			
+			
+			
+		});
+		console.log('endin')
 		
 		return(_wrapper);
 	},
@@ -298,29 +345,44 @@ var covid19engine = {
 	buildDataColumn : function(data, colnum){
 		let col = document.createElement('div');
 		let cls = 'datacol';
+		//padding class:
+		let _pad = 'padding';
 		if(colnum%2){
-			cls += ' odd';
+			_pad += ' odd';
 		}
+		
 		col.setAttribute('class',cls);
 		col.setAttribute('data-date',data['date']);
 		col.setAttribute('title',data['date'] + ' colnum='+colnum);
 		col.setAttribute('style',';left:'+colnum*this.COL_WIDTH+'px;')
 		/*
-		 * here, I test each data against the flagged data blocks to display:
+		 * here, I test each data against the flagged data blocks to display. I also need a
+		 * padding for the top, so I can stripe it up (see https://stackoverflow.com/questions/585945/how-to-align-content-of-a-div-to-the-bottom):
 		 * */
+		let padding = document.createElement("div");
+		//padding.setAttribute('class',_pad);
+		let padheight = 0;
 		for(item in this.dataBlocks){
 			if(this.dataBlocks[item]['display']){
+				let height = data[item]*covid19engine.SCALEFACTOR;
+				padheight+=height;
 				let block = document.createElement('div');
 				block.setAttribute('class','datablock '+item);
 				block.setAttribute('title',data[item]);
 				block.setAttribute('data-total',data[item]);
 				block.setAttribute('data-datablock',item);
-				block.setAttribute('style','width:'+(this.COL_WIDTH-1)+'px;height:'+data[item]*covid19engine.SCALEFACTOR + 'px');
+				block.setAttribute('style','width:'+(this.COL_WIDTH-1)+'px;height:'+ height + 'px');
 				col.appendChild(block);
 			}
 		}
+		//let _padheight = 
+		padding.setAttribute('style','height:'+(1000-padheight)+"px;")
+		padding.setAttribute('class',_pad);
 		let _target = document.getElementById('output_target');
+		col.insertBefore(padding,col.firstChild);
+		//col.appendChild(padding);
 		_target.appendChild(col);
+		
 	},	
 	
 	
