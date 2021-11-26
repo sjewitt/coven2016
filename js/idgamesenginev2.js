@@ -336,7 +336,9 @@ var idgamesengine = {
 	buildFileLinks : function(data, target,isSearchResult){
 		var _target = document.getElementById(target);
 		var _out = "";
-		var ftp_root = "ftp://ftp.fu-berlin.de/pc/games/idgames/";
+		//https://www.quaddicted.com/files/idgames/levels/doom2/deathmatch/Ports/g-i/hkdm1-6.zip
+		let ftp_root = "https://www.quaddicted.com/files/idgames/";
+		//var ftp_root = "ftp://ftp.fu-berlin.de/pc/games/idgames/";
 		var _ul = document.createElement('ul');
 		if(isSearchResult){
 			_ul.setAttribute('id','search_result_list');

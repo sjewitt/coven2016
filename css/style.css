@@ -24,6 +24,11 @@ div.raw #doomworld_api button, input, optgroup, select, textarea{
 	color: black;
 }
 
+div.raw #doomworld_api ul > li > a{
+	color: white;
+	font-style: italic;
+}
+
 div.spinner_wrapper > img{
 	width: 15px;
 	height: 15px;
