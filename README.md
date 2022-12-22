@@ -1,0 +1,3 @@
+# coven2016 -.NET
+
+An unfinished, but fully functional SQLServer-backed CMS, with a sort of object based approach to page construction and editing. Needs revisiting...
