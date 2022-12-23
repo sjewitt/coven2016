@@ -1,0 +1,1 @@
+insert into content_types([name], [description]) values('Default','Default catch-all content type');

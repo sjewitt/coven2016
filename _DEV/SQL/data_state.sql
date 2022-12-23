@@ -1,0 +1,5 @@
+INSERT INTO [state] ([id],[name],[description])VALUES(1,'active','Active, visible content')
+INSERT INTO [state] ([id],[name],[description])VALUES(2,'atwork','Content being edited')
+INSERT INTO [state] ([id],[name],[description])VALUES(3,'pending','Content awaiting approval')
+INSERT INTO [state] ([id],[name],[description])VALUES(4,'expired','Content that is no longer within date')
+INSERT INTO [state] ([id],[name],[description])VALUES(5,'rejected','Content failing approval')

@@ -1,0 +1,1 @@
+INSERT INTO [viewtree] ([page_id],[parent_id],[layout_id],[ordering])VALUES(1,0,1,0)
