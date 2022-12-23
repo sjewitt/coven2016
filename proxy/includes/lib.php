@@ -15,9 +15,12 @@ class proxy{
          * */
         $_param_string_array = Array();
         foreach ($_GET as $key => $value) { 
+            # echo $value . ', ';
             array_push($_param_string_array, $key . '=' . $value);
         }
-        $query_string = implode($_param_string_array,'&');
+        # echo 'PARAMETERS: '.$_param_string_array;
+        # fixed for PHP8. See https://www.php.net/manual/en/migration74.deprecated.php (implode())
+        $query_string = implode('&',$_param_string_array);       # implode($_param_string_array,'&');
         return(file_get_contents(self::api_root . '?' . $query_string . '&out=json'));
     }
     
