@@ -6,7 +6,7 @@ div.tree-toggler{
 	margin-right: 3px;
 }
 div.spinner_wrapper{
-	display: none;
+	display: inline-block;
 	width: 15px;
 	height: 15px;
 }
