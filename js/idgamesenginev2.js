@@ -24,15 +24,17 @@ var idgamesengine = {
 		this.spinner.setAttribute('src','/images/spinner.gif');
 		this.container = _container;
 	},
+	
+	getSpinner : function(){
+		return(this.spinner);
+	},
 
 	loadContents : function(branch,target,container){
-		console.log("load contents to " + target);
 		let _url = idgamesengine.PROXY_LOCATION + "?action=getcontents&id=0";
 		if(branch){
 			_url = idgamesengine.PROXY_LOCATION + "?action=getcontents&name=" + branch;
 		};
-		console.log($('#'+target).find('div.spinner_wrapper'));
-		$('#'+target).find('div.spinner_wrapper').append($(idgamesengine.spinner).clone());
+		$('#'+target).find('div.spinner_wrapper').append($(this.getSpinner()).clone());
 		var _target = target;
 		$.ajax({
             type: "GET",
@@ -226,7 +228,6 @@ var idgamesengine = {
 		});
 		$('#idgames_search_reset').click(function(){
 			/* reload tree browser */
-			console.log($('#doomworld_api ul.doombrowser').length);
 			if(!$('#doomworld_api ul.doombrowser').length){
 				/* remove elements created by the search: */
 				$('.searchwrapper').remove();
@@ -249,22 +250,16 @@ var idgamesengine = {
 			opts.push('dir='+dir);
 		}
 		let _opts = '&'+opts.join('&');
-		
-		console.log(idgamesengine.PROXY_LOCATION + "?action=search&query="+query + _opts);
-		
 		$.ajax({
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             url : idgamesengine.PROXY_LOCATION + "?action=search&query="+query + _opts
         }).done(function(data){
-        	/* and call the files render rouotine: */
-        	console.log(data)
-        	/* remove file tree first */
+        	/* and call the files render rouotine:  remove file tree first */
         	$('#'+idgamesengine.container + ' ul.doombrowser').remove();
         	/* clear any preious search */
         	$('#search_result_list').remove();
-        	
         	idgamesengine.buildFileLinks(data,idgamesengine.container,true);
         	
         }).fail(function(a,b,c){
@@ -316,7 +311,6 @@ var idgamesengine = {
 	    	$('#'+container+' li > div').each(function(){
 	    		$(this).off('click').click(function(){
 	    			if($(this).attr('data-loaded') === 'false'){
-	    				console.log($(this).parent());
 	    				$(this).parent().addClass('loaded');
 	    				$(this).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
 	    				$(this).attr({'data-loaded':'true'});
@@ -394,9 +388,7 @@ var idgamesengine = {
 	 * */
 	toggleBranch : function(togglerId){
 		var _things = $('#'+togglerId).find('ul');
-		console.log(_things);
 		$(_things).each(function(){
-			console.log($(this));
 			if($(this).hasClass('hidden')){
 				$('#'+togglerId).find('i').first().removeClass('fa-folder').addClass('fa-folder-open');
 				$(this).removeClass('hidden');
